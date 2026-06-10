@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Flat color landscape illustration of sushi and cocktail pairing">
+  <rect width="1200" height="630" fill="#0d0d10"/>
+  <path d="M0 390h1200v240H0z" fill="#17171b"/>
+  <circle cx="205" cy="116" r="70" fill="#862232"/>
+  <circle cx="998" cy="132" r="92" fill="#c8a46a"/>
+  <path d="M0 340c168-70 300-70 468 0s319 70 552 0c70-21 130-28 180-22v112H0z" fill="#241f27"/>
+  <path d="M160 445h520c42 0 76 34 76 76v0H84v0c0-42 34-76 76-76z" fill="#f5f1ea"/>
+  <g>
+    <ellipse cx="220" cy="492" rx="42" ry="28" fill="#101014"/>
+    <ellipse cx="220" cy="492" rx="25" ry="15" fill="#a61e2d"/>
+    <ellipse cx="340" cy="492" rx="42" ry="28" fill="#101014"/>
+    <ellipse cx="340" cy="492" rx="25" ry="15" fill="#e6d5b8"/>
+    <ellipse cx="460" cy="492" rx="42" ry="28" fill="#101014"/>
+    <ellipse cx="460" cy="492" rx="25" ry="15" fill="#c8a46a"/>
+    <ellipse cx="580" cy="492" rx="42" ry="28" fill="#101014"/>
+    <ellipse cx="580" cy="492" rx="25" ry="15" fill="#a61e2d"/>
+  </g>
+  <path d="M865 225h195l-38 210c-8 43-46 74-90 74s-82-31-90-74z" fill="#f5f1ea"/>
+  <path d="M884 260h157l-25 140c-6 32-34 55-67 55s-61-23-67-55z" fill="#a61e2d"/>
+  <rect x="944" y="505" width="22" height="78" rx="11" fill="#f5f1ea"/>
+  <rect x="878" y="578" width="154" height="22" rx="11" fill="#f5f1ea"/>
+  <path d="M932 254c30-52 62-76 116-92" fill="none" stroke="#c8a46a" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="1048" cy="159" r="18" fill="#e6d5b8"/>
+</svg>

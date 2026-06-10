@@ -1,0 +1,32 @@
+{
+  "seo": {
+    "title": "Sushi Menu | Tokyo Club Sushi Speakeasy",
+    "description": "Explore the Tokyo Club Sushi Speakeasy menu — nigiri, sashimi, signature rolls, craft cocktails, sake, and chef specials. South Beach's finest Japanese dining."
+  },
+  "hero": {
+    "eyebrow": "Tokyo Club Sushi Speakeasy",
+    "title": "The Menu",
+    "description": "Sushi precision, speakeasy cocktails, and late-night share plates — crafted for the full South Beach night.",
+    "image": {
+      "src": "/pictures/05-japanese-dishes-spread-with-cocktail.jpg",
+      "alt": "A dramatic spread of Japanese dishes and cocktails at Tokyo Club Sushi Speakeasy.",
+      "width": 1365,
+      "height": 2048
+    },
+    "primaryButtonLabel": "Book a Table"
+  },
+  "menuLinks": {
+    "food": {
+      "label": "Food Menu",
+      "href": "/menu/Tokyo-Sushi-Speakeasy-Menu-Food.png"
+    },
+    "drink": {
+      "label": "Drink Menu",
+      "href": "/menu/Tokyo-Sushi-Speakeasy-Menu-Drink.png"
+    }
+  },
+  "footnotes": [
+    "A 20% service charge and sales tax are added to your check.",
+    "*Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness, especially if you have certain medical conditions."
+  ]
+}

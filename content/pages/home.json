@@ -1,0 +1,129 @@
+{
+  "seo": {
+    "title": "Tokyo Club Sushi Speakeasy | Modern Japanese Speakeasy in South Beach",
+    "description": "A hidden Japanese speakeasy in South Beach serving premium sushi, craft cocktails, and late-night energy at 1000 Collins Ave. Book your table."
+  },
+  "hero": {
+    "eyebrow": "Japanese speakeasy meets Miami nightlife",
+    "title": "South Beach's late-night sushi ritual.",
+    "description": "Premium sushi, sculpted cocktails, moody lighting, and a room built for date nights, celebrations, and unforgettable after-dark plans.",
+    "video": "/videos/Tokyo%20Video.MOV",
+    "poster": {
+      "src": "/pictures/home-banner-bg.png",
+      "alt": "A cocktail and premium sushi dishes staged on a dramatic black table.",
+      "width": 1920,
+      "height": 1080
+    },
+    "sideImage": {
+      "src": "/pictures/04-lychee-orchid-and-citrus-cocktails.jpg",
+      "alt": "Signature cocktails with floral garnishes against a dark speakeasy backdrop.",
+      "width": 2048,
+      "height": 1365
+    },
+    "primaryButtonLabel": "Book a Table",
+    "secondaryButton": {
+      "label": "Explore the Menu",
+      "href": "/menu"
+    },
+    "marquee": ["4.8 Google Rating", "200+ Reviews", "1000 Collins Ave", "Wed-Mon 5PM-12AM"]
+  },
+  "experience": {
+    "eyebrow": "The ultimate sushi speakeasy in South Beach",
+    "pillars": [
+      {
+        "title": "Japanese craft, Miami pulse",
+        "body": "Tokyo Club Sushi Speakeasy balances refined technique with a nightlife energy that feels unmistakably South Beach. Every plate is built with the precision of an Edomae kitchen — clean cuts, seasonal instinct, and a respect for simplicity — then served inside a room that moves to its own rhythm.",
+        "image": {
+          "src": "/pictures/02-seared-tuna-tataki-with-microgreens.jpg",
+          "alt": "Seared tuna tataki plated with microgreens showcasing Japanese precision.",
+          "width": 1365,
+          "height": 2048
+        }
+      },
+      {
+        "title": "Dinner becomes a scene",
+        "body": "Every table is staged with contrast, glow, and shareable moments designed for dates and celebrations. The room is low-lit, the plating is bold, and the energy builds as the night goes on.",
+        "image": {
+          "src": "/pictures/11-beef-sushi-roll-with-cocktail-and-bao.jpg",
+          "alt": "A dramatic dinner spread with beef sushi rolls, cocktails, and bao buns.",
+          "width": 1365,
+          "height": 2048
+        }
+      },
+      {
+        "title": "Cocktails with a point of view",
+        "body": "Bright citrus, floral notes, and bold presentation keep the drinks as memorable as the sushi. Our bar program leans into lychee, yuzu, orchid, and unexpected botanicals — each pour designed to photograph as well as it tastes.",
+        "image": {
+          "src": "/pictures/06-lychee-orchid-cocktail-closeup.jpg",
+          "alt": "A lychee orchid cocktail in dramatic closeup with floral garnish.",
+          "width": 1365,
+          "height": 2048
+        }
+      }
+    ]
+  },
+  "menuPreview": {
+    "eyebrow": "Signature menu",
+    "title": "Sushi precision, cocktail drama, and late-night share plates.",
+    "description": "Edomae technique meets South Beach decadence. From clean-cut nigiri to 24K gold-topped signature rolls — every dish is built for the table after dark.",
+    "button": {
+      "label": "View Full Menu",
+      "href": "/menu"
+    }
+  },
+  "events": {
+    "eyebrow": "Host your night the Tokyo way",
+    "title": "Built for celebrations, group plans, and after-dark momentum.",
+    "description": "Open the occasion that matches the night you are planning.",
+    "image": {
+      "src": "/pictures/GoldRoll Mainpage.png",
+      "alt": "Tokyo Gold Roll with 24K gold leaf revealed under a glass dome with dramatic smoke.",
+      "width": 1365,
+      "height": 2048
+    },
+    "imageEyebrow": "Group planning made easy",
+    "imageTitle": "Start with dinner. Let the night expand from there.",
+    "primaryButtonLabel": "Reserve Now",
+    "secondaryButton": {
+      "label": "Plan Your Night",
+      "href": "/contact"
+    }
+  },
+  "socialProof": {
+    "eyebrow": "Memorable moments, lasting impressions",
+    "title": "The ambiance is unforgettable—and so is every bite.",
+    "description": "Our guests don't just dine—they experience. See why people keep talking about every detail, from the atmosphere to the service and beyond."
+  },
+  "galleryTeaser": {
+    "eyebrow": "Gallery Teaser",
+    "title": "Visual stories, thoughtfully framed.",
+    "description": "Explore our handpicked selection of images, offering a vivid glimpse into the Tokyo Club experience. Every photo captures the essence of our food, drinks, and atmosphere—inviting you to discover more.",
+    "button": {
+      "label": "View Full Gallery",
+      "href": "/gallery"
+    },
+    "images": [
+      {
+        "src": "/pictures/04-lychee-orchid-and-citrus-cocktails.jpg",
+        "alt": "Signature cocktails with floral garnishes against a dark speakeasy backdrop.",
+        "width": 2048,
+        "height": 1365,
+        "category": "cocktails"
+      },
+      {
+        "src": "/pictures/Food2.png",
+        "alt": "A torched wagyu sushi roll finished with flame at Tokyo Club Sushi Speakeasy.",
+        "width": 1365,
+        "height": 2048,
+        "category": "food"
+      },
+      {
+        "src": "/pictures/Drinks.png",
+        "alt": "Signature Tokyo Club cocktails served side by side under dramatic low light.",
+        "width": 1365,
+        "height": 2048,
+        "category": "cocktails"
+      }
+    ]
+  }
+}

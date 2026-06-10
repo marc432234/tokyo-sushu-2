@@ -1,0 +1,23 @@
+{
+  "seo": {
+    "title": "Gallery | Tokyo Club Sushi Speakeasy",
+    "description": "Browse the gallery of Tokyo Club Sushi Speakeasy — premium sushi, craft cocktails, and moody interior shots from our South Beach hidden bar."
+  },
+  "hero": {
+    "eyebrow": "Gallery",
+    "title": "Every detail, worth the frame.",
+    "description": "",
+    "image": {
+      "src": "/pictures/04-lychee-orchid-and-citrus-cocktails.jpg",
+      "alt": "Signature cocktails with floral garnishes against a dark speakeasy backdrop.",
+      "width": 2048,
+      "height": 1365
+    }
+  },
+  "cta": {
+    "eyebrow": "The room looks even better in person.",
+    "title": "See it live in South Beach.",
+    "description": "",
+    "buttonLabel": "Reserve a Table"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "seo": {
+    "title": "The Experience | Tokyo Club Sushi Speakeasy",
+    "description": "Step inside Tokyo Club Sushi Speakeasy — an intimate hidden bar in South Beach with moody lighting, Japanese craftsmanship, and unforgettable nightlife energy."
+  },
+  "hero": {
+    "eyebrow": "Tokyo Club Sushi Speakeasy",
+    "title": "The Experience",
+    "description": "A modern Japanese speakeasy where culinary artistry, handcrafted cocktails, and unforgettable atmosphere converge in the heart of South Beach.",
+    "image": {
+      "src": "/pictures/27-DSC08232.jpg",
+      "alt": "A moody table setting inside Tokyo Club Sushi Speakeasy with Japanese scroll art and dark slatted walls.",
+      "width": 1365,
+      "height": 2048
+    },
+    "primaryButtonLabel": "Reserve Your Night",
+    "secondaryButton": {
+      "label": "Explore the Menu",
+      "href": "/menu"
+    }
+  },
+  "sections": {
+    "storyEyebrow": "Our story",
+    "storyTitle": "A hidden world behind the door.",
+    "storyBodyOne": "At Tokyo Club Sushi Speakeasy, we blend the artistry of traditional sushi craftsmanship with an elevated nightlife atmosphere, creating an experience that delights the senses and excites the palate. Our sushi masters meticulously select the finest, freshest ingredients — crafting every roll, sashimi, and nigiri to perfection.",
+    "storyBodyTwo": "Step inside and you'll find a space that feels both intimate and alive — dark lacquer walls, warm golden light, and the kind of energy that turns a dinner reservation into a lasting memory.",
+    "storyImage": {
+      "src": "/pictures/Experiance page.png",
+      "alt": "The intimate Tokyo Club Sushi Speakeasy dining room in warm, moody light.",
+      "width": 1365,
+      "height": 2048
+    },
+    "proverb": "Hara hachibu-me ni isha irazu.",
+    "proverbTranslation": "If you fill your stomach to 8/10, you don't need a doctor. — Japanese proverb",
+    "proverbImage": {
+      "src": "/pictures/29-DSC08280.jpg",
+      "alt": "Golden koi fish sculptures swimming across a dark textured wall inside Tokyo Club Sushi Speakeasy.",
+      "width": 1365,
+      "height": 2048
+    },
+    "featuresEyebrow": "What sets us apart",
+    "featuresTitle": "Experience Tokyo, one bite at a time.",
+    "creativityEyebrow": "Creativity & Energy",
+    "creativityTitle": "Where dinner becomes a scene.",
+    "creativityBodyOne": "Our chefs are constantly pushing the boundaries of innovation to create dishes that are both visually stunning and incredibly delicious — exploring new flavor combinations and techniques to keep things fresh and exciting.",
+    "creativityBodyTwo": "Whether you're celebrating a special occasion or seeking an unforgettable night out, Tokyo Club Sushi Speakeasy brings the vibrancy, elegance, and energy of Tokyo's dining scene right to your doorstep.",
+    "finalEyebrow": "Your table awaits",
+    "finalTitle": "Come roll with us.",
+    "finalDescription": "Join us for an unforgettable blend of culinary artistry, refreshing libations, and pure entertainment — right here in South Beach."
+  }
+}

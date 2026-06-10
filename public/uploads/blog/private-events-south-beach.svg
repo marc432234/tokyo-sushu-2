@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Flat color landscape illustration of a private event dinner">
+  <rect width="1200" height="630" fill="#101014"/>
+  <rect y="390" width="1200" height="240" fill="#18151a"/>
+  <path d="M0 370h1200v70H0z" fill="#2a2024"/>
+  <circle cx="600" cy="132" r="92" fill="#c8a46a"/>
+  <path d="M210 110h580l90 280H120z" fill="#15151a"/>
+  <path d="M248 145h505l56 205H193z" fill="#a61e2d"/>
+  <path d="M310 182h392l32 122H279z" fill="#2c252c"/>
+  <g fill="#f5f1ea">
+    <circle cx="365" cy="472" r="52"/>
+    <circle cx="507" cy="472" r="52"/>
+    <circle cx="649" cy="472" r="52"/>
+    <circle cx="791" cy="472" r="52"/>
+  </g>
+  <g fill="#0e0e10">
+    <circle cx="365" cy="472" r="31"/>
+    <circle cx="507" cy="472" r="31"/>
+    <circle cx="649" cy="472" r="31"/>
+    <circle cx="791" cy="472" r="31"/>
+  </g>
+  <path d="M212 520c166-60 324-60 490 0 102 37 196 41 320 15v105H212z" fill="#271e24"/>
+  <rect x="250" y="448" width="600" height="42" rx="21" fill="#c8a46a"/>
+  <g fill="#f5f1ea" opacity=".9">
+    <rect x="290" y="245" width="36" height="58" rx="18"/>
+    <rect x="410" y="245" width="36" height="58" rx="18"/>
+    <rect x="530" y="245" width="36" height="58" rx="18"/>
+    <rect x="650" y="245" width="36" height="58" rx="18"/>
+  </g>
+  <path d="M955 282c58 30 91 83 99 158" fill="none" stroke="#c8a46a" stroke-width="12" stroke-linecap="round"/>
+  <path d="M990 300c-22 44-25 91-8 141" fill="none" stroke="#862232" stroke-width="12" stroke-linecap="round"/>
+</svg>

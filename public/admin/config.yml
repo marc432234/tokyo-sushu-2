@@ -1,0 +1,397 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "public/uploads/blog"
+public_folder: "/uploads/blog"
+
+site_url: "https://www.tokyosushispeakeasy.com"
+display_url: "https://www.tokyosushispeakeasy.com"
+logo_url: "/logo/tokyo-club-logo.svg"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Home Page"
+        file: "content/pages/home.json"
+        format: "json"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "SEO Title", name: "title", widget: "string" }
+              - { label: "SEO Description", name: "description", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Hero Video", name: "video", widget: "string", required: false }
+              - label: "Poster Image"
+                name: "poster"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+                  - { label: "Width", name: "width", widget: "number", required: false }
+                  - { label: "Height", name: "height", widget: "number", required: false }
+              - label: "Side Image"
+                name: "sideImage"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+                  - { label: "Width", name: "width", widget: "number", required: false }
+                  - { label: "Height", name: "height", widget: "number", required: false }
+              - { label: "Primary Button Label", name: "primaryButtonLabel", widget: "string" }
+              - label: "Secondary Button"
+                name: "secondaryButton"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link", name: "href", widget: "string" }
+              - label: "Marquee Items"
+                name: "marquee"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+          - label: "Experience Carousel"
+            name: "experience"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - label: "Pillars"
+                name: "pillars"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }
+                  - label: "Image"
+                    name: "image"
+                    widget: "object"
+                    fields:
+                      - { label: "Image", name: "src", widget: "image" }
+                      - { label: "Alt Text", name: "alt", widget: "string" }
+                      - { label: "Width", name: "width", widget: "number", required: false }
+                      - { label: "Height", name: "height", widget: "number", required: false }
+          - label: "Menu Preview"
+            name: "menuPreview"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link", name: "href", widget: "string" }
+          - label: "Events"
+            name: "events"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+                  - { label: "Width", name: "width", widget: "number", required: false }
+                  - { label: "Height", name: "height", widget: "number", required: false }
+              - { label: "Image Eyebrow", name: "imageEyebrow", widget: "string" }
+              - { label: "Image Title", name: "imageTitle", widget: "string" }
+              - { label: "Primary Button Label", name: "primaryButtonLabel", widget: "string" }
+              - label: "Secondary Button"
+                name: "secondaryButton"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link", name: "href", widget: "string" }
+          - label: "Social Proof Intro"
+            name: "socialProof"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Gallery Teaser"
+            name: "galleryTeaser"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link", name: "href", widget: "string" }
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+                  - { label: "Category", name: "category", widget: "string" }
+                  - { label: "Width", name: "width", widget: "number", required: false }
+                  - { label: "Height", name: "height", widget: "number", required: false }
+      - name: "menu"
+        label: "Menu Page"
+        file: "content/pages/menu.json"
+        format: "json"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "SEO Title", name: "title", widget: "string" }
+              - { label: "SEO Description", name: "description", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+                  - { label: "Width", name: "width", widget: "number", required: false }
+                  - { label: "Height", name: "height", widget: "number", required: false }
+              - { label: "Reservation Button Label", name: "primaryButtonLabel", widget: "string", required: false }
+          - label: "Menu Links"
+            name: "menuLinks"
+            widget: "object"
+            fields:
+              - label: "Food Menu"
+                name: "food"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "File or Link", name: "href", widget: "string" }
+              - label: "Drink Menu"
+                name: "drink"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "File or Link", name: "href", widget: "string" }
+          - label: "Footnotes"
+            name: "footnotes"
+            widget: "list"
+            field: { label: "Footnote", name: "footnote", widget: "text" }
+      - name: "experience"
+        label: "Experience Page"
+        file: "content/pages/experience.json"
+        format: "json"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "SEO Title", name: "title", widget: "string" }
+              - { label: "SEO Description", name: "description", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+                  - { label: "Width", name: "width", widget: "number", required: false }
+                  - { label: "Height", name: "height", widget: "number", required: false }
+              - { label: "Primary Button Label", name: "primaryButtonLabel", widget: "string", required: false }
+              - label: "Secondary Button"
+                name: "secondaryButton"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link", name: "href", widget: "string" }
+          - label: "Sections"
+            name: "sections"
+            widget: "object"
+            fields:
+              - { label: "Story Eyebrow", name: "storyEyebrow", widget: "string" }
+              - { label: "Story Title", name: "storyTitle", widget: "string" }
+              - { label: "Story Body One", name: "storyBodyOne", widget: "text" }
+              - { label: "Story Body Two", name: "storyBodyTwo", widget: "text" }
+              - label: "Story Image"
+                name: "storyImage"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+                  - { label: "Width", name: "width", widget: "number", required: false }
+                  - { label: "Height", name: "height", widget: "number", required: false }
+              - { label: "Proverb", name: "proverb", widget: "string" }
+              - { label: "Proverb Translation", name: "proverbTranslation", widget: "text" }
+              - label: "Proverb Image"
+                name: "proverbImage"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+                  - { label: "Width", name: "width", widget: "number", required: false }
+                  - { label: "Height", name: "height", widget: "number", required: false }
+              - { label: "Features Eyebrow", name: "featuresEyebrow", widget: "string" }
+              - { label: "Features Title", name: "featuresTitle", widget: "string" }
+              - { label: "Creativity Eyebrow", name: "creativityEyebrow", widget: "string" }
+              - { label: "Creativity Title", name: "creativityTitle", widget: "string" }
+              - { label: "Creativity Body One", name: "creativityBodyOne", widget: "text" }
+              - { label: "Creativity Body Two", name: "creativityBodyTwo", widget: "text" }
+              - { label: "Final Eyebrow", name: "finalEyebrow", widget: "string" }
+              - { label: "Final Title", name: "finalTitle", widget: "string" }
+              - { label: "Final Description", name: "finalDescription", widget: "text" }
+      - name: "gallery"
+        label: "Gallery Page"
+        file: "content/pages/gallery.json"
+        format: "json"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "SEO Title", name: "title", widget: "string" }
+              - { label: "SEO Description", name: "description", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - label: "Featured Image"
+                name: "image"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+                  - { label: "Width", name: "width", widget: "number", required: false }
+                  - { label: "Height", name: "height", widget: "number", required: false }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Button Label", name: "buttonLabel", widget: "string" }
+      - name: "contact"
+        label: "Contact Page"
+        file: "content/pages/contact.json"
+        format: "json"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "SEO Title", name: "title", widget: "string" }
+              - { label: "SEO Description", name: "description", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+                  - { label: "Width", name: "width", widget: "number", required: false }
+                  - { label: "Height", name: "height", widget: "number", required: false }
+              - { label: "Primary Button Label", name: "primaryButtonLabel", widget: "string", required: false }
+              - label: "Secondary Button"
+                name: "secondaryButton"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link", name: "href", widget: "string" }
+          - label: "Occasions"
+            name: "occasions"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Form Intro"
+            name: "formIntro"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Sidebar"
+            name: "sidebar"
+            widget: "object"
+            fields:
+              - { label: "Visit Eyebrow", name: "visitEyebrow", widget: "string" }
+              - { label: "Call Eyebrow", name: "callEyebrow", widget: "string" }
+              - { label: "Call Description", name: "callDescription", widget: "text" }
+              - { label: "Events Eyebrow", name: "eventsEyebrow", widget: "string" }
+              - { label: "Events Description", name: "eventsDescription", widget: "text" }
+              - { label: "Events Email", name: "eventsEmail", widget: "string" }
+              - { label: "Follow Eyebrow", name: "followEyebrow", widget: "string" }
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: "title"
+    slug: "{{slug}}"
+    fields:
+      - label: "Featured Image"
+        name: "featuredImage"
+        widget: "image"
+        required: true
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+        required: true
+        hint: "Use lowercase words separated by hyphens, for example south-beach-sushi-night."
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
+        required: true
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        required: false
+        field:
+          label: "Category"
+          name: "category"
+          widget: "string"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        required: true
