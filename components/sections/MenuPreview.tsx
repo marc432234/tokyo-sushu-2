@@ -102,7 +102,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
         <div className="flex flex-col lg:flex-row justify-between gap-6">
           <div className="flex-1 p-6 bg-white/5 rounded-lg outline outline-1 outline-[#cfa638]/30 backdrop-blur-[10px] flex flex-col lg:flex-row items-center gap-6 card-hover">
             <div className="w-full lg:w-[207px] h-60 relative bg-white rounded-sm outline outline-1 outline-white/20 overflow-hidden shrink-0 group">
-              <img className="w-[207px] h-[310px] left-0 top-[-23px] absolute transition duration-700 group-hover:scale-105" src="/pictures/tokyo-gold-roll.png" alt="" />
+              <img className="w-[207px] h-[310px] left-0 top-[-23px] absolute transition duration-700 group-hover:scale-105" src="/pictures/tokyo-gold-roll.png" alt="Tokyo Gold Roll with shrimp tempura, eel, tuna, ikura, and 24K gold leaf" />
             </div>
             <div className="flex flex-col justify-start items-start gap-4">
               <div className="flex flex-col justify-start items-start gap-5">
@@ -119,7 +119,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
           </div>
           <div className="flex-1 p-6 bg-white/5 rounded-lg outline outline-1 outline-white/10 backdrop-blur-[10px] flex flex-col lg:flex-row items-center gap-6 card-hover">
             <div className="w-full lg:w-[207px] h-60 relative bg-white rounded-sm outline outline-1 outline-white/20 overflow-hidden shrink-0 group">
-              <img className="w-[207px] h-[310px] left-0 top-[-23px] absolute transition duration-700 group-hover:scale-105" src="/pictures/wagyu-truffle-roll.png" alt="" />
+              <img className="w-[207px] h-[310px] left-0 top-[-23px] absolute transition duration-700 group-hover:scale-105" src="/pictures/wagyu-truffle-roll.png" alt="Wagyu Truffle Roll with wagyu slices, truffle mayo, and crispy garlic" />
             </div>
             <div className="flex flex-col justify-start items-start gap-4">
               <div className="flex flex-col justify-start items-start gap-5">
@@ -138,7 +138,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
         <div className="flex flex-col lg:flex-row justify-between gap-6">
           <div className="flex-1 p-6 bg-white/5 rounded-lg outline outline-1 outline-white/10 backdrop-blur-[10px] flex flex-col lg:flex-row items-center gap-6 card-hover">
             <div className="w-full lg:w-[207px] h-60 relative bg-white rounded-sm outline outline-1 outline-white/20 overflow-hidden shrink-0 group">
-              <img className="w-[207px] h-[310px] left-0 top-[-23px] absolute transition duration-700 group-hover:scale-105" src="/pictures/south-beath-roll.jpg" alt="" />
+              <img className="w-[207px] h-[310px] left-0 top-[-23px] absolute transition duration-700 group-hover:scale-105" src="/pictures/south-beath-roll.jpg" alt="South Beach Roll with salmon, shrimp, avocado, crispy crab, and caviar" />
             </div>
             <div className="flex flex-col justify-start items-start gap-4">
               <div className="flex flex-col justify-start items-start gap-5">
@@ -155,7 +155,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
           </div>
           <div className="flex-1 p-6 bg-white/5 rounded-lg outline outline-1 outline-white/10 backdrop-blur-[10px] flex flex-col lg:flex-row items-center gap-6 card-hover">
             <div className="w-full lg:w-[207px] h-60 relative bg-white rounded-sm outline outline-1 outline-white/20 overflow-hidden shrink-0 group">
-              <img className="w-[207px] h-[310px] left-0 top-[-23px] absolute transition duration-700 group-hover:scale-105" src="/pictures/lychee-martini.png" alt="" />
+              <img className="w-[207px] h-[310px] left-0 top-[-23px] absolute transition duration-700 group-hover:scale-105" src="/pictures/lychee-martini.png" alt="Lychee martini signature cocktail at Tokyo Club Sushi Speakeasy" />
             </div>
             <div className="flex flex-col justify-start items-start gap-4">
               <div className="flex flex-col justify-start items-start gap-5">

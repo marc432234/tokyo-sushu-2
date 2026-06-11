@@ -36,7 +36,7 @@ export default function HomePage() {
       <section className="relative isolate overflow-hidden bg-[#160306] py-[120px]">
         <Image
           src="/pictures/premium-sushi.png"
-          alt=""
+          alt="Premium sushi platter at Tokyo Club Sushi Speakeasy"
           width={380}
           height={570}
           className="absolute inset-0 -z-10 h-full w-full object-contain object-center"

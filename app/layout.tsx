@@ -2,10 +2,6 @@ import type { Metadata } from "next";
 import { Lora, Outfit } from "next/font/google";
 import Script from "next/script";
 
-import { Footer } from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
-import { pageOgImages, siteConfig, siteUrl } from "@/lib/site";
-
 import "./globals.css";
 
 const GOOGLE_TAG_ID = "AW-18203197260";
@@ -26,12 +22,6 @@ const bodyFont = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: siteUrl,
-  title: siteConfig.title,
-  description: siteConfig.description,
-  alternates: {
-    canonical: "/",
-  },
   icons: {
     icon: [
       { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
@@ -41,30 +31,6 @@ export const metadata: Metadata = {
     apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
   },
   manifest: "/site.webmanifest",
-  appleWebApp: {
-    title: "Tokyoclub Sushi's Speakeasy",
-  },
-  openGraph: {
-    title: siteConfig.title,
-    description: siteConfig.description,
-    url: siteConfig.social.website,
-    siteName: siteConfig.name,
-    type: "website",
-    images: [
-      {
-        url: pageOgImages.home.src,
-        width: pageOgImages.home.width,
-        height: pageOgImages.home.height,
-        alt: pageOgImages.home.alt,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: [pageOgImages.home.src],
-  },
 };
 
 export default function RootLayout({
@@ -110,22 +76,6 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '${META_PIXEL_ID}');
 fbq('track', 'PageView');`}
         </Script>
-        <Script
-          id="netlify-identity"
-          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-          strategy="afterInteractive"
-        />
-        <Script id="netlify-identity-redirect" strategy="afterInteractive">
-          {`if (window.netlifyIdentity) {
-  window.netlifyIdentity.on('init', function(user) {
-    if (!user) {
-      window.netlifyIdentity.on('login', function() {
-        document.location.href = '/admin/';
-      });
-    }
-  });
-}`}
-        </Script>
       </head>
       <body suppressHydrationWarning>
         <noscript>
@@ -145,11 +95,7 @@ fbq('track', 'PageView');`}
             alt=""
           />
         </noscript>
-        <div className="page-shell">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        {children}
       </body>
     </html>
   );

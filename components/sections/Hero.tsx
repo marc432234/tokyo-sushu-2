@@ -11,7 +11,7 @@ export function Hero({ content }: { content: HomePageContent["hero"] }) {
       <div className="absolute inset-0">
         <Image
           src={content.poster.src}
-          alt=""
+          alt={content.poster.alt}
           width={content.poster.width ?? 1365}
           height={content.poster.height ?? 2048}
           priority

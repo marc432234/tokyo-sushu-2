@@ -15,7 +15,7 @@ export function BlogPageLayout({ page }: { page: number }) {
         <section className="relative isolate overflow-hidden">
           <Image
             src="/pictures/blog-list-bg.png"
-            alt=""
+            alt="Tokyo Club Sushi Speakeasy dining atmosphere"
             width={1920}
             height={1080}
             className="absolute inset-0 -z-10 h-full w-full object-cover object-center"

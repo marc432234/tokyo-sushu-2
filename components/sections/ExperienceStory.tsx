@@ -75,7 +75,7 @@ export function ExperienceStory({ content }: { content: HomePageContent["experie
       <div className="absolute inset-0 -z-10 bg-[#160206]" />
       <Image
         src="/pictures/smoke-bg.png"
-        alt=""
+        alt="Atmospheric smoke effect over Tokyo Club Sushi Speakeasy interior"
         width={1920}
         height={1080}
         className="absolute inset-0 -z-10 h-full w-full object-cover mix-blend-color-dodge"
