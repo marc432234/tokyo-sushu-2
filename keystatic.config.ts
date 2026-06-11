@@ -16,7 +16,7 @@ const buttonObject = (label: string) =>
 
 export default config({
   storage:
-    process.env.NODE_ENV === 'production'
+    process.env.NEXT_PUBLIC_VERCEL_ENV
       ? {
           kind: 'github',
           repo: 'marc432234/tokyo-sushu-2',
@@ -47,7 +47,7 @@ export default config({
           directory: 'public/uploads/blog',
           publicPath: '/uploads/blog',
         }),
-        body: fields.markdoc({ label: 'Content', options: {} }),
+        body: fields.markdoc({ label: 'Content', options: {}, extension: 'md' }),
       },
     }),
   },
