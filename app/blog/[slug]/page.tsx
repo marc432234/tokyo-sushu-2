@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllBlogPosts, getBlogPostBySlug, formatPostDate } from "@/lib/blog";
 import { MarkdownContent } from "@/components/blog/MarkdownContent";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Carousel } from "@/components/ui/Carousel";
+import { siteConfig } from "@/lib/site";
 
 export function generateStaticParams() {
   return getAllBlogPosts().map((post) => ({
@@ -13,6 +15,41 @@ export function generateStaticParams() {
 type Props = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getBlogPostBySlug(slug);
+  if (!post) return {};
+
+  return {
+    title: `${post.title} | Tokyo Club Blog`,
+    description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
+    openGraph: {
+      title: `${post.title} | Tokyo Club Blog`,
+      description: post.excerpt,
+      url: `/blog/${slug}`,
+      siteName: siteConfig.name,
+      type: "article",
+      images: [
+        {
+          url: post.featuredImage,
+          width: 1365,
+          height: 2048,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${post.title} | Tokyo Club Blog`,
+      description: post.excerpt,
+      images: [post.featuredImage],
+    },
+  };
+}
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
@@ -62,7 +99,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       {otherPosts.length > 0 && (
         <ScrollReveal>
-          <div className="mx-auto flex max-w-[1360px] flex-col items-start justify-start gap-12 px-4 py-20 md:px-10">
+          <div className="container-shell flex flex-col items-start justify-start gap-12 py-20">
             <Carousel
               visibleCount={3}
               eyebrow="BLOGS"
@@ -70,11 +107,11 @@ export default async function BlogPostPage({ params }: Props) {
               description="Inside Tokyo Club — from sushi craftsmanship and cocktail rituals to South Beach nightlife, Japanese dining culture, and after-dark experiences."
             >
               {otherPosts.map((article, i) => (
-                <div key={i} className="flex w-full flex-col items-start justify-start gap-6 rounded-lg bg-white/5 p-6 outline outline-1 outline-white/10 card-hover">
-                  <div className="img-zoom relative h-48 w-full overflow-hidden rounded-lg bg-white md:h-[300px]">
+                <div key={i} className="flex h-full w-full flex-col items-start justify-start gap-6 rounded-lg bg-white/5 p-6 outline outline-1 outline-white/10 card-hover">
+                  <div className="img-zoom relative h-48 w-full shrink-0 overflow-hidden rounded-lg bg-white md:h-[300px]">
                     <img className="h-full w-full object-cover" src={article.featuredImage} alt="" />
                   </div>
-                  <div className="flex w-full flex-col items-start justify-start gap-4">
+                  <div className="flex w-full flex-1 flex-col items-start justify-start gap-4">
                     <div className="flex w-full flex-col items-start justify-start gap-5">
                       <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-stone-400">
                         {article.categories.map((cat) => (
@@ -83,7 +120,7 @@ export default async function BlogPostPage({ params }: Props) {
                           </span>
                         ))}
                       </div>
-                      <div className="flex w-full flex-col items-start justify-start gap-3">
+                      <div className="flex w-full flex-1 flex-col items-start justify-start gap-3">
                         <div className="font-['Lora'] text-2xl font-normal leading-[33.60px] text-white">{article.title}</div>
                         <div className="font-['Outfit'] text-base font-light leading-[22.40px] tracking-wide text-white/60">{article.excerpt}</div>
                       </div>

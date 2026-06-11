@@ -13,8 +13,8 @@ export function EventOccasions() {
         className="absolute inset-0 -z-10 h-full w-full object-cover mix-blend-color-dodge"
       />
       <div className="flex flex-col">
-      <div className="px-10 py-[120px] flex flex-col justify-center items-center gap-12">
-        <div className="w-full lg:w-[1360px] mx-auto flex justify-between items-start">
+      <div className="py-[120px] flex flex-col justify-center items-center gap-12">
+        <div className="container-shell flex flex-col lg:flex-row justify-between items-start gap-6">
           <div className="max-w-[883px] flex flex-col justify-start items-start gap-6">
             <span className="eyebrow text-white">Host your night the Tokyo way</span>
             <div className="text-white text-5xl font-normal font-['Lora'] leading-[57.60px]">Built for celebrations, group plans, and after-dark momentum.</div>
@@ -25,7 +25,7 @@ export function EventOccasions() {
           </a>
         </div>
         <ScrollReveal>
-          <div className="grid w-full max-w-[1360px] mx-auto grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="container-shell grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="overflow-hidden p-6 relative bg-black rounded-lg flex flex-col justify-end items-start gap-4 card-hover group min-h-[28rem] md:min-h-[32rem] lg:min-h-[37.5rem]">
               <img className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" src="/pictures/date-nights.png" alt="" />
               <div className="absolute inset-x-0 bottom-0 h-[331px] bg-gradient-to-b from-[#6e0d20]/0 to-[#6d0c1f]" />

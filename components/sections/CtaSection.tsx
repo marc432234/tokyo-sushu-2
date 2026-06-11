@@ -5,16 +5,30 @@ export function CtaSection() {
   return (
     <ScrollReveal>
       <section className="relative isolate overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[#6e0d20]" />
+        <div className="absolute inset-0 -z-10 bg-[#0E0204]" />
         <Image
-          src="/pictures/smoke-bg.png"
+          className="w-[484.56px] h-[727.03px] left-0 top-0 absolute"
+          src="/pictures/ready-left.png"
           alt=""
-          width={1920}
-          height={1080}
-          className="absolute inset-0 -z-10 h-full w-full object-cover mix-blend-multiply"
+          width={485}
+          height={727}
         />
-        <div className="px-10 py-[120px]">
-        <div className="max-w-[1360px] mx-auto flex flex-col justify-center items-center gap-14">
+        <Image
+          className="w-[484.56px] h-[727.03px] left-0 top-0 absolute origin-top-left -rotate-180"
+          src="/pictures/ready-left.png"
+          alt=""
+          width={485}
+          height={727}
+        />
+        <Image
+          className="w-[484.56px] h-[727.03px] right-0 top-0 absolute"
+          src="/pictures/ready-right.png"
+          alt=""
+          width={485}
+          height={727}
+        />
+        <div className="py-[120px]">
+        <div className="container-shell flex flex-col justify-center items-center gap-14">
           <div className="flex flex-col justify-center items-center gap-6">
             <span className="eyebrow text-white">Secure Your NighT</span>
             <div className="flex flex-col justify-center items-center gap-4">
@@ -22,7 +36,7 @@ export function CtaSection() {
               <div className="max-w-[644px] text-center text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Reservations recommended · Walk-ins welcome when available</div>
             </div>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center gap-6">
             <a href="https://www.opentable.com/r/tokyo-club-reservations-miami-beach?restref=1480237&lang=en-US&ot_source=Restaurant%20website&ot_campaign=LP" className="h-14 px-6 py-[17px] bg-[#ac6e26] flex justify-center items-center gap-2.5 btn-glow">
               <div className="text-white text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">Book a Table via OpenTable</div>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

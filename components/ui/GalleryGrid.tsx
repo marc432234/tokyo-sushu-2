@@ -32,7 +32,7 @@ export function GalleryGrid() {
 
   return (
     <>
-      <div className="flex gap-4">
+      <div className="flex flex-col sm:flex-row gap-4">
         {columns.map((col) => (
           <div key={col.items[0]} className="flex flex-1 flex-col gap-4">
             {col.items.map((globalIndex) => {

@@ -28,7 +28,7 @@ export default function ContactPage() {
         description="Get in touch with Tokyo Club Sushi Speakeasy. Reserve a table, plan a private event, or reach our team at 1000 Collins Ave, South Beach."
       />
 
-      <section className="relative isolate min-h-[600px] overflow-hidden pt-(--header-offset) pb-20 md:pb-32">
+      <section className="relative isolate min-h-[600px] pt-(--header-offset) pb-20 md:pb-32">
         <Image
           src={pageContent.hero.image.src}
           alt={pageContent.hero.image.alt}
@@ -43,18 +43,25 @@ export default function ContactPage() {
         <div className="container-shell flex min-h-[calc(600px-var(--header-offset))] items-center">
           <div className="max-w-[39rem] pb-14 pt-20">
             <span className="eyebrow text-white">{pageContent.hero.eyebrow}</span>
-            <h1 className="mt-7 font-(family-name:--font-display) text-[clamp(3.2rem,6vw,5rem)] leading-[1.02] text-white">
-              {pageContent.hero.title}
+            <h1 className="mt-7 font-(family-name:--font-display) text-[2.5rem] md:text-[4rem] leading-[1.02] text-white">
+              {pageContent.hero.title.split("venue").length > 1 ? (
+                <>
+                  {pageContent.hero.title.split("venue")[0]}
+                  <span className="text-highlight-underline-amber"><span className="italic" style={{ color: "#FFC107" }}>venue</span></span>
+                  {pageContent.hero.title.split("venue").slice(1).join("venue")}
+                </>
+              ) : (
+                pageContent.hero.title
+              )}
             </h1>
             <p className="mt-5 max-w-xl text-base font-light leading-[1.4] tracking-wide text-white/70">
               {pageContent.hero.description}
             </p>
           </div>
         </div>
-      </section>
 
-      <ScrollReveal>
-        <div className="max-w-[1360px] mx-auto px-4 md:px-10 pb-12 md:pb-20 -mt-20 md:-mt-32 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+        <div className="absolute bottom-0 left-1/2 z-10 w-full max-w-[1360px] -translate-x-1/2 px-4 md:px-10 translate-y-1/2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {pageContent.occasions.map((occasion, index) => {
             const icons = [
               <svg key="date" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +106,7 @@ export default function ContactPage() {
               </svg>,
             ];
             return (
-              <div key={occasion.title} className="p-6 bg-gradient-to-b from-[#cf183c]/0 to-[#cf183c]/30 rounded-lg outline outline-1 outline-white/20 backdrop-blur-[20px] flex flex-col justify-end items-start gap-4 overflow-hidden card-hover">
+              <div key={occasion.title} className="p-6 bg-gradient-to-b from-[#cf183c]/10 to-[#cf183c]/25 rounded-lg outline outline-1 outline-white/20 backdrop-blur-[30px] flex flex-col justify-end items-start gap-4 overflow-hidden card-hover">
                 <div className="self-stretch flex flex-col justify-start items-start gap-4">
                   {icons[index]}
                   <div className="self-stretch justify-start text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">{occasion.title}</div>
@@ -109,10 +116,11 @@ export default function ContactPage() {
             );
           })}
         </div>
-      </ScrollReveal>
+        </div>
+      </section>
 
       <ScrollReveal>
-        <div className="max-w-[1360px] mx-auto px-4 md:px-10 pb-12 md:pb-20 flex justify-center items-center flex-wrap gap-4">
+        <div className="container-shell pt-20 md:pt-[160px] pb-12 md:pb-20 flex justify-center items-center flex-wrap gap-4">
           <a href={siteConfig.bookingUrl} className="h-14 px-6 py-[17px] bg-[#ad6d25] flex justify-center items-center gap-2.5 btn-glow">
             <div className="justify-start text-white text-base font-normal font-['Outfit'] leading-[22.40px] tracking-[2.56px]">RESERVE A TABLE</div>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -131,7 +139,7 @@ export default function ContactPage() {
       </ScrollReveal>
 
       <ScrollReveal>
-        <div className="w-full lg:w-[1360px] mx-auto px-4 md:px-10 pb-16 md:pb-[120px] flex flex-col md:flex-row justify-between items-start gap-4 md:gap-8">
+        <div className="container-shell pb-16 md:pb-[120px] flex flex-col md:flex-row justify-between items-start gap-4 md:gap-8">
           <div className="w-full md:w-1/2 flex flex-col justify-start items-start gap-4 md:gap-8">
             <div className="self-stretch flex flex-col justify-start items-start gap-4">
               <div className="self-stretch flex flex-col justify-start items-start gap-4">

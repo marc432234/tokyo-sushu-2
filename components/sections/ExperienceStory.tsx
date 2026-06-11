@@ -83,7 +83,7 @@ export function ExperienceStory({ content }: { content: HomePageContent["experie
       <div className="pointer-events-none absolute -left-20 top-1/4 size-80 rounded-full border border-(--accent-red)/20" />
       <div className="pointer-events-none absolute -right-20 top-1/4 size-80 rounded-full border border-(--accent-red)/20" />
 
-      <div className="w-full lg:w-[1360px] mx-auto">
+      <div className="container-shell">
       <div className="grid gap-10 lg:grid-cols-[300px_minmax(0,668px)_300px] lg:items-center lg:gap-[46px]">
         <div className="hidden h-[587px] flex-col justify-between lg:flex">
           {storyImages.slice(0, 2).map((image) => (

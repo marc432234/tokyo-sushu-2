@@ -80,7 +80,9 @@ export const siteConfig = {
   reviewSummary: "4.8 Google rating",
   reviewCount: "200+ reviews",
   social: {
+    facebook: "https://www.facebook.com/tokyosushispeakeasy",
     instagram: "https://www.instagram.com/tokyosushispeakeasy/",
+    whatsapp: "https://wa.me/17867289318",
     website: "https://www.tokyosushispeakeasy.com",
   },
   nav: [

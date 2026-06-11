@@ -88,7 +88,7 @@ export function Carousel({ children, visibleCount = 3, eyebrow, title, descripti
       <div className="relative mt-12 overflow-hidden">
         <div ref={trackRef} className="flex gap-6" style={{ transform: "translateX(0%)" }}>
           {extended.map((child, i) => (
-            <div key={i} className="min-w-0 shrink-0 grow-0" style={{ flexBasis: `calc((100% - ${(visibleCount - 1) * 24}px) / ${visibleCount})` }}>
+            <div key={i} className="min-w-0 shrink-0 grow-0 flex" style={{ flexBasis: `calc((100% - ${(visibleCount - 1) * 24}px) / ${visibleCount})` }}>
               {child}
             </div>
           ))}

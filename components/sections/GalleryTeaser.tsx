@@ -19,7 +19,7 @@ const columns = [
 
 export function GalleryTeaser({ content }: { content: HomePageContent["galleryTeaser"] }) {
   return (
-    <section className="bg-[#170307] pb-0 pt-[clamp(4rem,8vw,7.5rem)]">
+    <section className="bg-[#170307] pb-[120px] pt-[clamp(4rem,8vw,7.5rem)]">
       <div className="container-shell">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>

@@ -33,7 +33,7 @@ export default function HomePage() {
       <Reveal delay={50}>
         <ExperienceStory content={pageContent.experience} />
       </Reveal>
-      <section className="relative isolate overflow-hidden bg-[#160306] px-10 py-[120px]">
+      <section className="relative isolate overflow-hidden bg-[#160306] py-[120px]">
         <Image
           src="/pictures/premium-sushi.png"
           alt=""
@@ -44,7 +44,7 @@ export default function HomePage() {
         <div className="pointer-events-none absolute right-[-120px] top-[-107px] size-[336px] rounded-full border-2 border-[#cf183c]/30" />
         <div className="pointer-events-none absolute bottom-[-80px] left-[-51px] size-[193px] rounded-full border-2 border-[#cf183c]/30" />
           
-        <div className="mx-auto flex max-w-[1360px] flex-col items-center gap-10">
+        <div className="container-shell flex flex-col items-center gap-10">
 
           <div className="max-w-[984px] text-center text-5xl font-normal font-['Lora'] leading-[57.60px] text-white/80">&quot;Premium sushi. Sculpted cocktails. A room that moves on its own frequency.&quot;</div>
           <hr className="w-full border-white/16" />

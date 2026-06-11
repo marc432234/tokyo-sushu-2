@@ -21,15 +21,14 @@ export function BlogPageLayout({ page }: { page: number }) {
             className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 -z-10 bg-black/60" />
-          <div className="container-shell relative flex flex-col items-start justify-start gap-6 px-4 pb-16 pt-[200px] md:px-10 md:pb-[120px]">
+          <div className="container-shell relative flex flex-col items-start justify-start gap-6 pb-16 pt-[200px] md:pb-[120px]">
             <div className="relative z-10">
               <span className="eyebrow text-[#ad6d25]">TOKYO JOURNAL</span>
             </div>
             <div className="relative z-10 flex max-w-[570px] flex-col items-start justify-start gap-4">
-              <div>
-                <span className="font-['Lora'] text-3xl font-normal leading-[76.80px] text-[#ffc107] md:text-5xl lg:text-[64px]">Stories</span>
-                <span className="font-['Lora'] text-3xl font-normal leading-[76.80px] text-white md:text-5xl lg:text-[64px]"> from the<br />Speakeasy.</span>
-              </div>
+              <h1 className="font-['Lora'] text-[2.5rem] font-normal leading-[1.2] text-white md:text-[4rem]">
+                <span className="text-highlight-underline-amber italic" style={{ color: "#FFC107" }}>Stories</span> from the<br />Speakeasy.
+              </h1>
               <div className="font-['Outfit'] text-base font-light leading-[22.40px] tracking-wide text-white">
                 Inside Tokyo Club — from sushi craftsmanship and cocktail rituals to South Beach nightlife, Japanese dining culture, and after-dark experiences.
               </div>
@@ -39,7 +38,7 @@ export function BlogPageLayout({ page }: { page: number }) {
       </ScrollReveal>
 
       <ScrollReveal>
-        <div className="mx-auto flex max-w-[1360px] flex-wrap items-start justify-between gap-8 px-4 pb-12 md:px-10 md:pb-20">
+        <div className="container-shell flex flex-wrap items-start justify-between gap-8 pb-12 md:pb-20">
           <div className="flex w-full flex-col items-start justify-start gap-4 md:w-[322px]">
             <div className="btn-glow flex h-14 w-full items-center justify-between bg-[#ad6d25] px-6 py-[17px]">
               <div className="font-['Outfit'] text-base font-normal uppercase leading-[22.40px] tracking-[2.56px] text-white">ALL</div>

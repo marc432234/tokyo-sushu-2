@@ -6,7 +6,8 @@ import type { HomePageContent } from "@/lib/page-content";
 
 export function Hero({ content }: { content: HomePageContent["hero"] }) {
   return (
-    <section className="relative isolate min-h-[880px] overflow-hidden">
+    <>
+    <section className="relative isolate min-h-[880px]">
       <div className="absolute inset-0">
         <Image
           src={content.poster.src}
@@ -16,16 +17,24 @@ export function Hero({ content }: { content: HomePageContent["hero"] }) {
           priority
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/10" />
       </div>
 
-      <div className="relative z-10 mx-auto grid min-h-[880px] w-[min(100%-clamp(2.5rem,5vw,5rem),85rem)] grid-rows-[1fr_auto] pt-(--header-offset)">
+      <div className="container-shell grid min-h-[880px] grid-rows-[1fr_auto] pt-(--header-offset)">
         <div className="flex items-center">
-          <div className="hero-stack max-w-[41rem] space-y-6 pb-16 pt-[300px] lg:pb-0 lg:pt-[350px]">
+          <div className="hero-stack max-w-[41rem] space-y-6 pb-16 pt-[300px] lg:pb-0 lg:pt-[350px] mb-[120px]">
             <span className="eyebrow text-white">{content.eyebrow}</span>
 
-            <h1 className="max-w-[41rem] font-(family-name:--font-display) text-[clamp(3.2rem,7vw,6.25rem)] leading-[0.98] text-white">
-              {content.title}
+            <h1 className="max-w-[41rem] font-(family-name:--font-display) text-[2.5rem] md:text-[4rem] leading-[1.02] text-white">
+              {content.title.split("Sushi").length > 1 ? (
+                <>
+                  {content.title.split("Sushi")[0]}
+                  <span className="text-highlight-underline"><span className="italic text-(--accent-gold)">Sushi</span></span>
+                  {content.title.split("Sushi").slice(1).join("Sushi")}
+                </>
+              ) : (
+                content.title
+              )}
             </h1>
 
             <p className="max-w-[41rem] text-base font-light leading-[1.4] tracking-wide text-white/75 sm:text-lg">
@@ -50,21 +59,32 @@ export function Hero({ content }: { content: HomePageContent["hero"] }) {
             </div>
           </div>
         </div>
-
-        <div className="hero-marquee flex flex-wrap items-center justify-center gap-x-12 gap-y-4 bg-[#5a2609]/30 px-6 py-7 text-sm uppercase text-white backdrop-blur-lg my-8">
-          <span className="font-(family-name:--font-display) text-4xl leading-none">4.8</span>
-          <span className="h-4 w-px bg-white/30" />
-          <span className="tracking-wide">Google Ratings</span>
-          <span className="hidden size-2 rounded-full bg-(--accent-gold) sm:block" />
-          <span className="font-(family-name:--font-display) text-4xl leading-none">200+</span>
-          <span className="h-4 w-px bg-white/30" />
-          <span className="tracking-wide">Verified Reviews</span>
-          <span className="hidden size-2 rounded-full bg-(--accent-gold) sm:block" />
-          <span className="font-(family-name:--font-display) text-4xl leading-none">#1</span>
-          <span className="h-4 w-px bg-white/30" />
-          <span className="tracking-wide">Sushi Speakeasy SoBe</span>
-        </div>
       </div>
     </section>
+
+    <div className="container-shell relative z-10" style={{ marginTop: -46, marginBottom: -46 }}>
+      <div className="hero-marquee bg-[#ad6d25]/30 py-7 backdrop-blur-[20px] rounded-[8px] text-sm uppercase text-white">
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-x-12 sm:gap-y-4">
+          <span className="flex items-center">
+            <span className="font-['Outfit'] text-[32px] leading-none">4.8</span>
+            <span className="mx-4 inline-block w-px h-4 bg-white" />
+            <span className="font-['Outfit'] text-[20px] tracking-wide">Google Ratings</span>
+          </span>
+          <span className="hidden size-2 rounded-full bg-white sm:block" />
+          <span className="flex items-center">
+            <span className="font-['Outfit'] text-[32px] leading-none">200+</span>
+            <span className="mx-4 inline-block w-px h-4 bg-white" />
+            <span className="font-['Outfit'] text-[20px] tracking-wide">Verified Reviews</span>
+          </span>
+          <span className="hidden size-2 rounded-full bg-white sm:block" />
+          <span className="flex items-center">
+            <span className="font-['Outfit'] text-[32px] leading-none">#1</span>
+            <span className="mx-4 inline-block w-px h-4 bg-white" />
+            <span className="font-['Outfit'] text-[20px] tracking-wide">Sushi Speakeasy SoBe</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    </>
   );
 }

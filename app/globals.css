@@ -80,11 +80,10 @@ button {
 }
 
 .container-shell {
-  /* width: calc(100% - clamp(3.5rem, 8vw, 10rem));
-  margin-inline: auto; */
   width: 100%;
   max-width: 1360px;
   margin: 0px auto;
+  padding-inline: clamp(1rem, 4vw, 2.5rem);
 }
 
 @media (max-width: 1360px) {
@@ -228,6 +227,24 @@ header + .container-shell {
 
 .gold-text {
   color: var(--accent-gold);
+}
+
+.text-highlight-underline {
+  display: inline;
+  background-image: linear-gradient(to right, var(--accent-gold), var(--accent-gold-bright));
+  background-repeat: no-repeat;
+  background-position: left bottom 0.2em;
+  background-size: 100% 2px;
+  padding-bottom: 0.05em;
+}
+
+.text-highlight-underline-amber {
+  display: inline;
+  background-image: linear-gradient(to right, #FFC107, #FFD54F);
+  background-repeat: no-repeat;
+  background-position: left bottom 0.2em;
+  background-size: 100% 2px;
+  padding-bottom: 0.05em;
 }
 
 .gold-frame {
