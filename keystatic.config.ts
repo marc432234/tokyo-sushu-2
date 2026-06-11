@@ -47,7 +47,7 @@ export default config({
           directory: 'public/uploads/blog',
           publicPath: '/uploads/blog',
         }),
-        body: fields.markdoc({ label: 'Content', options: {} }),
+        body: fields.markdoc({ label: 'Content', options: {}, extension: 'md' }),
       },
     }),
   },
