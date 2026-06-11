@@ -27,7 +27,7 @@ export function BlogGrid({ posts, page }: { posts: BlogPost[]; page: number }) {
             {visible.slice(offset, offset + 2).map((article) => (
               <Link key={article.slug} href={`/blog/${article.slug}`} className="card-hover flex flex-1 flex-col items-start justify-start gap-6 rounded-lg bg-white/5 p-6 outline outline-1 outline-white/10">
                 <div className="img-zoom relative h-48 w-full shrink-0 overflow-hidden rounded-lg bg-white md:h-[300px]">
-                  <img className="h-full w-full object-cover" src={article.featuredImage} alt="" />
+                  <img className="h-full w-full object-cover" src={article.featuredImage} alt={article.title} />
                 </div>
                 <div className="flex w-full flex-1 flex-col items-start justify-start gap-4">
                   <div className="flex w-full flex-col items-start justify-start gap-5">

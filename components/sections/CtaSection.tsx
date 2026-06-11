@@ -9,21 +9,21 @@ export function CtaSection() {
         <Image
           className="w-[484.56px] h-[727.03px] left-0 top-0 absolute"
           src="/pictures/ready-left.png"
-          alt=""
+          alt="Decorative Japanese-inspired border element"
           width={485}
           height={727}
         />
         <Image
           className="w-[484.56px] h-[727.03px] left-0 top-0 absolute origin-top-left -rotate-180"
           src="/pictures/ready-left.png"
-          alt=""
+          alt="Decorative Japanese-inspired border element mirrored"
           width={485}
           height={727}
         />
         <Image
           className="w-[484.56px] h-[727.03px] right-0 top-0 absolute"
           src="/pictures/ready-right.png"
-          alt=""
+          alt="Decorative Japanese-inspired border element"
           width={485}
           height={727}
         />
@@ -37,7 +37,7 @@ export function CtaSection() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-6">
-            <a href="https://www.opentable.com/r/tokyo-club-reservations-miami-beach?restref=1480237&lang=en-US&ot_source=Restaurant%20website&ot_campaign=LP" className="h-14 px-6 py-[17px] bg-[#ac6e26] flex justify-center items-center gap-2.5 btn-glow">
+            <a href="https://www.opentable.com/r/tokyo-club-reservations-miami-beach?restref=1480237&lang=en-US&ot_source=Restaurant%20website&ot_campaign=LP&utm_source=google&utm_medium=cpc&utm_campaign=tokyo_search" className="h-14 px-6 py-[17px] bg-[#ac6e26] flex justify-center items-center gap-2.5 btn-glow">
               <div className="text-white text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">Book a Table via OpenTable</div>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.4168 10H4.16675" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />

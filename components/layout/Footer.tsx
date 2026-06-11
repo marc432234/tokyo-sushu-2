@@ -18,7 +18,7 @@ export function Footer() {
     <footer className="relative overflow-hidden border-t border-white/10 bg-black pb-8 pt-16">
       <Image
         src="/pictures/footer-bg.png"
-        alt=""
+        alt="Tokyo Club Sushi Speakeasy interior ambiance"
         width={2048}
         height={1365}
         className="absolute inset-0 h-full w-full object-cover"

@@ -70,7 +70,7 @@ export const siteConfig = {
   description:
     "A modern Japanese speakeasy in South Beach where premium sushi, bold cocktails, karaoke energy, and late-night atmosphere meet.",
   logo: logoMark,
-  bookingUrl: "https://www.opentable.com/r/tokyo-club-reservations-miami-beach?restref=1480237&lang=en-US&ot_source=Restaurant%20website&ot_campaign=LP",
+  bookingUrl: "https://www.opentable.com/r/tokyo-club-reservations-miami-beach?restref=1480237&lang=en-US&ot_source=Restaurant%20website&ot_campaign=LP&utm_source=google&utm_medium=cpc&utm_campaign=tokyo_search",
   phone: "(786) 728-9318",
   phoneHref: "tel:+17867289318",
   address: "1000 Collins Ave, Miami Beach, FL 33139",

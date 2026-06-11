@@ -17,6 +17,8 @@
   "description": "Premium homepage and site structure for Tokyo Club Sushi Speakeasy.",
   "license": "ISC",
   "dependencies": {
+    "@keystatic/core": "^0.5.50",
+    "@keystatic/next": "^5.0.4",
     "next": "^16.2.2",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
