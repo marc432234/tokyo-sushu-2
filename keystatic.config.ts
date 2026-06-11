@@ -16,7 +16,7 @@ const buttonObject = (label: string) =>
 
 export default config({
   storage:
-    process.env.KEYSTATIC_GITHUB_CLIENT_ID
+    process.env.NEXT_PUBLIC_VERCEL_ENV
       ? {
           kind: 'github',
           repo: 'marc432234/tokyo-sushu-2',
