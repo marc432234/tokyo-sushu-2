@@ -16,7 +16,7 @@ const buttonObject = (label: string) =>
 
 export default config({
   storage:
-    process.env.NODE_ENV === 'production'
+    process.env.KEYSTATIC_GITHUB_CLIENT_ID
       ? {
           kind: 'github',
           repo: 'marc432234/tokyo-sushu-2',
