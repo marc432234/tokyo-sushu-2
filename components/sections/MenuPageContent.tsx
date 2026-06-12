@@ -76,7 +76,7 @@ export function MenuPageContent() {
       </section>
 
       <div className="sticky top-[var(--header-offset)] z-40 w-full border-b border-white/20 bg-[#160206]">
-        <div className="px-4 md:px-10 py-4 flex justify-center items-center overflow-x-auto">
+        <div className="px-4 md:px-10 py-4 flex justify-start md:justify-center items-center gap-2 overflow-x-auto">
           {menuSections.map((s) => (
             <div
               key={s.id}
