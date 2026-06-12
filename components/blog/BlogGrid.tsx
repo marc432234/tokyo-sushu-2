@@ -23,7 +23,7 @@ export function BlogGrid({ posts, page, categorySlug }: { posts: BlogPost[]; pag
 
   return (
     <div className="flex flex-1 flex-col items-center justify-start gap-16">
-      <div className="grid w-full grid-cols-2 gap-[29px]">
+      <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-[29px]">
         {visible.map((article, index) => (
           <Link
             key={article.slug}
