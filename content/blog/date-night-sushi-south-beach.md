@@ -1,11 +1,12 @@
 ---
-title: "Date Night in South Beach: Why Sushi Keeps Things Fun, Easy, and Memorable"
-slug: "date-night-sushi-south-beach"
-date: "2026-06-08"
+title: "The Date Night in South Beach: Why Sushi Keeps Things Fun, Easy, and
+  Memorable"
+slug: date-night-sushi-south-beach
+date: 2026-06-08
 categories:
-  - "Experience"
-  - "South Beach"
-featuredImage: "/uploads/blog/date-night-south-beach.svg"
+  - Experience
+  - South Beach
+featuredImage: /uploads/blog/date-night-south-beach.svg
 ---
 
 A good date night in South Beach needs the right balance. It should feel special, but not forced. It should give you something to talk about, but not make conversation difficult. It should have atmosphere, but not so much noise that the night becomes work. Sushi is one of the easiest ways to hit that balance, especially when the setting is a modern Japanese speakeasy with cocktails, low light, and a menu built for sharing.
