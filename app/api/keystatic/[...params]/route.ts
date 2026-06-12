@@ -3,7 +3,9 @@ import config from '../../../../keystatic.config';
 
 export const dynamic = 'force-dynamic';
 
-const { GET: ksGET, POST } = makeRouteHandler({ config });
+const { GET: ksGET, POST } = makeRouteHandler({
+  config,
+});
 export { POST };
 
 export async function GET(request: Request, context: { params: Promise<{ params: string[] }> }) {
