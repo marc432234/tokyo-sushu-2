@@ -1,0 +1,395 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: blog
+    label: Blog Posts
+    folder: content/blog
+    create: true
+    slug: "{{slug}}"
+    format: frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: Categories, name: categories, widget: list, required: false, field: { label: Category, name: category, widget: string } }
+      - { label: Featured Image, name: featuredImage, widget: string, required: false, hint: "e.g. /pictures/my-image.jpg" }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: categories
+    label: Categories
+    folder: content/categories
+    create: true
+    slug: "{{slug}}"
+    format: frontmatter
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Slug, name: slug, widget: string }
+
+  - name: pages
+    label: Pages
+    files:
+      - name: settings
+        label: Settings
+        file: content/pages/settings.json
+        format: json
+        fields:
+          - { label: Phone Number, name: phoneNumber, widget: string, hint: "e.g. (786) 728-9318" }
+          - { label: Email Address, name: emailAddress, widget: string }
+          - { label: Address, name: address, widget: text, hint: "Full address for display" }
+          - { label: Reservation Link, name: reservationLink, widget: string }
+          - { label: Visit Menu Label, name: visitMenu, widget: string }
+          - { label: Phone Menu Label, name: phoneNumberMenu, widget: string }
+          - { label: Address Menu Label, name: addressMenu, widget: string }
+
+      - name: home
+        label: Home Page
+        file: content/pages/home.json
+        format: json
+        fields:
+          - label: SEO
+            name: seo
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Video Path, name: video, widget: string, hint: "e.g. /videos/tokyo-hero.mp4" }
+              - label: Poster Image
+                name: poster
+                widget: object
+                fields:
+                  - { label: Image Path, name: src, widget: string, hint: "e.g. /pictures/my-image.jpg" }
+                  - { label: Alt Text, name: alt, widget: string }
+                  - { label: Width, name: width, widget: number, default: 1365 }
+                  - { label: Height, name: height, widget: number, default: 2048 }
+              - label: Side Image
+                name: sideImage
+                widget: object
+                fields:
+                  - { label: Image Path, name: src, widget: string }
+                  - { label: Alt Text, name: alt, widget: string }
+                  - { label: Width, name: width, widget: number, default: 1365 }
+                  - { label: Height, name: height, widget: number, default: 2048 }
+              - { label: Primary Button Label, name: primaryButtonLabel, widget: string }
+              - label: Secondary Button
+                name: secondaryButton
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Link, name: href, widget: string }
+              - label: Marquee Items
+                name: marquee
+                widget: list
+                field: { label: Item, name: item, widget: string }
+
+          - label: Experience Carousel
+            name: experience
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - label: Pillars
+                name: pillars
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Body, name: body, widget: text }
+                  - label: Image
+                    name: image
+                    widget: object
+                    fields:
+                      - { label: Image Path, name: src, widget: string }
+                      - { label: Alt Text, name: alt, widget: string }
+                      - { label: Width, name: width, widget: number, default: 1365 }
+                      - { label: Height, name: height, widget: number, default: 2048 }
+
+          - label: Menu Preview
+            name: menuPreview
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Link, name: href, widget: string }
+
+          - label: Events
+            name: events
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Image
+                name: image
+                widget: object
+                fields:
+                  - { label: Image Path, name: src, widget: string }
+                  - { label: Alt Text, name: alt, widget: string }
+                  - { label: Width, name: width, widget: number, default: 1365 }
+                  - { label: Height, name: height, widget: number, default: 2048 }
+              - { label: Image Eyebrow, name: imageEyebrow, widget: string }
+              - { label: Image Title, name: imageTitle, widget: string }
+              - { label: Primary Button Label, name: primaryButtonLabel, widget: string }
+              - label: Secondary Button
+                name: secondaryButton
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Link, name: href, widget: string }
+
+          - label: Social Proof
+            name: socialProof
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+
+          - label: Gallery Teaser
+            name: galleryTeaser
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Link, name: href, widget: string }
+              - label: Gallery Images
+                name: images
+                widget: list
+                fields:
+                  - { label: Image Path, name: src, widget: string }
+                  - { label: Alt Text, name: alt, widget: string }
+                  - { label: Category, name: category, widget: string }
+                  - { label: Width, name: width, widget: number, default: 1365 }
+                  - { label: Height, name: height, widget: number, default: 2048 }
+
+      - name: menu
+        label: Menu Page
+        file: content/pages/menu.json
+        format: json
+        fields:
+          - label: SEO
+            name: seo
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Hero Image
+                name: image
+                widget: object
+                fields:
+                  - { label: Image Path, name: src, widget: string }
+                  - { label: Alt Text, name: alt, widget: string }
+                  - { label: Width, name: width, widget: number, default: 1365 }
+                  - { label: Height, name: height, widget: number, default: 2048 }
+              - { label: Reservation Button Label, name: primaryButtonLabel, widget: string }
+          - label: Menu Links
+            name: menuLinks
+            widget: object
+            fields:
+              - label: Food Menu
+                name: food
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Link, name: href, widget: string }
+              - label: Drink Menu
+                name: drink
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Link, name: href, widget: string }
+          - label: Footnotes
+            name: footnotes
+            widget: list
+            field: { label: Footnote, name: footnote, widget: text }
+
+      - name: experience
+        label: Experience Page
+        file: content/pages/experience.json
+        format: json
+        fields:
+          - label: SEO
+            name: seo
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Hero Image
+                name: image
+                widget: object
+                fields:
+                  - { label: Image Path, name: src, widget: string }
+                  - { label: Alt Text, name: alt, widget: string }
+                  - { label: Width, name: width, widget: number, default: 1365 }
+                  - { label: Height, name: height, widget: number, default: 2048 }
+              - { label: Primary Button Label, name: primaryButtonLabel, widget: string }
+              - label: Secondary Button
+                name: secondaryButton
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Link, name: href, widget: string }
+          - label: Sections
+            name: sections
+            widget: object
+            fields:
+              - { label: Story Eyebrow, name: storyEyebrow, widget: string }
+              - { label: Story Title, name: storyTitle, widget: string }
+              - { label: Story Body (First Paragraph), name: storyBodyOne, widget: text }
+              - { label: Story Body (Second Paragraph), name: storyBodyTwo, widget: text }
+              - label: Story Image
+                name: storyImage
+                widget: object
+                fields:
+                  - { label: Image Path, name: src, widget: string }
+                  - { label: Alt Text, name: alt, widget: string }
+                  - { label: Width, name: width, widget: number, default: 1365 }
+                  - { label: Height, name: height, widget: number, default: 2048 }
+              - { label: Proverb, name: proverb, widget: string }
+              - { label: Proverb Translation, name: proverbTranslation, widget: text }
+              - label: Proverb Image
+                name: proverbImage
+                widget: object
+                fields:
+                  - { label: Image Path, name: src, widget: string }
+                  - { label: Alt Text, name: alt, widget: string }
+                  - { label: Width, name: width, widget: number, default: 1365 }
+                  - { label: Height, name: height, widget: number, default: 2048 }
+              - { label: Features Eyebrow, name: featuresEyebrow, widget: string }
+              - { label: Features Title, name: featuresTitle, widget: string }
+              - { label: Creativity Eyebrow, name: creativityEyebrow, widget: string }
+              - { label: Creativity Title, name: creativityTitle, widget: string }
+              - { label: Creativity Body (First Paragraph), name: creativityBodyOne, widget: text }
+              - { label: Creativity Body (Second Paragraph), name: creativityBodyTwo, widget: text }
+              - { label: Final Section Eyebrow, name: finalEyebrow, widget: string }
+              - { label: Final Section Title, name: finalTitle, widget: string }
+              - { label: Final Section Description, name: finalDescription, widget: text }
+
+      - name: gallery
+        label: Gallery Page
+        file: content/pages/gallery.json
+        format: json
+        fields:
+          - label: SEO
+            name: seo
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Featured Image
+                name: image
+                widget: object
+                fields:
+                  - { label: Image Path, name: src, widget: string }
+                  - { label: Alt Text, name: alt, widget: string }
+                  - { label: Width, name: width, widget: number, default: 1365 }
+                  - { label: Height, name: height, widget: number, default: 2048 }
+          - label: CTA
+            name: cta
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Button Label, name: buttonLabel, widget: string }
+
+      - name: contact
+        label: Contact Page
+        file: content/pages/contact.json
+        format: json
+        fields:
+          - label: SEO
+            name: seo
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Hero Image
+                name: image
+                widget: object
+                fields:
+                  - { label: Image Path, name: src, widget: string }
+                  - { label: Alt Text, name: alt, widget: string }
+                  - { label: Width, name: width, widget: number, default: 1365 }
+                  - { label: Height, name: height, widget: number, default: 2048 }
+              - { label: Primary Button Label, name: primaryButtonLabel, widget: string }
+              - label: Secondary Button
+                name: secondaryButton
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Link, name: href, widget: string }
+          - label: Occasions
+            name: occasions
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Form Intro
+            name: formIntro
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Sidebar
+            name: sidebar
+            widget: object
+            fields:
+              - { label: Visit Eyebrow, name: visitEyebrow, widget: string }
+              - { label: Call Eyebrow, name: callEyebrow, widget: string }
+              - { label: Call Description, name: callDescription, widget: text }
+              - { label: Events Eyebrow, name: eventsEyebrow, widget: string }
+              - { label: Events Description, name: eventsDescription, widget: text }
+              - { label: Events Email, name: eventsEmail, widget: string }
+              - { label: Follow Eyebrow, name: followEyebrow, widget: string }
