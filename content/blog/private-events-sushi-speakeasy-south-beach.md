@@ -1,11 +1,11 @@
 ---
 title: "Private Events in South Beach: Why a Sushi Speakeasy Makes the Night Easier"
-slug: "private-events-sushi-speakeasy-south-beach"
-date: "2026-06-06"
+slug: private-events-sushi-speakeasy-south-beach
+date: 2026-06-06
 categories:
-  - "Events"
-  - "South Beach"
-featuredImage: "/uploads/blog/private-events-south-beach.svg"
+  - cocktails
+  - south-beach
+featuredImage: /uploads/blog/private-events-south-beach.svg
 ---
 
 Planning a private event in South Beach sounds exciting until the details start stacking up. You need a venue with atmosphere, food that works for different guests, drinks that feel special, and a layout that supports conversation instead of fighting it. You also need the night to feel polished without becoming complicated. That is why a sushi speakeasy can be such a strong choice for birthdays, group dinners, company celebrations, visiting friends, and private dining in Miami Beach.
