@@ -3,8 +3,7 @@ title: "Private Events in South Beach: Why a Sushi Speakeasy Makes the Night Eas
 slug: "private-events-sushi-speakeasy-south-beach"
 date: "2026-06-06"
 categories:
-  - "Private Events"
-  - "Celebrations"
+  - "Events"
   - "South Beach"
 featuredImage: "/uploads/blog/private-events-south-beach.svg"
 ---

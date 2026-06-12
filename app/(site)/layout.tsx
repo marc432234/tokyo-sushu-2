@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { pageOgImages, siteConfig, siteUrl } from "@/lib/site";
+import { getSiteConfig } from "@/lib/get-site-config";
+import { pageOgImages, siteUrl } from "@/lib/site";
+
+const siteConfig = getSiteConfig();
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
@@ -17,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteConfig.title,
     description: siteConfig.description,
-    url: siteConfig.social.website,
+    url: siteConfig.social?.website ?? "https://www.tokyosushispeakeasy.com",
     siteName: siteConfig.name,
     type: "website",
     images: [

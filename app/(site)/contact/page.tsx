@@ -5,9 +5,12 @@ import { CtaSection } from "@/components/sections/CtaSection";
 import { StructuredData } from "@/components/seo/StructuredData";
 import ScrollReveal from "@/components/ScrollReveal";
 import { BookingButton } from "@/components/ui/ReservationModal";
+import { getSiteConfig } from "@/lib/get-site-config";
 import { createPageMetadata } from "@/lib/metadata";
 import { getPageContent } from "@/lib/page-content";
-import { pageOgImages, siteConfig } from "@/lib/site";
+import { pageOgImages } from "@/lib/site";
+
+const siteConfig = getSiteConfig();
 
 const pageContent = getPageContent("contact");
 
@@ -160,7 +163,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex-1 flex flex-col justify-start items-start gap-2">
                   <span className="text-white">Visit us</span>
-                  <div className="self-stretch justify-start text-[#c0c0c0] text-base font-normal font-['Outfit'] leading-[22.40px]">1000 Collins Ave, Miami Beach, FL 33139</div>
+                  <div className="self-stretch justify-start text-[#c0c0c0] text-base font-normal font-['Outfit'] leading-[22.40px]">{siteConfig.address}</div>
                   <a href={siteConfig.mapsUrl} target="_blank" rel="noreferrer" className="self-stretch justify-start text-[#ad6d25] text-base font-normal font-['Outfit'] underline leading-[22.40px]">Open in maps</a>
                 </div>
               </div>
@@ -173,7 +176,7 @@ export default function ContactPage() {
                 <div className="flex-1 flex flex-col justify-start items-start gap-2">
                   <span className="text-white">Prefer to call?</span>
                   <div className="self-stretch justify-start text-[#c0c0c0] text-base font-light font-['Outfit'] leading-[22.40px]">For group bookings and same-day plans, calling is the fastest way to get everything sorted.</div>
-                  <a href="tel:+17867289318" className="self-stretch justify-start text-[#ad6d25] text-base font-normal font-['Outfit'] underline leading-[22.40px]">(786) 728-9318</a>
+                  <a href={siteConfig.phoneHref} className="self-stretch justify-start text-[#ad6d25] text-base font-normal font-['Outfit'] underline leading-[22.40px]">{siteConfig.phone}</a>
                 </div>
               </div>
               <div className="self-stretch flex justify-start items-start gap-3">
@@ -186,7 +189,7 @@ export default function ContactPage() {
                 <div className="flex-1 flex flex-col justify-start items-start gap-2">
                   <span className="text-white">Large parties &amp; private events</span>
                   <div className="self-stretch justify-start text-[#c0c0c0] text-base font-light font-['Outfit'] leading-[22.40px]">For groups of 15+ guests or private event inquiries, reach our events team directly.</div>
-                  <a href="mailto:events@fairwindhotelmiami.com" className="self-stretch justify-start text-[#ad6d25] text-base font-normal font-['Outfit'] underline leading-[22.40px]">events@fairwindhotelmiami.com</a>
+                  <a href={`mailto:${siteConfig.email}`} className="self-stretch justify-start text-[#ad6d25] text-base font-normal font-['Outfit'] underline leading-[22.40px]">{siteConfig.email}</a>
                 </div>
               </div>
               <div className="self-stretch flex justify-start items-start gap-3">
@@ -211,7 +214,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex-1 flex flex-col justify-start items-start gap-2">
                   <span className="text-white">HOURS</span>
-                  <div className="self-stretch justify-start text-[#c0c0c0] text-lg font-light font-['Outfit'] leading-[25.20px]">Wed-Mon 5PM-12AM</div>
+                  <div className="self-stretch justify-start text-[#c0c0c0] text-lg font-light font-['Outfit'] leading-[25.20px]">{siteConfig.hours}</div>
                 </div>
               </div>
             </div>

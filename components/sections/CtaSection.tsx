@@ -44,13 +44,13 @@ export function CtaSection() {
                 <path d="M10.8333 15L15.8333 10L10.8333 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
               </svg>
             </a>
-            <div className="h-14 px-6 outline outline-1 outline-offset-[-1px] outline-[#ac6e26] flex justify-center items-center gap-1">
+            <a href="tel:+17867289318" className="h-14 px-6 outline outline-1 outline-offset-[-1px] outline-[#ac6e26] flex justify-center items-center gap-1">
               <div className="text-[#ac6e26] text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">(786) 728-9318</div>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.4168 10H4.16675" stroke="#AC6E26" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
                 <path d="M10.8333 15L15.8333 10L10.8333 5" stroke="#AC6E26" strokeWidth="1.25" strokeLinejoin="round" />
               </svg>
-            </div>
+            </a>
           </div>
           <div className="text-[#ac6e26] text-base font-light font-['Outfit'] uppercase leading-[22.40px] tracking-[3.20px] text-center">Open Wednesday – Monday · 5:00 PM – 12:00 AM · 1000 Collins Ave, Miami Beach</div>
         </div>

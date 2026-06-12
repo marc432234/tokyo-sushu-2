@@ -3,9 +3,8 @@ title: "Date Night in South Beach: Why Sushi Keeps Things Fun, Easy, and Memorab
 slug: "date-night-sushi-south-beach"
 date: "2026-06-08"
 categories:
-  - "Date Night"
+  - "Experience"
   - "South Beach"
-  - "Sushi"
 featuredImage: "/uploads/blog/date-night-south-beach.svg"
 ---
 

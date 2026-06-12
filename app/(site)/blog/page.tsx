@@ -10,6 +10,6 @@ export const metadata = createPageMetadata({
   image: pageOgImages.home,
 });
 
-export default function BlogPage() {
+export default async function BlogPage() {
   return <BlogPageLayout page={1} />;
 }

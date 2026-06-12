@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { siteConfig } from "@/lib/site";
+import { getSiteConfig } from "@/lib/get-site-config";
+
+const siteConfig = getSiteConfig();
 
 const explore = [
   { href: "/", label: "Home" },
@@ -86,12 +88,11 @@ export function Footer() {
             <div className="mt-6 space-y-5 text-base tracking-wide">
               <div>
                 <p className="text-white">Tokyo Club Sushi Speakeasy</p>
-                <p className="mt-3 font-light text-white/60">1000 Collins Ave Miami Beach, FL 33139</p>
+                <p className="mt-3 font-light text-white/60">{siteConfig.address}</p>
               </div>
               <div>
                 <p className="text-white">Hours:</p>
-                <p className="mt-3 font-light leading-[1.4] text-white/60">Wednesday - Monday<br />5:00 PM - 12:00 AM</p>
-                <p className="mt-3 font-light text-(--accent-gold)/70">(Closed Tuesdays)</p>
+                <p className="mt-3 font-light leading-[1.4] text-white/60">{siteConfig.hours}</p>
               </div>
               <a href={siteConfig.phoneHref} className="btn-secondary w-fit">
                 {siteConfig.phone}

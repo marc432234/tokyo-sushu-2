@@ -7,7 +7,7 @@ const { GET: ksGET, POST } = makeRouteHandler({ config });
 export { POST };
 
 export async function GET(request: Request, context: { params: Promise<{ params: string[] }> }) {
-  const response = await ksGET(request, context);
+  const response = await ksGET(request);
 
   // Keystatic's githubLogin doesn't request `repo` scope, so the token can't
   // commit. Intercept the redirect to GitHub OAuth and inject scope=repo.

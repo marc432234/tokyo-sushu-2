@@ -3,9 +3,8 @@ title: "Planning a Sushi Night in South Beach? Here's How to Make It Feel Specia
 slug: "south-beach-sushi-night-guide"
 date: "2026-06-05"
 categories:
-  - "Sushi"
+  - "Experience"
   - "South Beach"
-  - "Guides"
 featuredImage: "/uploads/blog/south-beach-sushi-night-guide.svg"
 ---
 

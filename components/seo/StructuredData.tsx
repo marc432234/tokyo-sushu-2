@@ -1,5 +1,8 @@
-import { siteConfig, siteUrl } from "@/lib/site";
+import { getSiteConfig } from "@/lib/get-site-config";
+import { siteUrl } from "@/lib/site";
 import type { SiteImageAsset } from "@/lib/site";
+
+const siteConfig = getSiteConfig();
 
 type StructuredDataProps = {
   name: string;
@@ -28,7 +31,7 @@ function createRestaurantSchema() {
     priceRange: "$$$",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "1000 Collins Ave",
+      streetAddress: siteConfig.address.split(",")[0].trim(),
       addressLocality: "Miami Beach",
       addressRegion: "FL",
       postalCode: "33139",

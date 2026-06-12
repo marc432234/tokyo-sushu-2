@@ -3,9 +3,8 @@ title: "New to Sushi Menus? A Casual Guide to Ordering Well in Miami Beach"
 slug: "miami-sushi-menu-guide"
 date: "2026-06-09"
 categories:
-  - "Menu Guide"
-  - "Sushi"
-  - "Miami Beach"
+  - "Sushi Culture"
+  - "Miami Nightlife"
 featuredImage: "/uploads/blog/miami-sushi-menu-guide.svg"
 ---
 

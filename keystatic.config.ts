@@ -39,8 +39,13 @@ export default config({
         slug: fields.slug({ name: { label: 'Slug', description: 'URL-safe identifier, e.g. south-beach-sushi-night' } }),
         date: fields.date({ label: 'Date', defaultValue: { kind: 'today' } }),
         categories: fields.array(
-          fields.text({ label: 'Category' }),
-          { label: 'Categories', itemLabel: (props) => props.value }
+          fields.relationship({
+            label: 'Category',
+            collection: 'categories',
+          }),
+          {
+            label: 'Categories',
+          }
         ),
         featuredImage: fields.image({
           label: 'Featured Image',
@@ -48,6 +53,21 @@ export default config({
           publicPath: '/uploads/blog',
         }),
         body: fields.markdoc({ label: 'Content', options: {}, extension: 'md' }),
+      },
+    }),
+    categories: collection({
+      label: 'Categories',
+      slugField: 'slug',
+      path: 'content/categories/*',
+      schema: {
+        name: fields.text({
+          label: 'Category Name',
+        }),
+        slug: fields.slug({
+          name: {
+            label: 'Slug',
+          },
+        }),
       },
     }),
   },
@@ -272,6 +292,21 @@ export default config({
           eventsEmail: fields.text({ label: 'Events Email' }),
           followEyebrow: fields.text({ label: 'Follow Eyebrow' }),
         }, { label: 'Sidebar' }),
+      },
+    }),
+
+    settings: singleton({
+      label: 'Settings',
+      path: 'content/pages/settings',
+      format: { data: 'json' },
+      schema: {
+        phoneNumber: fields.text({ label: 'Phone Number', description: 'e.g. (786) 728-9318' }),
+        emailAddress: fields.text({ label: 'Email Address', description: 'e.g. info@tokyosushispeakeasy.com' }),
+        address: fields.text({ label: 'Address', multiline: true, description: 'Full address for display' }),
+        reservationLink: fields.text({ label: 'Reservation Link', description: 'e.g. OpenTable booking URL' }),
+        visitMenu: fields.text({ label: 'Visit Menu Label', multiline: true, description: 'Visit section content (footer, contact page)' }),
+        phoneNumberMenu: fields.text({ label: 'Phone Menu Label', description: 'Label for phone in navigation/menu' }),
+        addressMenu: fields.text({ label: 'Address Menu Label', description: 'Label for address in navigation/menu' }),
       },
     }),
   },

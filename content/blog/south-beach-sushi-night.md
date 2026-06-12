@@ -3,7 +3,7 @@ title: "How to Plan a South Beach Sushi Night"
 slug: "south-beach-sushi-night"
 date: "2026-06-04"
 categories:
-  - "Guides"
+  - "Sushi Culture"
   - "South Beach"
 featuredImage: "/pictures/15-japanese-dinner-spread-sushi-bao-dumplings.jpg"
 ---

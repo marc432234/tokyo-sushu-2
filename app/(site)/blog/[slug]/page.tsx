@@ -4,7 +4,9 @@ import { getAllBlogPosts, getBlogPostBySlug, formatPostDate } from "@/lib/blog";
 import { MarkdownContent } from "@/components/blog/MarkdownContent";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Carousel } from "@/components/ui/Carousel";
-import { siteConfig } from "@/lib/site";
+import { getSiteConfig } from "@/lib/get-site-config";
+
+const siteConfig = getSiteConfig();
 
 export function generateStaticParams() {
   return getAllBlogPosts().map((post) => ({

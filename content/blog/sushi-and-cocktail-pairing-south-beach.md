@@ -4,8 +4,7 @@ slug: "sushi-and-cocktail-pairing-south-beach"
 date: "2026-06-07"
 categories:
   - "Cocktails"
-  - "Sushi"
-  - "Dining Tips"
+  - "Sushi Culture"
 featuredImage: "/uploads/blog/sushi-cocktail-pairing.svg"
 ---
 
