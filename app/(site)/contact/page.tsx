@@ -31,7 +31,7 @@ export default function ContactPage() {
         description="Get in touch with Tokyo Club Sushi Speakeasy. Reserve a table, plan a private event, or reach our team at 1000 Collins Ave, South Beach."
       />
 
-      <section className="relative isolate min-h-[600px] pt-(--header-offset) pb-20 md:pb-32">
+      <section className="relative isolate min-h-[600px] pt-(--header-offset) pb-8 md:pb-32">
         <Image
           src={pageContent.hero.image.src}
           alt={pageContent.hero.image.alt}
@@ -63,7 +63,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-1/2 z-10 w-full max-w-[1360px] -translate-x-1/2 px-4 md:px-10 translate-y-1/2">
+        <div className="relative md:absolute md:bottom-0 md:left-1/2 z-10 w-full max-w-[1360px] md:-translate-x-1/2 px-4 md:px-10 md:translate-y-1/2">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {pageContent.occasions.map((occasion, index) => {
             const icons = [
@@ -109,7 +109,7 @@ export default function ContactPage() {
               </svg>,
             ];
             return (
-              <div key={occasion.title} className="p-6 bg-gradient-to-b from-[#cf183c]/10 to-[#cf183c]/25 rounded-lg outline outline-1 outline-white/20 backdrop-blur-[30px] flex flex-col justify-end items-start gap-4 overflow-hidden card-hover">
+              <div key={occasion.title} className="p-5 md:p-6 bg-gradient-to-b from-[#cf183c]/10 to-[#cf183c]/25 rounded-lg outline outline-1 outline-white/20 backdrop-blur-[30px] flex flex-col justify-end items-start gap-4 overflow-hidden card-hover">
                 <div className="self-stretch flex flex-col justify-start items-start gap-4">
                   {icons[index]}
                   <div className="self-stretch justify-start text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">{occasion.title}</div>
@@ -123,15 +123,15 @@ export default function ContactPage() {
       </section>
 
       <ScrollReveal>
-        <div className="container-shell pt-20 md:pt-[160px] pb-12 md:pb-20 flex justify-center items-center flex-wrap gap-4">
-          <a href={siteConfig.bookingUrl} className="h-14 px-6 py-[17px] bg-[#ad6d25] flex justify-center items-center gap-2.5 btn-glow">
+        <div className="container-shell pt-6 md:pt-[160px] pb-6 md:pb-20 flex justify-center items-center flex-wrap gap-4">
+          <a href={siteConfig.bookingUrl} className="w-full md:w-auto h-14 px-6 py-[17px] bg-[#ad6d25] flex justify-center items-center gap-2.5 btn-glow">
             <div className="justify-start text-white text-base font-normal font-['Outfit'] leading-[22.40px] tracking-[2.56px]">RESERVE A TABLE</div>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.4165 10H4.1665" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
               <path d="M10.8335 15L15.8335 10L10.8335 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
             </svg>
           </a>
-          <a href={siteConfig.phoneHref} className="h-14 px-6 py-[17px] flex justify-center items-center gap-1 btn-glow">
+          <a href={siteConfig.phoneHref} className="w-full md:w-auto h-14 px-6 py-[17px] flex justify-center items-center gap-1 btn-glow">
             <div className="justify-start text-white text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">Call to Plan</div>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.4165 10H4.1665" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
@@ -142,13 +142,13 @@ export default function ContactPage() {
       </ScrollReveal>
 
       <ScrollReveal>
-        <div className="container-shell pb-16 md:pb-[120px] flex flex-col md:flex-row justify-between items-start gap-4 md:gap-8">
+        <div className="container-shell pb-16 md:pb-[120px] flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8">
           <div className="w-full md:w-1/2 flex flex-col justify-start items-start gap-4 md:gap-8">
             <div className="self-stretch flex flex-col justify-start items-start gap-4">
               <div className="self-stretch flex flex-col justify-start items-start gap-4">
                 <div className="self-stretch justify-start">
-                  <span className="text-white text-2xl md:text-5xl font-normal font-['Lora'] leading-[57.60px]">Send us a </span>
-                  <span className="text-[#cf183c] text-2xl md:text-5xl font-normal font-['Lora'] leading-[57.60px]">message</span>
+                  <span className="text-white text-2xl md:text-5xl font-normal font-['Lora'] leading-[1.1] md:leading-[57.60px]">Send us a </span>
+                  <span className="text-[#cf183c] text-2xl md:text-5xl font-normal font-['Lora'] leading-[1.1] md:leading-[57.60px]">message</span>
                 </div>
                 <div className="self-stretch justify-start text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">{pageContent.formIntro.description}</div>
               </div>
@@ -219,27 +219,27 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-1/2 px-6 py-[49px] bg-white/5 rounded-2xl outline outline-1 outline-white/10 flex flex-col justify-start items-center gap-4 md:gap-8">
+          <div className="w-full md:w-1/2 px-4 py-8 md:px-6 md:py-[49px] bg-white/5 rounded-2xl outline outline-1 outline-white/10 flex flex-col justify-start items-center gap-4 md:gap-8">
             <div className="self-stretch flex flex-col justify-start items-start gap-4 md:gap-8">
-              <div className="self-stretch text-center justify-start text-white text-[32px] font-normal font-['Lora'] leading-[38.40px]">Drop a Message</div>
-              <div className="self-stretch flex flex-col justify-start items-start gap-4">
-                <div className="self-stretch px-5 py-3.5 bg-white/5 rounded-2xl outline outline-1 outline-white/10 flex justify-start items-center gap-2.5">
-                  <div className="flex-1 justify-start text-white/70 text-base font-light font-['Outfit'] leading-7 tracking-wide">Name</div>
+              <div className="self-stretch text-center justify-start text-white text-2xl md:text-[32px] font-normal font-['Lora'] leading-[1.2] md:leading-[38.40px]">Drop a Message</div>
+              <div className="self-stretch flex flex-col justify-start items-start gap-3 md:gap-4">
+                <div className="self-stretch px-4 py-3 md:px-5 md:py-3.5 bg-white/5 rounded-2xl outline outline-1 outline-white/10 flex justify-start items-center gap-2.5">
+                  <div className="flex-1 justify-start text-white/70 text-sm md:text-base font-light font-['Outfit'] leading-7 tracking-wide">Name</div>
                 </div>
-                <div className="self-stretch px-5 py-3.5 bg-white/5 rounded-2xl outline outline-1 outline-white/10 flex justify-start items-center gap-2.5">
-                  <div className="flex-1 justify-start text-white/70 text-base font-light font-['Outfit'] leading-7 tracking-wide">Email</div>
+                <div className="self-stretch px-4 py-3 md:px-5 md:py-3.5 bg-white/5 rounded-2xl outline outline-1 outline-white/10 flex justify-start items-center gap-2.5">
+                  <div className="flex-1 justify-start text-white/70 text-sm md:text-base font-light font-['Outfit'] leading-7 tracking-wide">Email</div>
                 </div>
-                <div className="self-stretch px-5 py-3.5 bg-white/5 rounded-2xl outline outline-1 outline-white/10 flex justify-start items-center gap-2.5">
-                  <div className="flex-1 justify-start text-white/70 text-base font-light font-['Outfit'] leading-7 tracking-wide">Phone Number</div>
+                <div className="self-stretch px-4 py-3 md:px-5 md:py-3.5 bg-white/5 rounded-2xl outline outline-1 outline-white/10 flex justify-start items-center gap-2.5">
+                  <div className="flex-1 justify-start text-white/70 text-sm md:text-base font-light font-['Outfit'] leading-7 tracking-wide">Phone Number</div>
                 </div>
-                <div className="self-stretch px-5 py-3.5 bg-white/5 rounded-2xl outline outline-1 outline-white/10 flex justify-start items-center gap-2.5">
-                  <div className="flex-1 justify-start text-white/70 text-lg font-light font-['Outfit'] leading-7 tracking-wide">Subject</div>
+                <div className="self-stretch px-4 py-3 md:px-5 md:py-3.5 bg-white/5 rounded-2xl outline outline-1 outline-white/10 flex justify-start items-center gap-2.5">
+                  <div className="flex-1 justify-start text-white/70 text-sm md:text-base font-light font-['Outfit'] leading-7 tracking-wide">Subject</div>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 9L12 15L18 9" stroke="white" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <div className="self-stretch h-40 p-5 bg-white/5 rounded-2xl outline outline-1 outline-white/10 flex justify-start items-start gap-2.5">
-                  <div className="flex-1 justify-start text-white/70 text-base font-light font-['Outfit'] leading-7 tracking-wide">Application Details</div>
+                <div className="self-stretch h-36 md:h-40 p-4 md:p-5 bg-white/5 rounded-2xl outline outline-1 outline-white/10 flex justify-start items-start gap-2.5">
+                  <div className="flex-1 justify-start text-white/70 text-sm md:text-base font-light font-['Outfit'] leading-7 tracking-wide">Application Details</div>
                 </div>
               </div>
             </div>
