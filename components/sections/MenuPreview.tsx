@@ -11,11 +11,22 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
   return (
     <section className="relative overflow-hidden bg-[#160206] py-14 lg:py-[clamp(4rem,8vw,7.5rem)]">
       <div className="pointer-events-none absolute inset-x-0 top-[30%] h-[50rem] bg-[url('/pictures/sushi-bg-10.png')] bg-cover bg-center" />
+      <div className="pointer-events-none absolute top-20 left-0">
+        <svg width="47" height="95" viewBox="0 0 47 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="-0.5" cy="47.5" r="46.5" stroke="#CF183C" stroke-opacity="0.3" stroke-width="2"/>
+        </svg>
+      </div>
+      <div className="pointer-events-none absolute bottom-4 right-4">
+        <svg width="280" height="226" viewBox="0 0 280 226" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="197" cy="168" r="167" stroke="#CF183C" stroke-opacity="0.3" stroke-width="2"/>
+          <circle cx="47.5" cy="92.5" r="46.5" stroke="#CF183C" stroke-opacity="0.3" stroke-width="2"/>
+        </svg>
+      </div>
       <div className="container-shell flex flex-col justify-start items-center gap-12">
         <div className="flex flex-col justify-start items-center gap-6">
           <span className="eyebrow text-white">Japanese speakeasy meets Miami nightlife</span>
           <div className="flex flex-col justify-start items-center gap-4">
-            <div className="max-w-[898px] text-center text-[#cf183c] text-5xl font-normal font-['Lora'] leading-[57.60px]">Sushi precision, cocktail drama, and late-night share plates.</div>
+            <div className="max-w-[898px] text-center text-[#cf183c] text-3xl md:text-5xl font-normal font-['Lora'] leading-[57.60px]">Sushi precision, cocktail drama, and late-night share plates.</div>
             <div className="max-w-[812px] text-center text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Edomae technique meets South Beach decadence. From clean-cut nigiri to 24K gold-topped signature rolls — every dish is built for the table after dark.</div>
           </div>
         </div>
@@ -173,7 +184,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
         </div>
       </div>
       <div className="container-shell flex flex-col justify-center items-center gap-10 pt-20">
-        <div className="text-center"><span className="text-white text-[40px] font-normal font-['Lora'] leading-[48px]">The full </span><span className="text-[#cf183c] text-[40px] font-normal font-['Lora'] leading-[48px]">ritual</span><span className="text-white text-[40px] font-normal font-['Lora'] leading-[48px]"> awaits.</span></div>
+        <div className="text-center"><span className="text-white text-3xl md:text-[40px] font-normal font-['Lora'] leading-[48px]">The full </span><span className="text-[#cf183c] text-3xl md:text-[40px] font-normal font-['Lora'] leading-[48px]">ritual</span><span className="text-white text-3xl md:text-[40px] font-normal font-['Lora'] leading-[48px]"> awaits.</span></div>
         <div className="h-14 px-6 py-[17px] bg-[#ac6e26] inline-flex justify-center items-center gap-2.5 btn-glow">
           <div className="text-white text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">View the Complete Menu</div>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

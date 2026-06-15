@@ -127,8 +127,6 @@ export default function ExperiencePage() {
           priority
           className="absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-70"
         />
-        <div className="absolute inset-0 -z-10 bg-black/70" />
-        <div className="absolute inset-0 -z-10 bg-linear-to-b from-black/10 via-[#170307]/35 to-[#170307]" />
 
         <div className="container-shell flex min-h-[calc(600px-var(--header-offset))] items-center">
           <div className="max-w-[39rem] pb-14 pt-20">
@@ -167,15 +165,15 @@ export default function ExperiencePage() {
               <p className="mt-5 text-base font-light leading-[1.55] tracking-wide text-white/65">
                 {sectionText("storyBodyTwo")}
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <BookingButton className="h-14 px-6 py-[17px] bg-[#ad6d25] flex justify-center items-center gap-2.5 btn-glow">
+              <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                <BookingButton className="w-full sm:w-auto h-14 px-6 py-[17px] bg-[#ad6d25] flex justify-center items-center gap-2.5 btn-glow">
                   <div className="justify-start text-white text-base font-normal font-['Outfit'] leading-[22.40px] tracking-[2.56px]">RESERVE A TABLE</div>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.4165 10H4.1665" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
                     <path d="M10.8335 15L15.8335 10L10.8335 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
                   </svg>
                 </BookingButton>
-                <Link href="/gallery" className="h-14 px-6 py-[17px] flex justify-center items-center gap-1 btn-glow">
+                <Link href="/gallery" className="w-full sm:w-auto h-14 px-6 py-[17px] flex justify-center items-center gap-1 btn-glow outline outline-1 outline-transparent transition-all duration-300 hover:outline-[#ad6d25]">
                   <div className="justify-start text-white text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">See the Space</div>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.4165 10H4.1665" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />

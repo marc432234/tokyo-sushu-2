@@ -46,7 +46,7 @@ export default function HomePage() {
           
         <div className="container-shell flex flex-col items-center gap-10">
 
-          <div className="max-w-[984px] text-center text-5xl font-normal font-['Lora'] leading-[57.60px] text-white/80">&quot;Premium sushi. Sculpted cocktails. A room that moves on its own frequency.&quot;</div>
+          <div className="max-w-[984px] text-center text-3xl md:text-5xl font-normal font-['Lora'] leading-[57.60px] text-white/80">&quot;Premium sushi. Sculpted cocktails. A room that moves on its own frequency.&quot;</div>
           <hr className="w-full border-white/16" />
           <div className="text-center text-base font-light font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px] text-[#ac6e26]">Tokyo Club Sushi Speakeasy — South Beach, Miami</div>
         </div>

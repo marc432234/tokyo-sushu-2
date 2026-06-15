@@ -17,7 +17,7 @@ export function EventOccasions() {
         <div className="container-shell flex flex-col lg:flex-row justify-between items-start gap-6">
           <div className="max-w-[883px] flex flex-col justify-start items-start gap-6">
             <span className="eyebrow text-white">Host your night the Tokyo way</span>
-            <div className="text-white text-5xl font-normal font-['Lora'] leading-[57.60px]">Built for celebrations, group plans, and after-dark momentum.</div>
+            <div className="text-white text-3xl md:text-5xl font-normal font-['Lora'] leading-[57.60px]">Built for celebrations, group plans, and after-dark momentum.</div>
             <div className="text-white text-base font-normal font-['Outfit'] leading-[22.40px]">Open the occasion that matches the night you are planning.</div>
           </div>
           <a href="https://www.opentable.com/r/tokyo-club-reservations-miami-beach?restref=1480237&lang=en-US&ot_source=Restaurant%20website&ot_campaign=LP&utm_source=google&utm_medium=cpc&utm_campaign=tokyo_search" className="h-12 px-4 py-[13px] outline outline-1 outline-offset-[-1px] outline-[#ac6e26] flex justify-center items-center gap-2.5 btn-glow">

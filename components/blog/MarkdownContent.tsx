@@ -40,7 +40,7 @@ export function MarkdownContent({ content }: { content: string }) {
           return (
             <h3
               key={index}
-              className="font-display text-3xl leading-tight text-stone-50"
+              className="font-display text-xl md:text-3xl leading-tight text-stone-50"
             >
               {renderInline(trimmed.replace(/^### /, ""))}
             </h3>
@@ -51,7 +51,7 @@ export function MarkdownContent({ content }: { content: string }) {
           return (
             <h2
               key={index}
-              className="pt-4 font-display text-4xl leading-tight text-stone-50"
+              className="pt-4 font-display text-2xl md:text-4xl leading-tight text-stone-50"
             >
               {renderInline(trimmed.replace(/^## /, ""))}
             </h2>
@@ -62,7 +62,7 @@ export function MarkdownContent({ content }: { content: string }) {
           return (
             <h1
               key={index}
-              className="font-display text-5xl leading-tight text-stone-50"
+              className="font-display text-3xl md:text-5xl leading-tight text-stone-50"
             >
               {renderInline(trimmed.replace(/^# /, ""))}
             </h1>

@@ -94,9 +94,9 @@ export function SocialProof({ content }: { content: HomePageContent["socialProof
         </div>
 
         <div className="mt-12 overflow-hidden">
-          <div ref={trackRef} className="flex gap-5" style={{ transform: `translateX(0%)` }}>
+          <div ref={trackRef} className="flex gap-5 w-full" style={{ transform: `translateX(0%)` }}>
             {items.map((testimonial, i) => (
-              <article key={`${testimonial.author}-${i}`} className="figma-card min-w-0 shrink-0 grow-0 rounded-[12px] border-0" style={{ flexBasis: `calc(100% / ${visible} - 10px)` }}>
+              <article key={`${testimonial.author}-${i}`} className="figma-card min-w-0 shrink-0 grow-0 rounded-[12px] border-0" style={{ flexBasis: `calc((100% - ${(visible - 1) * 20}px) / ${visible})` }}>
                 <div className="flex gap-1 text-(--accent-gold) p-6 pb-0" aria-label="5 star rating">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <span key={i}>★</span>

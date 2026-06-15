@@ -134,7 +134,7 @@ function SectionRenderer({
                 </span>
               )}
             </div>
-            <div className="max-w-full text-white text-base font-light font-(family-name:--font-body) leading-[22.40px] tracking-wide">
+            <div className="max-w-full text-white text-base font-normal font-(family-name:--font-body) leading-[22.40px] tracking-[0.05em]">
               {section.description}
             </div>
           </div>
@@ -157,7 +157,7 @@ function ItemsContent({ section }: { section: Section }) {
       {section.rows.map((row, rowIndex) => {
         const isLastRow = rowIndex === rowCount - 1;
         const showQuote = isLastRow && section.quote;
-        const cols = row.length >= 3 ? "md:grid-cols-3" : "md:grid-cols-2";
+        const cols = row.length >= 3 || showQuote ? "md:grid-cols-3" : "md:grid-cols-2";
 
         return (
           <div
@@ -189,8 +189,8 @@ function ItemsContent({ section }: { section: Section }) {
 
 function MenuItemCard({ item }: { item: MenuItem }) {
   return (
-    <div className="p-4 md:p-6 bg-white/5 rounded-lg card-hover outline outline-1 outline-white/10 flex justify-between items-center">
-      <div className="flex-1 flex flex-col justify-start items-start gap-1.5">
+    <div className="p-4 md:p-6 bg-white/5 rounded-lg card-hover outline outline-1 outline-white/10 flex justify-between items-start">
+      <div className="flex-1 flex flex-col justify-start items-start gap-8">
         {item.badge && (
           <div className="px-2 py-[5px] bg-[#ad6d25] inline-flex justify-center items-center gap-2.5">
             <div className="text-black text-xs font-normal font-(family-name:--font-body) uppercase leading-4 tracking-widest">
@@ -198,11 +198,13 @@ function MenuItemCard({ item }: { item: MenuItem }) {
             </div>
           </div>
         )}
-        <div className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[28.80px]">
-          {item.name}
-        </div>
-        <div className="self-stretch text-white text-base font-light font-(family-name:--font-body) leading-[22.40px] tracking-wide">
-          {item.description}
+        <div className="self-stretch flex flex-col justify-start items-start gap-1.5">
+          <div className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[28.80px]">
+            {item.name}
+          </div>
+          <div className="self-stretch text-white text-base font-normal font-(family-name:--font-body) leading-[22.40px] tracking-[0.05em]">
+            {item.description}
+          </div>
         </div>
       </div>
       <div className="text-[#ad6d25] text-2xl font-normal font-(family-name:--font-display) leading-[28.80px] ml-4">
@@ -215,7 +217,7 @@ function MenuItemCard({ item }: { item: MenuItem }) {
 function FeaturedCard({ item }: { item: MenuItem & { badge: string } }) {
   return (
     <div className="self-stretch p-4 md:p-6 bg-white/5 rounded-lg card-hover btn-glow outline outline-1 outline-[#ad6d25] flex justify-between items-start gap-6 flex-wrap">
-      <div className="flex-1 flex flex-col justify-start items-start gap-6">
+      <div className="flex-1 flex flex-col justify-start items-start gap-8">
         <div className="px-2 py-[5px] bg-[#ad6d25] inline-flex justify-center items-center gap-2.5">
           <div className="text-black text-xs font-normal font-(family-name:--font-body) uppercase leading-4 tracking-widest">
             {item.badge}
@@ -225,7 +227,7 @@ function FeaturedCard({ item }: { item: MenuItem & { badge: string } }) {
           <div className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[28.80px]">
             {item.name}
           </div>
-          <div className="self-stretch text-white text-base font-light font-(family-name:--font-body) leading-[22.40px] tracking-wide">
+          <div className="self-stretch text-white text-base font-normal font-(family-name:--font-body) leading-[22.40px] tracking-[0.05em]">
             {item.description}
           </div>
         </div>
@@ -254,7 +256,7 @@ function ImageFeatureSection({ feature }: { feature: NonNullable<Section["imageF
             <div className="self-stretch text-white text-xl md:text-[32px] font-normal font-(family-name:--font-display) leading-[38.40px]">
               {feature.title}
             </div>
-            <div className="self-stretch text-white text-base font-light font-(family-name:--font-body) leading-[22.40px] tracking-wide">
+            <div className="self-stretch text-white text-base font-normal font-(family-name:--font-body) leading-[22.40px] tracking-[0.05em]">
               {feature.description}
             </div>
           </div>
@@ -269,8 +271,8 @@ function ImageFeatureSection({ feature }: { feature: NonNullable<Section["imageF
 
 function SaucesRow({ sauces }: { sauces: NonNullable<Section["sauces"]> }) {
   return (
-    <div className="w-full p-4 md:p-6 bg-white/5 rounded-lg card-hover outline outline-1 outline-white/10 overflow-hidden">
-      <div className="flex justify-start items-center gap-12 flex-wrap">
+    <div className="w-full p-4 md:p-6 bg-white/5 card-hover outline outline-1 outline-white/10 overflow-hidden">
+        <div className="flex justify-center items-center gap-12 flex-wrap">
         <div className="text-white text-xl md:text-[32px] font-normal font-(family-name:--font-body) leading-[44.80px]">
           House Sauces
         </div>
@@ -279,7 +281,7 @@ function SaucesRow({ sauces }: { sauces: NonNullable<Section["sauces"]> }) {
             <div className="text-white text-xl font-normal font-(family-name:--font-body) leading-7">
               {sauce.name}
             </div>
-            <div className="w-4 h-0 rotate-90 outline outline-1 outline-offset-[-0.50px] outline-white/30" />
+            <div className="w-[1px] h-4 bg-white/32" />
             <div className="text-white text-xl font-light font-(family-name:--font-body) uppercase leading-7">
               {sauce.price}
             </div>
@@ -326,7 +328,7 @@ function CocktailCard({ item }: { item: CardItem }) {
             ))}
           </div>
         )}
-        <div className="self-stretch text-white/60 text-base font-light font-(family-name:--font-body) leading-[22.40px] tracking-wide">
+        <div className="self-stretch text-white/60 text-base font-normal font-(family-name:--font-body) leading-[22.40px] tracking-[0.05em]">
           {item.description}
         </div>
         <div className="self-stretch text-[#ad6d25] text-2xl font-light font-(family-name:--font-body) leading-[33.60px] tracking-wide">
@@ -370,7 +372,7 @@ function SakeCard({ item }: { item: CardItem }) {
         <div className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[33.60px]">
           {item.name}
         </div>
-        <div className="self-stretch text-white/60 text-base font-light font-(family-name:--font-body) leading-[22.40px] tracking-wide">
+        <div className="self-stretch text-white/60 text-base font-normal font-(family-name:--font-body) leading-[22.40px] tracking-[0.05em]">
           {item.description}
         </div>
         {item.extra && (
@@ -405,7 +407,7 @@ function DessertCard({ item }: { item: CardItem }) {
         <div className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[33.60px]">
           {item.name}
         </div>
-        <div className="self-stretch text-white/60 text-base font-light font-(family-name:--font-body) leading-[22.40px] tracking-wide">
+        <div className="self-stretch text-white/60 text-base font-normal font-(family-name:--font-body) leading-[22.40px] tracking-[0.05em]">
           {item.description}
         </div>
         <div className="self-stretch text-[#ad6d25] text-2xl font-light font-(family-name:--font-body) leading-[33.60px] tracking-wide">

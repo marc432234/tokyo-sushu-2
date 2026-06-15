@@ -71,7 +71,7 @@ export const menuSections: Section[] = [
         {
           name: "Super Crunch Shrimp",
           description: "Crispy battered shrimp served with house eel sauce.",
-          price: "$9",
+          price: "$12",
         },
         {
           name: "Chicken Yakitori",
@@ -96,7 +96,7 @@ export const menuSections: Section[] = [
       name: "Tuna Tataki",
       description:
         "Seared tuna loin coated with sesame seeds, served with yellow chili sauce and pickled onions. The starter South Beach orders twice.",
-      price: "$11",
+      price: "$20",
       badge: "Chef's Pick",
     },
   },
@@ -253,7 +253,7 @@ export const menuSections: Section[] = [
           name: "Sexy Roll",
           description:
             "Kani, crispy shrimp & cream cheese topped with avocado and spicy salmon. Eight pieces.",
-          price: "$34",
+          price: "$24",
         },
       ],
       [

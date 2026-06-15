@@ -32,7 +32,7 @@ export function CtaSection() {
           <div className="flex flex-col justify-center items-center gap-6">
             <span className="eyebrow text-white">Secure Your NighT</span>
             <div className="flex flex-col justify-center items-center gap-4">
-              <div className="text-center"><span className="text-white text-5xl font-normal font-['Lora'] leading-[57.60px]">Ready for the </span><span className="text-[#cf183c] text-5xl font-normal font-['Lora'] leading-[57.60px]">Ritual</span><span className="text-[#cf183c] text-5xl font-normal font-['Lora'] leading-[57.60px]">?</span></div>
+              <div className="text-center"><span className="text-white text-3xl md:text-5xl font-normal font-['Lora'] leading-[57.60px]">Ready for the </span><span className="text-[#cf183c] text-3xl md:text-5xl font-normal font-['Lora'] leading-[57.60px]">Ritual</span><span className="text-[#cf183c] text-3xl md:text-5xl font-normal font-['Lora'] leading-[57.60px]">?</span></div>
               <div className="max-w-[644px] text-center text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Reservations recommended · Walk-ins welcome when available</div>
             </div>
           </div>
@@ -44,7 +44,7 @@ export function CtaSection() {
                 <path d="M10.8333 15L15.8333 10L10.8333 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
               </svg>
             </a>
-            <a href="tel:+17867289318" className="w-full md:w-auto h-14 px-6 outline outline-1 outline-offset-[-1px] outline-[#ac6e26] flex justify-center items-center gap-1">
+            <a href="tel:+17867289318" className="btn-secondary w-full md:w-auto gap-1">
               <div className="text-[#ac6e26] text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">(786) 728-9318</div>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.4168 10H4.16675" stroke="#AC6E26" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />

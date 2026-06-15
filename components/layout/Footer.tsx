@@ -17,7 +17,7 @@ const highlights = ["Nigiri & Sashimi", "Signature Rolls", "Cocktails & Sake", "
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-black pb-8 pt-16">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-black pb-8 pt-[100px]">
       <Image
         src="/pictures/footer-bg.png"
         alt="Tokyo Club Sushi Speakeasy interior ambiance"

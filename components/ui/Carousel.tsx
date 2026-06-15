@@ -13,7 +13,7 @@ type CarouselProps = {
 export function Carousel({ children, visibleCount = 3, eyebrow, title, description }: CarouselProps) {
   const items = Array.isArray(children) ? children : [children];
   const total = items.length;
-  const extended = [...items, ...items.slice(0, 2)];
+  const extended = [...items, ...items.slice(0, visibleCount)];
   const [current, setCurrent] = useState(0);
   const currentRef = useRef(0);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -86,7 +86,7 @@ export function Carousel({ children, visibleCount = 3, eyebrow, title, descripti
         </div>
       )}
       <div className="relative mt-12 overflow-hidden">
-        <div ref={trackRef} className="flex gap-6" style={{ transform: "translateX(0%)" }}>
+        <div ref={trackRef} className="flex gap-6 w-full" style={{ transform: "translateX(0%)" }}>
           {extended.map((child, i) => (
             <div key={i} className="min-w-0 shrink-0 grow-0 flex" style={{ flexBasis: `calc((100% - ${(visibleCount - 1) * 24}px) / ${visibleCount})` }}>
               {child}
