@@ -1,8 +1,8 @@
 import { getSettings } from "./settings";
 import { siteConfig } from "./site";
 
-export function getSiteConfig() {
-  const settings = getSettings();
+export async function getSiteConfig() {
+  const settings = await getSettings();
   const phoneDigits = settings.phoneNumber.replace(/\D/g, "");
   const encodedAddress = settings.address.replace(/\s+/g, "+").replace(/,/g, "%2C");
 

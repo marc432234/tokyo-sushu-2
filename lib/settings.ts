@@ -1,7 +1,6 @@
-import fs from "fs";
-import path from "path";
+import { cache } from "react";
 
-const settingsPath = path.join(process.cwd(), "content/pages/settings.json");
+import { getSupabaseClient } from "./supabase";
 
 export type SiteSettings = {
   phoneNumber: string;
@@ -13,7 +12,16 @@ export type SiteSettings = {
   addressMenu: string;
 };
 
-export function getSettings(): SiteSettings {
-  const source = fs.readFileSync(settingsPath, "utf8");
-  return JSON.parse(source) as SiteSettings;
-}
+export const getSettings = cache(async (): Promise<SiteSettings> => {
+  const { data, error } = await getSupabaseClient()
+    .from("pages")
+    .select("content")
+    .eq("key", "settings")
+    .single();
+
+  if (error || !data) {
+    throw new Error(`Failed to load settings: ${error?.message ?? "not found"}`);
+  }
+
+  return data.content as SiteSettings;
+});

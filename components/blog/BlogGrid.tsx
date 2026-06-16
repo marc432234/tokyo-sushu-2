@@ -16,7 +16,7 @@ export function BlogGrid({ posts, page, categorySlug }: { posts: BlogPost[]; pag
   if (posts.length === 0) {
     return (
       <div className="rounded-lg border border-white/10 bg-white/[0.03] p-8 text-stone-300">
-        Blog posts will appear here after they are published from Decap CMS.
+        Blog posts will appear here once they are published from the admin.
       </div>
     );
   }

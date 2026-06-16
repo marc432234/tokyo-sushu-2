@@ -6,12 +6,16 @@ import { BlogPageLayout } from "@/components/blog/BlogPageLayout";
 
 const PER_PAGE = 4;
 
-export function generateStaticParams() {
-  const posts = getAllBlogPosts();
-  const totalPages = Math.ceil(posts.length / PER_PAGE);
-  return Array.from({ length: totalPages - 1 }, (_, i) => ({
-    page: String(i + 2),
-  }));
+export async function generateStaticParams() {
+  try {
+    const posts = await getAllBlogPosts();
+    const totalPages = Math.ceil(posts.length / PER_PAGE);
+    return Array.from({ length: totalPages - 1 }, (_, i) => ({
+      page: String(i + 2),
+    }));
+  } catch {
+    return [];
+  }
 }
 
 type Props = {
@@ -34,7 +38,7 @@ export default async function BlogPagePaginated({ params }: Props) {
 
   if (!Number.isInteger(pageNum) || pageNum < 2) notFound();
 
-  const posts = getAllBlogPosts();
+  const posts = await getAllBlogPosts();
   const totalPages = Math.ceil(posts.length / 4);
   if (pageNum > totalPages) notFound();
 

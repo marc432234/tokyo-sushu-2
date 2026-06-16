@@ -14,7 +14,7 @@ const pages = [
   { path: "/contact", priority: 0.6, changeFrequency: "monthly" as const },
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = siteConfig.social.website.replace(/\/$/, "");
   const staticPages = pages.map((page) => ({
     url: `${baseUrl}${page.path}`,
@@ -22,12 +22,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: page.changeFrequency,
     priority: page.priority,
   }));
-  const blogPosts = getAllBlogPosts().map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
+
+  let blogPosts: MetadataRoute.Sitemap = [];
+  try {
+    blogPosts = (await getAllBlogPosts()).map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }));
+  } catch {
+    // Supabase unreachable at build time — ship the static pages only.
+  }
 
   return [...staticPages, ...blogPosts];
 }

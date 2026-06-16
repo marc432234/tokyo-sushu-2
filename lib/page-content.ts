@@ -1,7 +1,6 @@
-import fs from "fs";
-import path from "path";
+import { cache } from "react";
 
-const pagesDirectory = path.join(process.cwd(), "content/pages");
+import { getSupabaseClient } from "./supabase";
 
 export type CmsImage = {
   src: string;
@@ -128,12 +127,21 @@ type PageContentMap = {
   };
 };
 
-export function getPageContent<TPage extends keyof PageContentMap>(page: TPage): PageContentMap[TPage] {
-  const filePath = path.join(pagesDirectory, `${page}.json`);
-  const source = fs.readFileSync(filePath, "utf8");
+export const getPageContent = cache(
+  async <TPage extends keyof PageContentMap>(page: TPage): Promise<PageContentMap[TPage]> => {
+    const { data, error } = await getSupabaseClient()
+      .from("pages")
+      .select("content")
+      .eq("key", page)
+      .single();
 
-  return JSON.parse(source) as PageContentMap[TPage];
-}
+    if (error || !data) {
+      throw new Error(`Failed to load page content "${page}": ${error?.message ?? "not found"}`);
+    }
+
+    return data.content as PageContentMap[TPage];
+  },
+);
 
 export function imageDimensions(image: CmsImage): Required<Pick<CmsImage, "width" | "height">> {
   return {

@@ -13,13 +13,13 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
       <div className="pointer-events-none absolute inset-x-0 top-[30%] h-[50rem] bg-[url('/pictures/sushi-bg-10.png')] bg-cover bg-center" />
       <div className="pointer-events-none absolute top-20 left-0">
         <svg width="47" height="95" viewBox="0 0 47 95" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="-0.5" cy="47.5" r="46.5" stroke="#CF183C" stroke-opacity="0.3" stroke-width="2"/>
+          <circle cx="-0.5" cy="47.5" r="46.5" stroke="#CF183C" strokeOpacity="0.3" strokeWidth="2"/>
         </svg>
       </div>
       <div className="pointer-events-none absolute bottom-4 right-4">
         <svg width="280" height="226" viewBox="0 0 280 226" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="197" cy="168" r="167" stroke="#CF183C" stroke-opacity="0.3" stroke-width="2"/>
-          <circle cx="47.5" cy="92.5" r="46.5" stroke="#CF183C" stroke-opacity="0.3" stroke-width="2"/>
+          <circle cx="197" cy="168" r="167" stroke="#CF183C" strokeOpacity="0.3" strokeWidth="2"/>
+          <circle cx="47.5" cy="92.5" r="46.5" stroke="#CF183C" strokeOpacity="0.3" strokeWidth="2"/>
         </svg>
       </div>
       <div className="container-shell flex flex-col justify-start items-center gap-12">

@@ -6,12 +6,14 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { Carousel } from "@/components/ui/Carousel";
 import { getSiteConfig } from "@/lib/get-site-config";
 
-const siteConfig = getSiteConfig();
-
-export function generateStaticParams() {
-  return getAllBlogPosts().map((post) => ({
-    slug: post.slug,
-  }));
+export async function generateStaticParams() {
+  try {
+    const posts = await getAllBlogPosts();
+    return posts.map((post) => ({ slug: post.slug }));
+  } catch {
+    // Supabase may be unreachable at build time; render on demand instead.
+    return [];
+  }
 }
 
 type Props = {
@@ -20,8 +22,10 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
+  const post = await getBlogPostBySlug(slug);
   if (!post) return {};
+
+  const siteConfig = await getSiteConfig();
 
   return {
     title: `${post.title} | Tokyo Club Blog`,
@@ -55,11 +59,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
+  const post = await getBlogPostBySlug(slug);
 
   if (!post) notFound();
 
-  const otherPosts = getAllBlogPosts().filter((p) => p.slug !== slug).slice(0, 5);
+  const otherPosts = (await getAllBlogPosts()).filter((p) => p.slug !== slug).slice(0, 5);
 
   return (
     <div className="overflow-x-hidden bg-[#160206] text-white">

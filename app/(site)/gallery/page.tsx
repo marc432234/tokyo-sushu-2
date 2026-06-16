@@ -6,16 +6,18 @@ import { createPageMetadata } from "@/lib/metadata";
 import { getPageContent } from "@/lib/page-content";
 import { pageOgImages } from "@/lib/site";
 
-const pageContent = getPageContent("gallery");
+export async function generateMetadata() {
+  const pageContent = await getPageContent("gallery");
+  return createPageMetadata({
+    path: "/gallery",
+    title: pageContent.seo.title,
+    description: pageContent.seo.description,
+    image: pageOgImages.gallery,
+  });
+}
 
-export const metadata = createPageMetadata({
-  path: "/gallery",
-  title: pageContent.seo.title,
-  description: pageContent.seo.description,
-  image: pageOgImages.gallery,
-});
-
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const pageContent = await getPageContent("gallery");
   return (
     <>
       <StructuredData

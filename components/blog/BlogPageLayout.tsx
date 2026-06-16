@@ -15,8 +15,8 @@ const allCategories = [
   { name: "South Beach", slug: "south-beach" },
 ];
 
-export function BlogPageLayout({ page, categorySlug }: { page: number; categorySlug?: string }) {
-  const allPosts = getAllBlogPosts();
+export async function BlogPageLayout({ page, categorySlug }: { page: number; categorySlug?: string }) {
+  const allPosts = await getAllBlogPosts();
   const posts = categorySlug
     ? allPosts.filter((p) => p.categories.some((c) => c.toLowerCase().replace(/\s+/g, "-") === categorySlug))
     : allPosts;

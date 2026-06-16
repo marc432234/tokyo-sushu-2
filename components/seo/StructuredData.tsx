@@ -2,7 +2,7 @@ import { getSiteConfig } from "@/lib/get-site-config";
 import { siteUrl } from "@/lib/site";
 import type { SiteImageAsset } from "@/lib/site";
 
-const siteConfig = getSiteConfig();
+type SiteConfig = Awaited<ReturnType<typeof getSiteConfig>>;
 
 type StructuredDataProps = {
   name: string;
@@ -17,7 +17,7 @@ function absoluteUrl(path: string) {
   return new URL(path, siteUrl).toString();
 }
 
-function createRestaurantSchema() {
+function createRestaurantSchema(siteConfig: SiteConfig) {
   return {
     "@type": "Restaurant",
     "@id": absoluteUrl("#restaurant"),
@@ -83,19 +83,17 @@ function createBreadcrumbList(path: string) {
   };
 }
 
-function createStructuredData({
-  name,
-  path,
-  image,
-  description = siteConfig.description,
-}: StructuredDataProps) {
+function createStructuredData(
+  siteConfig: SiteConfig,
+  { name, path, image, description }: StructuredDataProps,
+) {
   const pageUrl = absoluteUrl(path);
   const imageUrl = absoluteUrl(image.src);
 
   return {
     "@context": "https://schema.org",
     "@graph": [
-      createRestaurantSchema(),
+      createRestaurantSchema(siteConfig),
       createBreadcrumbList(path),
       {
         "@type": "WebSite",
@@ -111,7 +109,7 @@ function createStructuredData({
         "@id": `${pageUrl}#webpage`,
         name,
         url: pageUrl,
-        description,
+        description: description ?? siteConfig.description,
         isPartOf: {
           "@id": absoluteUrl("#website"),
         },
@@ -133,12 +131,13 @@ function createStructuredData({
   };
 }
 
-export function StructuredData(props: StructuredDataProps) {
+export async function StructuredData(props: StructuredDataProps) {
+  const siteConfig = await getSiteConfig();
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(createStructuredData(props)),
+        __html: JSON.stringify(createStructuredData(siteConfig, props)),
       }}
     />
   );

@@ -22,7 +22,7 @@ export function GalleryTeaser({ content }: { content: HomePageContent["galleryTe
     <section className="relative bg-[#170307] pb-[120px] pt-[clamp(4rem,8vw,7.5rem)]">
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/4 scale-[0.80] origin-top">
         <svg width="607" height="439" viewBox="0 0 607 439" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="303.5" cy="135.5" r="302.5" stroke="#CF183C" stroke-opacity="0.3" stroke-width="2"/>
+          <circle cx="303.5" cy="135.5" r="302.5" stroke="#CF183C" strokeOpacity="0.3" strokeWidth="2"/>
         </svg>
       </div>
       <div className="container-shell">

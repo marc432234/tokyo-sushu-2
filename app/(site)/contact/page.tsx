@@ -10,18 +10,19 @@ import { createPageMetadata } from "@/lib/metadata";
 import { getPageContent } from "@/lib/page-content";
 import { pageOgImages } from "@/lib/site";
 
-const siteConfig = getSiteConfig();
+export async function generateMetadata() {
+  const pageContent = await getPageContent("contact");
+  return createPageMetadata({
+    path: "/contact",
+    title: pageContent.seo.title,
+    description: pageContent.seo.description,
+    image: pageOgImages.contact,
+  });
+}
 
-const pageContent = getPageContent("contact");
-
-export const metadata = createPageMetadata({
-  path: "/contact",
-  title: pageContent.seo.title,
-  description: pageContent.seo.description,
-  image: pageOgImages.contact,
-});
-
-export default function ContactPage() {
+export default async function ContactPage() {
+  const siteConfig = await getSiteConfig();
+  const pageContent = await getPageContent("contact");
   return (
     <div className="w-full min-h-screen bg-[#160206]">
       <StructuredData

@@ -11,7 +11,12 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  const posts = getAllBlogPosts();
+  let posts;
+  try {
+    posts = await getAllBlogPosts();
+  } catch {
+    return [];
+  }
   const categories = new Map<string, number>();
   posts.forEach((p) =>
     p.categories.forEach((c) => {
@@ -46,7 +51,7 @@ export default async function BlogCategoryPagePaginated({ params }: Props) {
 
   if (!Number.isInteger(pageNum) || pageNum < 2) notFound();
 
-  const posts = getAllBlogPosts();
+  const posts = await getAllBlogPosts();
   const filtered = posts.filter((p) =>
     p.categories.some((c) => c.toLowerCase().replace(/\s+/g, "-") === slug)
   );

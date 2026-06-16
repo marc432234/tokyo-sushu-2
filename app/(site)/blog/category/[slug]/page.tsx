@@ -8,13 +8,17 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export function generateStaticParams() {
-  const posts = getAllBlogPosts();
-  const categories = new Set<string>();
-  posts.forEach((p) =>
-    p.categories.forEach((c) => categories.add(c.toLowerCase().replace(/\s+/g, "-")))
-  );
-  return Array.from(categories).map((slug) => ({ slug }));
+export async function generateStaticParams() {
+  try {
+    const posts = await getAllBlogPosts();
+    const categories = new Set<string>();
+    posts.forEach((p) =>
+      p.categories.forEach((c) => categories.add(c.toLowerCase().replace(/\s+/g, "-")))
+    );
+    return Array.from(categories).map((slug) => ({ slug }));
+  } catch {
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: Props) {
@@ -30,7 +34,7 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function BlogCategoryPage({ params }: Props) {
   const { slug } = await params;
-  const posts = getAllBlogPosts();
+  const posts = await getAllBlogPosts();
   const hasPosts = posts.some((p) =>
     p.categories.some((c) => c.toLowerCase().replace(/\s+/g, "-") === slug)
   );

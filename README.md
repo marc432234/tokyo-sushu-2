@@ -1,56 +1,58 @@
 # Tokyo Club South Beach
 
-Next.js static export for Tokyo Club Sushi Speakeasy with Decap CMS blog editing.
+Next.js (App Router) site for Tokyo Club Sushi Speakeasy. Content is stored in
+**Supabase** and edited through a built-in admin at `/admin`. Deployed on **Vercel**.
 
 ## Local Development
 
 ```bash
 npm install
+cp .env.example .env.local   # then fill in the values
 npm run dev
 ```
 
-## Build
+## Environment variables
+
+See `.env.example`. You need:
+
+- `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` — Supabase project (Project Settings → API).
+- `ADMIN_USERNAME`, `ADMIN_PASSWORD`, `ADMIN_SESSION_SECRET` — credentials for the `/admin` login (`ADMIN_SESSION_SECRET` via `openssl rand -hex 32`).
+- `RESEND_API_KEY`, `CONTACT_EMAIL` — contact form email.
+
+## Supabase setup
+
+1. Create a Supabase project.
+2. In the Supabase SQL editor, run [`supabase/schema.sql`](supabase/schema.sql) to create the `pages`, `categories`, and `blog_posts` tables.
+3. Put the project URL + keys into `.env.local`.
+4. Migrate the existing file-based content into the database (one-time):
+
+   ```bash
+   npm run migrate:content
+   ```
+
+   This reads `content/pages/*.json`, `content/categories/*.md`, and `content/blog/*.md`
+   and upserts them into Supabase. It's safe to re-run.
+
+## Content model
+
+- **pages** — one row per page (`home`, `menu`, `experience`, `gallery`, `contact`, `settings`); full page content stored as JSONB.
+- **categories** — blog taxonomy (`name`, `slug`).
+- **blog_posts** — `slug`, `title`, `date`, `categories`, `featured_image`, `body` (Markdown).
+
+The hardcoded menu items live in `lib/menu-data.ts` (code, not CMS).
+
+## Admin
+
+The CMS lives at **`/admin`** and is protected by a username/password login
+(`ADMIN_USERNAME` / `ADMIN_PASSWORD`). From there you can:
+
+- Create / edit / delete **blog posts**.
+- Edit **page content** as JSON (home, menu, experience, gallery, contact, settings).
+
+## Build & deploy (Vercel)
 
 ```bash
 npm run build
 ```
 
-The static export is written to `out/`, which is what Netlify publishes.
-
-## Decap CMS Blog
-
-The CMS is available at `/admin/` after the site is deployed to Netlify.
-
-Page content is stored in `content/pages/`. Blog posts are stored as Markdown files in `content/blog/`. Uploaded images are stored in `public/uploads/blog/`.
-
-The admin panel includes editable entries for:
-
-- Home page
-- Menu page
-- Experience page
-- Gallery page
-- Contact page
-- Blog posts
-
-Each blog post has:
-
-- Featured image
-- Title
-- Body
-- Slug
-- Date
-- Categories
-
-## Netlify Setup
-
-1. Push this project to a new GitHub repository.
-2. Create a new Netlify site from that repository.
-3. Use `npm run build` as the build command.
-4. Use `out` as the publish directory.
-5. In Netlify, enable Identity.
-6. In Netlify Identity settings, enable Git Gateway.
-7. Invite the editor user from Netlify Identity.
-8. Visit `/admin/` on the deployed site and log in.
-
-The Decap config is in `public/admin/config.yml`. It is set to commit CMS changes to the `main` branch.
-# tky
+Set the same environment variables in the Vercel project settings, then deploy.

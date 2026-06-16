@@ -12,11 +12,6 @@ import type { CmsImage } from "@/lib/page-content";
 import { getPageContent } from "@/lib/page-content";
 import { pageOgImages } from "@/lib/site";
 
-const pageContent = getPageContent("experience");
-const sections = pageContent.sections ?? {};
-const sectionText = (key: string) => sections[key] as string;
-const sectionImage = (key: string) => sections[key] as CmsImage;
-
 const eventImages = [
   "/pictures/18-DSC08011.jpg",
   "/pictures/28-DSC08248.jpg",
@@ -101,14 +96,21 @@ const gallery = [
   },
 ];
 
-export const metadata = createPageMetadata({
-  path: "/experience",
-  title: pageContent.seo.title,
-  description: pageContent.seo.description,
-  image: pageOgImages.experience,
-});
+export async function generateMetadata() {
+  const pageContent = await getPageContent("experience");
+  return createPageMetadata({
+    path: "/experience",
+    title: pageContent.seo.title,
+    description: pageContent.seo.description,
+    image: pageOgImages.experience,
+  });
+}
 
-export default function ExperiencePage() {
+export default async function ExperiencePage() {
+  const pageContent = await getPageContent("experience");
+  const sections = pageContent.sections ?? {};
+  const sectionText = (key: string) => sections[key] as string;
+  const sectionImage = (key: string) => sections[key] as CmsImage;
   return (
     <>
       <StructuredData

@@ -12,16 +12,18 @@ import { createPageMetadata } from "@/lib/metadata";
 import { getPageContent } from "@/lib/page-content";
 import { pageOgImages } from "@/lib/site";
 
-const pageContent = getPageContent("home");
+export async function generateMetadata() {
+  const pageContent = await getPageContent("home");
+  return createPageMetadata({
+    path: "/",
+    title: pageContent.seo.title,
+    description: pageContent.seo.description,
+    image: pageOgImages.home,
+  });
+}
 
-export const metadata = createPageMetadata({
-  path: "/",
-  title: pageContent.seo.title,
-  description: pageContent.seo.description,
-  image: pageOgImages.home,
-});
-
-export default function HomePage() {
+export default async function HomePage() {
+  const pageContent = await getPageContent("home");
   return (
     <>
       <StructuredData

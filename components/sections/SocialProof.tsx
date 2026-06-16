@@ -22,7 +22,7 @@ export function SocialProof({ content }: { content: HomePageContent["socialProof
   const slideTo = useCallback((index: number, animate: boolean) => {
     if (!trackRef.current) return;
     trackRef.current.style.transition = animate ? "transform 500ms ease-in-out" : "none";
-    trackRef.current.style.transform = `translateX(calc(-${index * 100}% / ${visible}))`;
+    trackRef.current.style.transform = `translateX(calc(-${index} * (100% + 20px) / ${visible}))`;
   }, [visible]);
 
   const next = useCallback(() => {
@@ -93,7 +93,7 @@ export function SocialProof({ content }: { content: HomePageContent["socialProof
           </div>
         </div>
 
-        <div className="mt-12 overflow-hidden">
+        <div className="mt-12 overflow-hidden px-1">
           <div ref={trackRef} className="flex gap-5 w-full" style={{ transform: `translateX(0%)` }}>
             {items.map((testimonial, i) => (
               <article key={`${testimonial.author}-${i}`} className="figma-card min-w-0 shrink-0 grow-0 rounded-[12px] border-0" style={{ flexBasis: `calc((100% - ${(visible - 1) * 20}px) / ${visible})` }}>

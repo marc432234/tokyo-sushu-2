@@ -3,8 +3,6 @@ import Link from "next/link";
 
 import { getSiteConfig } from "@/lib/get-site-config";
 
-const siteConfig = getSiteConfig();
-
 const explore = [
   { href: "/", label: "Home" },
   { href: "/menu", label: "Full Menu" },
@@ -15,7 +13,8 @@ const explore = [
 
 const highlights = ["Nigiri & Sashimi", "Signature Rolls", "Cocktails & Sake", "Bao & Small Plates", "Chef Specials"];
 
-export function Footer() {
+export async function Footer() {
+  const siteConfig = await getSiteConfig();
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-black pb-8 pt-[100px]">
       <Image
