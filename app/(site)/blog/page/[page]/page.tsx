@@ -6,17 +6,7 @@ import { BlogPageLayout } from "@/components/blog/BlogPageLayout";
 
 const PER_PAGE = 4;
 
-export async function generateStaticParams() {
-  try {
-    const posts = await getAllBlogPosts();
-    const totalPages = Math.ceil(posts.length / PER_PAGE);
-    return Array.from({ length: totalPages - 1 }, (_, i) => ({
-      page: String(i + 2),
-    }));
-  } catch {
-    return [];
-  }
-}
+export const dynamic = "force-dynamic";
 
 type Props = {
   params: Promise<{ page: string }>;

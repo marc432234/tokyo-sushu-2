@@ -6,15 +6,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { Carousel } from "@/components/ui/Carousel";
 import { getSiteConfig } from "@/lib/get-site-config";
 
-export async function generateStaticParams() {
-  try {
-    const posts = await getAllBlogPosts();
-    return posts.map((post) => ({ slug: post.slug }));
-  } catch {
-    // Supabase may be unreachable at build time; render on demand instead.
-    return [];
-  }
-}
+export const dynamic = "force-dynamic";
 
 type Props = {
   params: Promise<{ slug: string }>;

@@ -5,6 +5,10 @@ import { Header } from "@/components/layout/Header";
 import { getSiteConfig } from "@/lib/get-site-config";
 import { pageOgImages, siteUrl } from "@/lib/site";
 
+// Content is read from Supabase at request time, so the whole site segment
+// renders dynamically rather than being prerendered at build.
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata(): Promise<Metadata> {
   const siteConfig = await getSiteConfig();
   return {

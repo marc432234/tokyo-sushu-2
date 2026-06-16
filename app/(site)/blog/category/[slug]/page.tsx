@@ -8,18 +8,7 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateStaticParams() {
-  try {
-    const posts = await getAllBlogPosts();
-    const categories = new Set<string>();
-    posts.forEach((p) =>
-      p.categories.forEach((c) => categories.add(c.toLowerCase().replace(/\s+/g, "-")))
-    );
-    return Array.from(categories).map((slug) => ({ slug }));
-  } catch {
-    return [];
-  }
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;

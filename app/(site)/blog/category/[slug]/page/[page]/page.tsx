@@ -10,29 +10,7 @@ type Props = {
   params: Promise<{ slug: string; page: string }>;
 };
 
-export async function generateStaticParams() {
-  let posts;
-  try {
-    posts = await getAllBlogPosts();
-  } catch {
-    return [];
-  }
-  const categories = new Map<string, number>();
-  posts.forEach((p) =>
-    p.categories.forEach((c) => {
-      const slug = c.toLowerCase().replace(/\s+/g, "-");
-      categories.set(slug, (categories.get(slug) ?? 0) + 1);
-    })
-  );
-  const params: { slug: string; page: string }[] = [];
-  categories.forEach((count, slug) => {
-    const totalPages = Math.ceil(count / PER_PAGE);
-    for (let i = 2; i <= totalPages; i++) {
-      params.push({ slug, page: String(i) });
-    }
-  });
-  return params;
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: Props) {
   const { slug, page } = await params;

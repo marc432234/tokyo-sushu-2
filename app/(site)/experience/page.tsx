@@ -96,6 +96,8 @@ const gallery = [
   },
 ];
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata() {
   const pageContent = await getPageContent("experience");
   return createPageMetadata({

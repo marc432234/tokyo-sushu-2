@@ -2,6 +2,8 @@ import { createPageMetadata } from "@/lib/metadata";
 import { pageOgImages } from "@/lib/site";
 import { BlogPageLayout } from "@/components/blog/BlogPageLayout";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = createPageMetadata({
   path: "/blog",
   title: "Tokyo Club Blog | Sushi, Cocktails, and South Beach Nights",

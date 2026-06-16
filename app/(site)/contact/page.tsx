@@ -10,6 +10,8 @@ import { createPageMetadata } from "@/lib/metadata";
 import { getPageContent } from "@/lib/page-content";
 import { pageOgImages } from "@/lib/site";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata() {
   const pageContent = await getPageContent("contact");
   return createPageMetadata({
