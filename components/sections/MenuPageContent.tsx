@@ -39,7 +39,7 @@ export function MenuPageContent() {
       <section className="relative isolate min-h-[600px] overflow-hidden pt-(--header-offset)">
         <Image
           src="/pictures/menu-banner-bg.png"
-          alt="Japanese dinner spread"
+          alt="Japanese dinner spread of sushi, bao buns, and dumplings at Tokyo Club Sushi Speakeasy"
           width={1365}
           height={2048}
           priority
@@ -124,7 +124,7 @@ function SectionRenderer({
             {section.number}
           </div>
           <div className="flex-1 flex flex-col justify-start items-start gap-1.5">
-            <div className="self-stretch">
+            <h2 className="self-stretch">
               <span className="text-white text-2xl md:text-5xl font-normal font-(family-name:--font-display) leading-[57.60px]">
                 {section.title}
               </span>
@@ -133,7 +133,7 @@ function SectionRenderer({
                   {section.accentTitle}
                 </span>
               )}
-            </div>
+            </h2>
             <div className="max-w-full text-white text-base font-normal font-(family-name:--font-body) leading-[22.40px] tracking-[0.05em]">
               {section.description}
             </div>
@@ -199,9 +199,9 @@ function MenuItemCard({ item }: { item: MenuItem }) {
           </div>
         )}
         <div className="self-stretch flex flex-col justify-start items-start gap-1.5">
-          <div className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[28.80px]">
+          <h3 className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[28.80px]">
             {item.name}
-          </div>
+          </h3>
           <div className="self-stretch text-white text-base font-normal font-(family-name:--font-body) leading-[22.40px] tracking-[0.05em]">
             {item.description}
           </div>
@@ -224,9 +224,9 @@ function FeaturedCard({ item }: { item: MenuItem & { badge: string } }) {
           </div>
         </div>
         <div className="self-stretch flex flex-col justify-start items-start gap-1.5">
-          <div className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[28.80px]">
+          <h3 className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[28.80px]">
             {item.name}
-          </div>
+          </h3>
           <div className="self-stretch text-white text-base font-normal font-(family-name:--font-body) leading-[22.40px] tracking-[0.05em]">
             {item.description}
           </div>
@@ -253,9 +253,9 @@ function ImageFeatureSection({ feature }: { feature: NonNullable<Section["imageF
             </div>
           </div>
           <div className="self-stretch flex flex-col justify-start items-start gap-1.5">
-            <div className="self-stretch text-white text-xl md:text-[32px] font-normal font-(family-name:--font-display) leading-[38.40px]">
+            <h3 className="self-stretch text-white text-xl md:text-[32px] font-normal font-(family-name:--font-display) leading-[38.40px]">
               {feature.title}
-            </div>
+            </h3>
             <div className="self-stretch text-white text-base font-normal font-(family-name:--font-body) leading-[22.40px] tracking-[0.05em]">
               {feature.description}
             </div>
@@ -311,9 +311,9 @@ function CocktailCard({ item }: { item: CardItem }) {
         {item.image && <img className="w-full h-full object-cover transition duration-700 group-hover:scale-105" src={item.image} alt={item.name} />}
       </div>
       <div className="self-stretch flex flex-col justify-start items-start gap-3">
-        <div className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[33.60px]">
+        <h3 className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[33.60px]">
           {item.name}
-        </div>
+        </h3>
         {item.tags && (
           <div className="flex justify-start items-start gap-3 flex-wrap">
             {item.tags.map((tag) => (
@@ -369,9 +369,9 @@ function SakeCard({ item }: { item: CardItem }) {
             ))}
           </div>
         )}
-        <div className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[33.60px]">
+        <h3 className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[33.60px]">
           {item.name}
-        </div>
+        </h3>
         <div className="self-stretch text-white/60 text-base font-normal font-(family-name:--font-body) leading-[22.40px] tracking-[0.05em]">
           {item.description}
         </div>
@@ -404,9 +404,9 @@ function DessertCard({ item }: { item: CardItem }) {
   return (
     <div className="p-4 md:p-6 bg-white/5 rounded-lg card-hover outline outline-1 outline-white/10 flex flex-col justify-start items-start gap-6">
       <div className="self-stretch flex flex-col justify-start items-start gap-3">
-        <div className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[33.60px]">
+        <h3 className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[33.60px]">
           {item.name}
-        </div>
+        </h3>
         <div className="self-stretch text-white/60 text-base font-normal font-(family-name:--font-body) leading-[22.40px] tracking-[0.05em]">
           {item.description}
         </div>

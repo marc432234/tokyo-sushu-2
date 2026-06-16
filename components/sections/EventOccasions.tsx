@@ -7,7 +7,8 @@ export function EventOccasions() {
       <div className="absolute inset-0 -z-10 bg-[#160206]" />
       <Image
         src="/pictures/smoke-bg.png"
-        alt="Atmospheric smoke effect over the Tokyo Club Sushi Speakeasy interior"
+        alt=""
+        aria-hidden="true"
         width={1920}
         height={1080}
         className="absolute inset-0 -z-10 h-full w-full object-cover mix-blend-color-dodge"
@@ -17,7 +18,7 @@ export function EventOccasions() {
         <div className="container-shell flex flex-col lg:flex-row justify-between items-start gap-6">
           <div className="max-w-[883px] flex flex-col justify-start items-start gap-6">
             <span className="eyebrow text-white">Host your night the Tokyo way</span>
-            <div className="text-white text-3xl md:text-5xl font-normal font-['Lora'] leading-[57.60px]">Built for celebrations, group plans, and after-dark momentum.</div>
+            <h2 className="text-white text-3xl md:text-5xl font-normal font-['Lora'] leading-[57.60px]">Built for celebrations, group plans, and after-dark momentum.</h2>
             <div className="text-white text-base font-normal font-['Outfit'] leading-[22.40px]">Open the occasion that matches the night you are planning.</div>
           </div>
           <a href="https://www.opentable.com/r/tokyo-club-reservations-miami-beach?restref=1480237&lang=en-US&ot_source=Restaurant%20website&ot_campaign=LP&utm_source=google&utm_medium=cpc&utm_campaign=tokyo_search" className="h-12 px-4 py-[13px] outline outline-1 outline-offset-[-1px] outline-[#ac6e26] flex justify-center items-center gap-2.5 btn-glow">
@@ -31,7 +32,7 @@ export function EventOccasions() {
               <div className="absolute inset-x-0 bottom-0 h-[200px] md:h-[331px] bg-gradient-to-b from-[#6e0d20]/0 to-[#6d0c1f]" />
               <div className="relative text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">01</div>
               <div className="relative flex flex-col justify-start items-start gap-4">
-                <div className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Date Nights</div>
+                <h3 className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Date Nights</h3>
                 <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Low light, standout cocktails, and a menu built for lingering together.</div>
               </div>
             </div>
@@ -40,7 +41,7 @@ export function EventOccasions() {
               <div className="absolute inset-x-0 bottom-0 h-[200px] md:h-[331px] bg-gradient-to-b from-[#6e0d20]/0 to-[#6d0c1f]" />
               <div className="relative text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">02</div>
               <div className="relative flex flex-col justify-start items-start gap-4">
-                <div className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Birthdays</div>
+                <h3 className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Birthdays</h3>
                 <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Turn dinner into a celebration with dramatic plates, music, and bottle-worthy energy.</div>
               </div>
             </div>
@@ -49,7 +50,7 @@ export function EventOccasions() {
               <div className="absolute inset-x-0 bottom-0 h-[200px] md:h-[331px] bg-gradient-to-b from-[#6e0d20]/0 to-[#6d0c1f]" />
               <div className="relative text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">03</div>
               <div className="relative flex flex-col justify-start items-start gap-4">
-                <div className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Groups &amp; Night Out</div>
+                <h3 className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Groups &amp; Night Out</h3>
                 <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">From visiting crews to after-dark plans, Tokyo Club Sushi Speakeasy sets the mood for the full evening.</div>
               </div>
             </div>

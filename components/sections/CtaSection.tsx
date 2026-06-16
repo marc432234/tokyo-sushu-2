@@ -9,21 +9,24 @@ export function CtaSection() {
         <Image
           className="hidden md:block w-[484.56px] h-[727.03px] left-0 top-0 absolute"
           src="/pictures/ready-left.png"
-          alt="Decorative Japanese-inspired border element"
+          alt=""
+          aria-hidden="true"
           width={485}
           height={727}
         />
         <Image
           className="hidden md:block w-[484.56px] h-[727.03px] left-0 top-0 absolute origin-top-left -rotate-180"
           src="/pictures/ready-left.png"
-          alt="Decorative Japanese-inspired border element mirrored"
+          alt=""
+          aria-hidden="true"
           width={485}
           height={727}
         />
         <Image
           className="hidden md:block w-[484.56px] h-[727.03px] left-1/2 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-0 top-0 absolute"
           src="/pictures/ready-right.png"
-          alt="Decorative Japanese-inspired border element"
+          alt=""
+          aria-hidden="true"
           width={485}
           height={727}
         />
