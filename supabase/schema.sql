@@ -76,3 +76,18 @@ create policy "public read pages"           on public.pages          for select 
 create policy "public read categories"      on public.categories     for select using (true);
 create policy "public read blog_posts"      on public.blog_posts     for select using (true);
 create policy "public read post_categories" on public.post_categories for select using (true);
+
+-- ---------------------------------------------------------------------------
+-- Storage: featured images
+-- Public bucket `blog` holds blog featured images. The app uploads with the
+-- service-role key; the public is read-only. Images are served through the
+-- deployment domain via the /uploads/blog/* rewrite in next.config.ts.
+-- ---------------------------------------------------------------------------
+insert into storage.buckets (id, name, public)
+values ('blog', 'blog', true)
+on conflict (id) do update set public = true;
+
+drop policy if exists "public read blog bucket" on storage.objects;
+create policy "public read blog bucket"
+  on storage.objects for select
+  using (bucket_id = 'blog');

@@ -2,8 +2,6 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import fs from "node:fs";
-import path from "node:path";
 
 import {
   createSession,
@@ -11,7 +9,7 @@ import {
   isAuthenticated,
   verifyCredentials,
 } from "@/lib/admin-auth";
-import { deletePost, savePage, savePost } from "@/lib/admin-data";
+import { deletePost, savePage, savePost, uploadFeaturedImage } from "@/lib/admin-data";
 
 export type LoginState = { error: string | null };
 
@@ -63,13 +61,7 @@ export async function savePostAction(formData: FormData) {
   const fileEntry = formData.get("featuredImage");
 
   if (fileEntry instanceof File && fileEntry.size > 0) {
-    const bytes = await fileEntry.arrayBuffer();
-    const ext = path.extname(fileEntry.name) || ".jpg";
-    const filename = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}${ext}`;
-    const dir = path.join(process.cwd(), "public", "uploads", "blog");
-    fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, filename), Buffer.from(bytes));
-    featuredImage = `/uploads/blog/${filename}`;
+    featuredImage = await uploadFeaturedImage(fileEntry);
   } else {
     featuredImage = formData.get("currentFeaturedImage")?.toString().trim() || null;
   }

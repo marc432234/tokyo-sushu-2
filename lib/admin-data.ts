@@ -97,6 +97,28 @@ export async function savePost(post: {
   }
 }
 
+/**
+ * Uploads a featured image to the public `blog` Storage bucket and returns a
+ * deployment-relative path (e.g. `/uploads/blog/123.jpg`). The path is proxied
+ * to Supabase Storage by the rewrite in next.config.ts, so the Supabase URL is
+ * never exposed to the browser.
+ */
+export async function uploadFeaturedImage(file: File): Promise<string> {
+  const ext = (file.name.split(".").pop() || "jpg").toLowerCase();
+  const filename = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
+  const bytes = await file.arrayBuffer();
+
+  const { error } = await getSupabaseClient()
+    .storage.from("blog")
+    .upload(filename, bytes, {
+      contentType: file.type || "application/octet-stream",
+      upsert: false,
+    });
+  if (error) throw new Error(`Image upload failed: ${error.message}`);
+
+  return `/uploads/blog/${filename}`;
+}
+
 export async function deletePost(slug: string): Promise<void> {
   const { error } = await getSupabaseClient().from("blog_posts").delete().eq("slug", slug);
   if (error) throw new Error(error.message);
