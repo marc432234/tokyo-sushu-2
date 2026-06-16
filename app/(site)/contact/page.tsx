@@ -7,18 +7,18 @@ import { StructuredData } from "@/components/seo/StructuredData";
 import ScrollReveal from "@/components/ScrollReveal";
 import { BookingButton } from "@/components/ui/ReservationModal";
 import { getSiteConfig } from "@/lib/get-site-config";
-import { createPageMetadata } from "@/lib/metadata";
+import { createPageMetadata, getPageSeo } from "@/lib/metadata";
 import { getPageContent } from "@/lib/page-content";
 import { pageOgImages } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata() {
-  const pageContent = await getPageContent("contact");
+  const seo = await getPageSeo("contact");
   return createPageMetadata({
     path: "/contact",
-    title: pageContent.seo.title,
-    description: pageContent.seo.description,
+    title: seo.title,
+    description: seo.description,
     image: pageOgImages.contact,
   });
 }

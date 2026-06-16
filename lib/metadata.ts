@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
-import { siteConfig } from "@/lib/site";
+import { getPageContent, type PageSeo } from "@/lib/page-content";
+import { siteConfig, siteUrl } from "@/lib/site";
 import type { SiteImageAsset } from "@/lib/site";
 
 type PageMetadataInput = {
@@ -12,6 +13,20 @@ type PageMetadataInput = {
   };
 };
 
+/**
+ * Reads a page's SEO copy from the CMS, falling back to the static site
+ * defaults if Supabase is unreachable. Metadata must never throw — if it does,
+ * Next.js drops the entire metadata object (including the canonical link) and
+ * serves a noindex error page, so the canonical URL would silently disappear.
+ */
+export async function getPageSeo(page: Parameters<typeof getPageContent>[0]): Promise<PageSeo> {
+  try {
+    return (await getPageContent(page)).seo;
+  } catch {
+    return { title: siteConfig.title, description: siteConfig.description };
+  }
+}
+
 export function createPageMetadata({
   path,
   title,
@@ -21,6 +36,9 @@ export function createPageMetadata({
   const pageTitle = title ?? siteConfig.title;
   const pageDescription = description ?? siteConfig.description;
   return {
+    // Set explicitly here (not only in the layout) so a relative canonical
+    // always resolves to an absolute https://www. URL on every route.
+    metadataBase: siteUrl,
     title: pageTitle,
     description: pageDescription,
     alternates: {

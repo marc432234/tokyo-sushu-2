@@ -4,7 +4,7 @@ import { getAllBlogPosts, getBlogPostBySlug, formatPostDate } from "@/lib/blog";
 import { MarkdownContent } from "@/components/blog/MarkdownContent";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Carousel } from "@/components/ui/Carousel";
-import { getSiteConfig } from "@/lib/get-site-config";
+import { siteConfig, siteUrl } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
@@ -17,9 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getBlogPostBySlug(slug);
   if (!post) return {};
 
-  const siteConfig = await getSiteConfig();
-
   return {
+    metadataBase: siteUrl,
     title: `${post.title} | Tokyo Club Blog`,
     description: post.excerpt,
     alternates: {
