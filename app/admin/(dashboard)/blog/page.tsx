@@ -21,6 +21,7 @@ export default async function AdminBlogList() {
         <table className="w-full text-left text-sm">
           <thead className="bg-white/[0.04] text-white/60">
             <tr>
+              <th className="px-4 py-3">Image</th>
               <th className="px-4 py-3">Title</th>
               <th className="px-4 py-3">Categories</th>
               <th className="px-4 py-3">Date</th>
@@ -29,13 +30,24 @@ export default async function AdminBlogList() {
           <tbody>
             {posts.length === 0 && (
               <tr>
-                <td colSpan={3} className="px-4 py-6 text-center text-white/50">
+                <td colSpan={4} className="px-4 py-6 text-center text-white/50">
                   No posts yet.
                 </td>
               </tr>
             )}
             {posts.map((post) => (
               <tr key={post.slug} className="border-t border-white/10 hover:bg-white/[0.03]">
+                <td className="px-4 py-3">
+                  {post.featured_image ? (
+                    <img
+                      src={post.featured_image}
+                      alt=""
+                      className="h-10 w-16 rounded border border-white/10 object-cover"
+                    />
+                  ) : (
+                    <div className="h-10 w-16 rounded border border-white/10 bg-white/5" />
+                  )}
+                </td>
                 <td className="px-4 py-3">
                   <Link href={`/admin/blog/${post.slug}`} className="hover:text-[#ad6d25]">
                     {post.title}

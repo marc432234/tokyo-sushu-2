@@ -43,19 +43,36 @@ create table if not exists public.blog_posts (
 create index if not exists blog_posts_date_idx on public.blog_posts (date desc);
 
 -- ---------------------------------------------------------------------------
+-- Post ↔ Category junction (enforces FK constraints)
+-- ---------------------------------------------------------------------------
+create table if not exists public.post_categories (
+  post_slug     text not null references public.blog_posts(slug) on delete cascade,
+  category_slug text not null references public.categories(slug) on delete cascade,
+  primary key (post_slug, category_slug)
+);
+
+-- Migrate existing categories text[] into the junction table
+insert into public.post_categories (post_slug, category_slug)
+select slug, unnest(categories) from public.blog_posts
+on conflict do nothing;
+
+-- ---------------------------------------------------------------------------
 -- Row Level Security
 -- The site reads with the service-role key from Server Components (bypasses
 -- RLS), but we still enable public read so the anon key works too if needed.
 -- Writes are only ever performed with the service-role key (migration/admin).
 -- ---------------------------------------------------------------------------
-alter table public.pages       enable row level security;
-alter table public.categories  enable row level security;
-alter table public.blog_posts  enable row level security;
+alter table public.pages          enable row level security;
+alter table public.categories     enable row level security;
+alter table public.blog_posts     enable row level security;
+alter table public.post_categories enable row level security;
 
-drop policy if exists "public read pages" on public.pages;
-drop policy if exists "public read categories" on public.categories;
-drop policy if exists "public read blog_posts" on public.blog_posts;
+drop policy if exists "public read pages"           on public.pages;
+drop policy if exists "public read categories"      on public.categories;
+drop policy if exists "public read blog_posts"      on public.blog_posts;
+drop policy if exists "public read post_categories" on public.post_categories;
 
-create policy "public read pages"       on public.pages      for select using (true);
-create policy "public read categories"  on public.categories for select using (true);
-create policy "public read blog_posts"  on public.blog_posts for select using (true);
+create policy "public read pages"           on public.pages          for select using (true);
+create policy "public read categories"      on public.categories     for select using (true);
+create policy "public read blog_posts"      on public.blog_posts     for select using (true);
+create policy "public read post_categories" on public.post_categories for select using (true);

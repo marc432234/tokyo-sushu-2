@@ -76,10 +76,25 @@ export async function savePost(post: {
   featured_image: string | null;
   body: string;
 }): Promise<void> {
-  const { error } = await getSupabaseClient()
+  const client = getSupabaseClient();
+
+  const { error: postError } = await client
     .from("blog_posts")
     .upsert({ ...post, updated_at: new Date().toISOString() }, { onConflict: "slug" });
-  if (error) throw new Error(error.message);
+  if (postError) throw new Error(postError.message);
+
+  const { error: delError } = await client
+    .from("post_categories")
+    .delete()
+    .eq("post_slug", post.slug);
+  if (delError) throw new Error(delError.message);
+
+  if (post.categories.length > 0) {
+    const { error: catError } = await client
+      .from("post_categories")
+      .insert(post.categories.map((cat) => ({ post_slug: post.slug, category_slug: cat })));
+    if (catError) throw new Error(catError.message);
+  }
 }
 
 export async function deletePost(slug: string): Promise<void> {

@@ -45,13 +45,22 @@ export function PostEditor({ post }: { post?: BlogRow }) {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label className={labelClass} htmlFor="featuredImage">Featured image URL</label>
+          <label className={labelClass} htmlFor="featuredImage">Featured image</label>
+          <input type="hidden" name="currentFeaturedImage" value={post?.featured_image ?? ""} />
           <input
             id="featuredImage"
             name="featuredImage"
-            defaultValue={post?.featured_image ?? ""}
+            type="file"
+            accept="image/*"
             className={field}
           />
+          {post?.featured_image && (
+            <img
+              src={post.featured_image}
+              alt="Current featured image"
+              className="mt-2 h-32 w-48 rounded border border-white/10 object-cover"
+            />
+          )}
         </div>
 
         <div className="flex flex-col gap-1">

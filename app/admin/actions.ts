@@ -2,6 +2,8 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import fs from "node:fs";
+import path from "node:path";
 
 import {
   createSession,
@@ -54,12 +56,26 @@ export async function savePostAction(formData: FormData) {
   const slug = formData.get("slug")?.toString().trim() ?? "";
   const title = formData.get("title")?.toString().trim() ?? "";
   const date = formData.get("date")?.toString().trim() || new Date().toISOString();
-  const featuredImage = formData.get("featuredImage")?.toString().trim() || null;
   const body = formData.get("body")?.toString() ?? "";
   const categories = (formData.get("categories")?.toString() ?? "")
     .split(",")
     .map((c) => c.trim())
     .filter(Boolean);
+
+  let featuredImage: string | null = null;
+  const fileEntry = formData.get("featuredImage");
+
+  if (fileEntry instanceof File && fileEntry.size > 0) {
+    const bytes = await fileEntry.arrayBuffer();
+    const ext = path.extname(fileEntry.name) || ".jpg";
+    const filename = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}${ext}`;
+    const dir = path.join(process.cwd(), "public", "uploads", "blog");
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, filename), Buffer.from(bytes));
+    featuredImage = `/uploads/blog/${filename}`;
+  } else {
+    featuredImage = formData.get("currentFeaturedImage")?.toString().trim() || null;
+  }
 
   if (!slug || !title) {
     throw new Error("Slug and title are required.");
