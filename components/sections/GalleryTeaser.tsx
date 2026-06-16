@@ -37,8 +37,8 @@ export function GalleryTeaser({ content }: { content: HomePageContent["galleryTe
         </div>
 
         <div className="mt-12 flex gap-4 relative z-10">
-          {columns.map((col) => (
-            <div key={col.items[0]} className="flex flex-1 flex-col gap-4">
+          {columns.map((col, i) => (
+            <div key={col.items[0]} className={`flex-1 flex-col gap-4 ${i === 2 ? "hidden md:flex" : "flex"}`}>
               {col.items.map((globalIndex) => {
                 const asset = images[globalIndex];
                 return (

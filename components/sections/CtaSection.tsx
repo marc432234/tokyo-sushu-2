@@ -21,7 +21,7 @@ export function CtaSection() {
           height={727}
         />
         <Image
-          className="w-[484.56px] h-[727.03px] left-1/2 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-0 top-0 absolute"
+          className="hidden md:block w-[484.56px] h-[727.03px] left-1/2 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-0 top-0 absolute"
           src="/pictures/ready-right.png"
           alt="Decorative Japanese-inspired border element"
           width={485}

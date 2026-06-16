@@ -61,7 +61,7 @@ export default async function BlogPostPage({ params }: Props) {
     <div className="overflow-x-hidden bg-[#160206] text-white">
       <ScrollReveal>
         <div className="container-shell relative">
-          <div className="flex flex-col items-start justify-between gap-12 px-10 pb-10 pt-[200px] md:flex-row">
+          <div className="flex flex-col items-start justify-between gap-12 px-5 pb-10 pt-[200px] md:flex-row md:px-10">
           <div className="flex w-full max-w-[652px] flex-col items-start justify-start gap-4">
             <div className="flex flex-col items-start justify-start gap-5">
               <div className="inline-flex items-center justify-center bg-[#ad6d25] px-2 py-[5px]">
