@@ -3,7 +3,9 @@ import type { MetadataRoute } from "next";
 import { getAllBlogPosts } from "@/lib/blog";
 import { siteConfig } from "@/lib/site";
 
-export const dynamic = "force-static";
+// Rendered per request so blog posts added through the admin CMS appear in the
+// sitemap immediately, without waiting for a rebuild.
+export const dynamic = "force-dynamic";
 
 const pages = [
   { path: "/", priority: 1.0, changeFrequency: "weekly" as const },
