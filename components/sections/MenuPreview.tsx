@@ -26,7 +26,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
         <div className="flex flex-col justify-start items-center gap-6">
           <span className="eyebrow text-white">Japanese speakeasy meets Miami nightlife</span>
           <div className="flex flex-col justify-start items-center gap-4">
-            <div className="max-w-[898px] text-center text-[#cf183c] text-3xl md:text-5xl font-normal font-['Lora'] leading-[57.60px]">Sushi precision, cocktail drama, and late-night share plates.</div>
+            <h2 className="max-w-[898px] text-center text-[#cf183c] text-3xl md:text-5xl font-normal font-['Lora'] leading-[57.60px]">Sushi precision, cocktail drama, and late-night share plates.</h2>
             <div className="max-w-[812px] text-center text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Edomae technique meets South Beach decadence. From clean-cut nigiri to 24K gold-topped signature rolls — every dish is built for the table after dark.</div>
           </div>
         </div>
@@ -36,7 +36,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
               <div className="text-white/20 text-[40px] font-normal font-['Lora'] leading-[56px]">01</div>
               <div className="flex flex-col justify-start items-start gap-8">
                 <div className="flex flex-col justify-start items-start gap-4">
-                  <div className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Nigiri</div>
+                  <h3 className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Nigiri</h3>
                   <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Clean cuts, precise seasoning, and fish-forward restraint.</div>
                 </div>
                 <div className="px-3.5 py-2.5 outline outline-1 outline-offset-[-1px] outline-[#ac6e26] inline-flex justify-center items-center gap-2.5">
@@ -48,7 +48,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
               <div className="text-white/20 text-[40px] font-normal font-['Lora'] leading-[56px]">02</div>
               <div className="flex flex-col justify-start items-start gap-8">
                 <div className="flex flex-col justify-start items-start gap-4">
-                  <div className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Sashimi</div>
+                  <h3 className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Sashimi</h3>
                   <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Elegant slices plated with sharp contrast and fresh texture.</div>
                 </div>
                 <div className="px-3.5 py-2.5 outline outline-1 outline-offset-[-1px] outline-[#ac6e26] inline-flex justify-center items-center gap-2.5">
@@ -60,7 +60,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
               <div className="text-white/20 text-[40px] font-normal font-['Lora'] leading-[56px]">03</div>
               <div className="flex flex-col justify-start items-start gap-8">
                 <div className="flex flex-col justify-start items-start gap-4">
-                  <div className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Sushi Rolls</div>
+                  <h3 className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Sushi Rolls</h3>
                   <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Decadent house signatures made for the late-night table.</div>
                 </div>
                 <div className="px-3.5 py-2.5 outline outline-1 outline-offset-[-1px] outline-[#ac6e26] inline-flex justify-center items-center gap-2.5">
@@ -74,7 +74,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
               <div className="text-white/20 text-[40px] font-normal font-['Lora'] leading-[56px]">01</div>
               <div className="flex flex-col justify-start items-start gap-8">
                 <div className="flex flex-col justify-start items-start gap-4">
-                  <div className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Cocktails</div>
+                  <h3 className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Cocktails</h3>
                   <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Floral, smoky, citrus-led pours crafted for the room after dark.</div>
                 </div>
                 <div className="px-3.5 py-2.5 outline outline-1 outline-offset-[-1px] outline-[#ac6e26] inline-flex justify-center items-center gap-2.5">
@@ -86,7 +86,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
               <div className="text-white/20 text-[40px] font-normal font-['Lora'] leading-[56px]">02</div>
               <div className="flex flex-col justify-start items-start gap-8">
                 <div className="flex flex-col justify-start items-start gap-4">
-                  <div className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Sake</div>
+                  <h3 className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Sake</h3>
                   <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Crisp pours and bottle service pairings for shared experiences.</div>
                 </div>
                 <div className="px-3.5 py-2.5 outline outline-1 outline-offset-[-1px] outline-[#ac6e26] inline-flex justify-center items-center gap-2.5">
@@ -98,7 +98,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
               <div className="text-white/20 text-[40px] font-normal font-['Lora'] leading-[56px]">03</div>
               <div className="flex flex-col justify-start items-start gap-8">
                 <div className="flex flex-col justify-start items-start gap-4">
-                  <div className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Chef Specials</div>
+                  <h3 className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Chef Specials</h3>
                   <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Seasonal moments and premium plates designed to turn heads.</div>
                 </div>
                 <div className="px-3.5 py-2.5 outline outline-1 outline-offset-[-1px] outline-[#ac6e26] inline-flex justify-center items-center gap-2.5">
@@ -121,7 +121,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
                   <div className="text-black text-xs font-normal font-['Outfit'] uppercase leading-4 tracking-widest">Signature</div>
                 </div>
                 <div className="flex flex-col justify-start items-start gap-3">
-                  <div className="text-white text-xl font-normal font-['Lora'] leading-7">Tokyo Gold Roll</div>
+                  <h3 className="text-white text-xl font-normal font-['Lora'] leading-7">Tokyo Gold Roll</h3>
                   <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Shrimp tempura, eel, and avocado roll topped with tuna, ikura, spicy mayo, eel sauce, and 24K gold leaf, cut into 8 pieces.</div>
                 </div>
               </div>
@@ -138,7 +138,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
                   <div className="text-black text-xs font-normal font-['Outfit'] uppercase leading-4 tracking-widest">Signature</div>
                 </div>
                 <div className="flex flex-col justify-start items-start gap-3">
-                  <div className="text-white text-xl font-normal font-['Lora'] leading-7">Wagyu Truffle Roll</div>
+                  <h3 className="text-white text-xl font-normal font-['Lora'] leading-7">Wagyu Truffle Roll</h3>
                   <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Beef tartare mixed with chives, topped with wagyu slices, truffle mayo, and crispy garlic, cut into 8 pieces.</div>
                 </div>
               </div>
@@ -157,7 +157,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
                   <div className="text-black text-xs font-normal font-['Outfit'] uppercase leading-4 tracking-widest">Popular</div>
                 </div>
                 <div className="flex flex-col justify-start items-start gap-3">
-                  <div className="text-white text-xl font-normal font-['Lora'] leading-7">South Beach Roll</div>
+                  <h3 className="text-white text-xl font-normal font-['Lora'] leading-7">South Beach Roll</h3>
                   <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Salmon, shrimp, and avocado topped with crispy crab and caviar, cut into 8 pieces.</div>
                 </div>
               </div>
@@ -174,7 +174,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
                   <div className="text-black text-xs font-normal font-['Outfit'] uppercase leading-4 tracking-widest">Signature</div>
                 </div>
                 <div className="flex flex-col justify-start items-start gap-3">
-                  <div className="text-white text-xl font-normal font-['Lora'] leading-7">Lychee Martini</div>
+                  <h3 className="text-white text-xl font-normal font-['Lora'] leading-7">Lychee Martini</h3>
                   <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Vodka, lychee sake, lychee juice, and fresh lime. Served in a chilled martini glass.</div>
                 </div>
               </div>

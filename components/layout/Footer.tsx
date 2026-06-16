@@ -19,7 +19,8 @@ export async function Footer() {
     <footer className="relative overflow-hidden border-t border-white/10 bg-black pb-8 pt-[100px]">
       <Image
         src="/pictures/footer-bg.png"
-        alt="Tokyo Club Sushi Speakeasy interior ambiance"
+        alt=""
+        aria-hidden="true"
         width={2048}
         height={1365}
         className="absolute inset-0 h-full w-full object-cover"
