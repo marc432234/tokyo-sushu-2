@@ -7,7 +7,7 @@ import { SocialProof } from "@/components/sections/SocialProof";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { BookingButton } from "@/components/ui/ReservationModal";
 import { Reveal } from "@/components/ui/Reveal";
-import { createPageMetadata } from "@/lib/metadata";
+import { createPageMetadata, getPageSeo } from "@/lib/metadata";
 import type { CmsImage } from "@/lib/page-content";
 import { getPageContent } from "@/lib/page-content";
 import { pageOgImages } from "@/lib/site";
@@ -99,11 +99,11 @@ const gallery = [
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata() {
-  const pageContent = await getPageContent("experience");
+  const seo = await getPageSeo("experience");
   return createPageMetadata({
     path: "/experience",
-    title: pageContent.seo.title,
-    description: pageContent.seo.description,
+    title: seo.title,
+    description: seo.description,
     image: pageOgImages.experience,
   });
 }

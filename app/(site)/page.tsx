@@ -8,18 +8,18 @@ import { SocialProof } from "@/components/sections/SocialProof";
 import Image from "next/image";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { Reveal } from "@/components/ui/Reveal";
-import { createPageMetadata } from "@/lib/metadata";
+import { createPageMetadata, getPageSeo } from "@/lib/metadata";
 import { getPageContent } from "@/lib/page-content";
 import { pageOgImages } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata() {
-  const pageContent = await getPageContent("home");
+  const seo = await getPageSeo("home");
   return createPageMetadata({
     path: "/",
-    title: pageContent.seo.title,
-    description: pageContent.seo.description,
+    title: seo.title,
+    description: seo.description,
     image: pageOgImages.home,
   });
 }
