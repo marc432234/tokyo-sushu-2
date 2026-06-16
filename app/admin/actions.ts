@@ -57,10 +57,7 @@ export async function savePostAction(formData: FormData) {
   const title = formData.get("title")?.toString().trim() ?? "";
   const date = formData.get("date")?.toString().trim() || new Date().toISOString();
   const body = formData.get("body")?.toString() ?? "";
-  const categories = (formData.get("categories")?.toString() ?? "")
-    .split(",")
-    .map((c) => c.trim())
-    .filter(Boolean);
+  const categories = formData.getAll("categories").map((c) => c.toString());
 
   let featuredImage: string | null = null;
   const fileEntry = formData.get("featuredImage");
