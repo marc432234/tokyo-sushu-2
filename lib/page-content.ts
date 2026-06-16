@@ -133,10 +133,16 @@ export const getPageContent = cache(
       .from("pages")
       .select("content")
       .eq("key", page)
-      .single();
+      .maybeSingle();
 
-    if (error || !data) {
-      throw new Error(`Failed to load page content "${page}": ${error?.message ?? "not found"}`);
+    if (error) {
+      throw new Error(`Failed to load page content "${page}": ${error.message}`);
+    }
+
+    if (!data) {
+      throw new Error(
+        `No "${page}" row found in the Supabase "pages" table. Run \`npm run migrate:content\` to populate content.`,
+      );
     }
 
     return data.content as PageContentMap[TPage];

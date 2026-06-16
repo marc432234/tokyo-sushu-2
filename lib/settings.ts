@@ -17,10 +17,16 @@ export const getSettings = cache(async (): Promise<SiteSettings> => {
     .from("pages")
     .select("content")
     .eq("key", "settings")
-    .single();
+    .maybeSingle();
 
-  if (error || !data) {
-    throw new Error(`Failed to load settings: ${error?.message ?? "not found"}`);
+  if (error) {
+    throw new Error(`Failed to load settings: ${error.message}`);
+  }
+
+  if (!data) {
+    throw new Error(
+      'No "settings" row found in the Supabase "pages" table. Run `npm run migrate:content` to populate content.',
+    );
   }
 
   return data.content as SiteSettings;
