@@ -19,10 +19,17 @@
   "license": "ISC",
   "dependencies": {
     "@supabase/supabase-js": "^2.108.2",
+    "@tiptap/extension-link": "^3.27.0",
+    "@tiptap/pm": "^3.27.0",
+    "@tiptap/react": "^3.27.0",
+    "@tiptap/starter-kit": "^3.27.0",
+    "marked": "^18.0.5",
     "next": "^16.2.2",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-markdown": "^10.1.0",
+    "rehype-raw": "^7.0.0",
+    "rehype-sanitize": "^6.0.0",
     "remark-gfm": "^4.0.1",
     "resend": "^6.11.0"
   },
