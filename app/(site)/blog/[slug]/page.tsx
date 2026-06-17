@@ -73,9 +73,9 @@ export default async function BlogPostPage({ params }: Props) {
                 <div className="font-['Outfit'] text-base font-light leading-[22.40px] tracking-wide text-white/60">
                   {formatPostDate(post.date)}
                 </div>
-                <div className="font-['Lora'] text-2xl font-normal leading-[56px] text-white md:text-[40px]">
+                <h1 className="font-['Lora'] text-2xl font-normal leading-[56px] text-white md:text-[40px]">
                   {post.title}
-                </div>
+                </h1>
                 <div className="font-['Outfit'] text-base font-light leading-[22.40px] tracking-wide text-white/60">
                   {post.excerpt}
                 </div>
