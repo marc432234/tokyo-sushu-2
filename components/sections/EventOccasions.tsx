@@ -28,7 +28,13 @@ export function EventOccasions() {
         <ScrollReveal>
           <div className="container-shell grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="overflow-hidden p-6 relative bg-black rounded-lg flex flex-col justify-end items-start gap-4 card-hover group min-h-[22rem] md:min-h-[32rem] lg:min-h-[37.5rem]">
-              <img className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" src="/pictures/date-nights.png" alt="Romantic date night dinner setting at Tokyo Club Sushi Speakeasy" />
+              <Image
+                src="/pictures/date-nights.png"
+                alt="Romantic date night dinner setting at Tokyo Club Sushi Speakeasy"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover transition duration-700 group-hover:scale-105"
+              />
               <div className="absolute inset-x-0 bottom-0 h-[200px] md:h-[331px] bg-gradient-to-b from-[#6e0d20]/0 to-[#6d0c1f]" />
               <div className="relative text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">01</div>
               <div className="relative flex flex-col justify-start items-start gap-4">
@@ -37,7 +43,13 @@ export function EventOccasions() {
               </div>
             </div>
             <div className="overflow-hidden p-6 relative bg-black rounded-lg flex flex-col justify-end items-start gap-4 card-hover group min-h-[22rem] md:min-h-[32rem] lg:min-h-[37.5rem]">
-              <img className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" src="/pictures/birthday.png" alt="Birthday celebration with cocktails and sushi at Tokyo Club Sushi Speakeasy" />
+              <Image
+                src="/pictures/birthday.png"
+                alt="Birthday celebration with cocktails and sushi at Tokyo Club Sushi Speakeasy"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover transition duration-700 group-hover:scale-105"
+              />
               <div className="absolute inset-x-0 bottom-0 h-[200px] md:h-[331px] bg-gradient-to-b from-[#6e0d20]/0 to-[#6d0c1f]" />
               <div className="relative text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">02</div>
               <div className="relative flex flex-col justify-start items-start gap-4">
@@ -46,7 +58,13 @@ export function EventOccasions() {
               </div>
             </div>
             <div className="overflow-hidden p-6 relative bg-black rounded-lg flex flex-col justify-end items-start gap-4 card-hover group min-h-[22rem] md:min-h-[32rem] lg:min-h-[37.5rem]">
-              <img className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" src="/pictures/groups-and-night-out.png" alt="Group dining and nightlife experience at Tokyo Club Sushi Speakeasy" />
+              <Image
+                src="/pictures/groups-and-night-out.png"
+                alt="Group dining and nightlife experience at Tokyo Club Sushi Speakeasy"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover transition duration-700 group-hover:scale-105"
+              />
               <div className="absolute inset-x-0 bottom-0 h-[200px] md:h-[331px] bg-gradient-to-b from-[#6e0d20]/0 to-[#6d0c1f]" />
               <div className="relative text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">03</div>
               <div className="relative flex flex-col justify-start items-start gap-4">

@@ -41,6 +41,7 @@ export default async function ContactPage() {
           alt={pageContent.hero.image.alt}
           fill
           priority
+          fetchPriority="high"
           className="absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-70"
           sizes="100vw"
         />

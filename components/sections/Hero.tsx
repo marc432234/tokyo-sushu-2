@@ -15,6 +15,8 @@ export function Hero({ content }: { content: HomePageContent["hero"] }) {
           width={content.poster.width ?? 1365}
           height={content.poster.height ?? 2048}
           priority
+          fetchPriority="high"
+          sizes="100vw"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/10" />

@@ -30,6 +30,9 @@ export async function BlogPageLayout({ page, categorySlug }: { page: number; cat
             alt="Tokyo Club Sushi Speakeasy dining atmosphere"
             width={1920}
             height={1080}
+            priority
+            fetchPriority="high"
+            sizes="100vw"
             className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 -z-10 bg-black/60" />

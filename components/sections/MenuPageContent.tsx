@@ -43,6 +43,8 @@ export function MenuPageContent() {
           width={1365}
           height={2048}
           priority
+          fetchPriority="high"
+          sizes="100vw"
           className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
         />
         <div className="absolute inset-0 -z-10 bg-black/70" />
@@ -243,7 +245,13 @@ function ImageFeatureSection({ feature }: { feature: NonNullable<Section["imageF
   return (
     <div className="w-full p-4 md:p-6 bg-white/5 rounded-lg card-hover outline outline-1 outline-white/10 flex justify-start items-center gap-6 flex-wrap">
       <div className="flex-1 min-w-[300px] h-48 md:h-[300px] relative bg-white rounded-sm outline outline-1 outline-offset-[-1px] outline-white/20 img-zoom overflow-hidden group">
-        <img className="w-full h-full object-cover transition duration-700 group-hover:scale-105" src={feature.image} alt={feature.title} />
+        <Image
+          src={feature.image}
+          alt={feature.title}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover transition duration-700 group-hover:scale-105"
+        />
       </div>
       <div className="flex-1 min-w-[300px] flex flex-col justify-start items-start gap-8">
         <div className="self-stretch flex flex-col justify-start items-start gap-8">
@@ -308,7 +316,15 @@ function CocktailCard({ item }: { item: CardItem }) {
   return (
     <div className="p-4 md:p-6 bg-white/5 rounded-lg card-hover outline outline-1 outline-white/10 flex flex-col justify-start items-start gap-6">
       <div className="self-stretch h-40 md:h-60 relative bg-white rounded-lg img-zoom overflow-hidden group">
-        {item.image && <img className="w-full h-full object-cover transition duration-700 group-hover:scale-105" src={item.image} alt={item.name} />}
+        {item.image && (
+          <Image
+            src={item.image}
+            alt={item.name}
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
+            className="object-cover transition duration-700 group-hover:scale-105"
+          />
+        )}
       </div>
       <div className="self-stretch flex flex-col justify-start items-start gap-3">
         <h3 className="self-stretch text-white text-lg md:text-2xl font-normal font-(family-name:--font-display) leading-[33.60px]">
