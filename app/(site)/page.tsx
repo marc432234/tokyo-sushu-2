@@ -12,7 +12,7 @@ import { createPageMetadata, getPageSeo } from "@/lib/metadata";
 import { getPageContent } from "@/lib/page-content";
 import { pageOgImages } from "@/lib/site";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export async function generateMetadata() {
   const seo = await getPageSeo("home");
@@ -34,15 +34,18 @@ export default async function HomePage() {
         image={pageOgImages.home}
       />
       <Hero content={pageContent.hero} />
-      <Reveal delay={50}>
-        <ExperienceStory content={pageContent.experience} />
-      </Reveal>
+      {pageContent.experience && (
+        <Reveal delay={50}>
+          <ExperienceStory content={pageContent.experience} />
+        </Reveal>
+      )}
       <section className="relative isolate overflow-hidden bg-[#160306] py-[120px]">
         <Image
           src="/pictures/premium-sushi.png"
           alt="Premium sushi platter at Tokyo Sushi Speakeasy"
           width={380}
           height={570}
+          sizes="380px"
           className="absolute inset-0 -z-10 h-full w-full object-contain object-center"
         />
         <div className="pointer-events-none absolute right-[-120px] top-[-107px] size-[336px] rounded-full border-2 border-[#cf183c]/30" />
@@ -55,18 +58,24 @@ export default async function HomePage() {
           <div className="text-center text-base font-light font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px] text-[#ac6e26]">Tokyo Sushi Speakeasy — South Beach, Miami</div>
         </div>
       </section>
-      <Reveal delay={90}>
-        <MenuPreview content={pageContent.menuPreview} />
-      </Reveal>
+      {pageContent.menuPreview && (
+        <Reveal delay={90}>
+          <MenuPreview content={pageContent.menuPreview} />
+        </Reveal>
+      )}
       <Reveal delay={130}>
         <EventOccasions />
       </Reveal>
-      <Reveal delay={170}>
-        <SocialProof content={pageContent.socialProof} />
-      </Reveal>
-      <Reveal delay={210}>
-        <GalleryTeaser content={pageContent.galleryTeaser} />
-      </Reveal>
+      {pageContent.socialProof && (
+        <Reveal delay={170}>
+          <SocialProof content={pageContent.socialProof} />
+        </Reveal>
+      )}
+      {pageContent.galleryTeaser && (
+        <Reveal delay={210}>
+          <GalleryTeaser content={pageContent.galleryTeaser} />
+        </Reveal>
+      )}
       <CtaSection />
     </>
   );

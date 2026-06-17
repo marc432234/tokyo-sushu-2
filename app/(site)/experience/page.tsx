@@ -96,7 +96,7 @@ const gallery = [
   },
 ];
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export async function generateMetadata() {
   const seo = await getPageSeo("experience");
@@ -158,6 +158,7 @@ export default async function ExperiencePage() {
                 alt={sectionImage("storyImage").alt}
                 width={sectionImage("storyImage").width ?? 1365}
                 height={sectionImage("storyImage").height ?? 2048}
+                sizes="(min-width: 1024px) 45vw, 100vw"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
             </div>
@@ -246,6 +247,7 @@ export default async function ExperiencePage() {
                     alt={item.alt}
                     width={1365}
                     height={2048}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
                     className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-[#6e0d20] via-transparent to-transparent" />
@@ -291,6 +293,7 @@ export default async function ExperiencePage() {
                 alt="Damask-wallpapered staircase with a gold handrail inside Tokyo Sushi Speakeasy."
                 width={1365}
                 height={2048}
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
             </div>
@@ -323,6 +326,7 @@ export default async function ExperiencePage() {
                     alt={asset.alt}
                     width={1365}
                     height={2048}
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />
                 </div>

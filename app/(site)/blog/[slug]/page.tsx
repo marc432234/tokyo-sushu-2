@@ -7,7 +7,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { Carousel } from "@/components/ui/Carousel";
 import { siteConfig, siteUrl } from "@/lib/site";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 type Props = {
   params: Promise<{ slug: string }>;

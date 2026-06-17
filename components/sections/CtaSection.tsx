@@ -13,6 +13,7 @@ export function CtaSection() {
           aria-hidden="true"
           width={485}
           height={727}
+          sizes="485px"
         />
         <Image
           className="hidden md:block w-[484.56px] h-[727.03px] left-0 top-0 absolute origin-top-left -rotate-180"
@@ -21,6 +22,7 @@ export function CtaSection() {
           aria-hidden="true"
           width={485}
           height={727}
+          sizes="485px"
         />
         <Image
           className="hidden md:block w-[484.56px] h-[727.03px] left-1/2 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-0 top-0 absolute"
@@ -29,6 +31,7 @@ export function CtaSection() {
           aria-hidden="true"
           width={485}
           height={727}
+          sizes="485px"
         />
         <div className="py-[120px]">
         <div className="container-shell flex flex-col justify-center items-center gap-14">

@@ -10,7 +10,7 @@ type Props = {
   params: Promise<{ slug: string; page: string }>;
 };
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export async function generateMetadata({ params }: Props) {
   const { slug, page } = await params;

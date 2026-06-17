@@ -79,6 +79,7 @@ export function ExperienceStory({ content }: { content: HomePageContent["experie
         aria-hidden="true"
         width={1920}
         height={1080}
+        sizes="100vw"
         className="absolute inset-0 -z-10 h-full w-full object-cover mix-blend-color-dodge"
       />
       <div className="pointer-events-none absolute -left-20 top-1/4 size-80 rounded-full border border-(--accent-red)/20" />
@@ -94,6 +95,7 @@ export function ExperienceStory({ content }: { content: HomePageContent["experie
                 alt={image.alt}
                 width={image.width}
                 height={image.height}
+                sizes="300px"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
             </div>
@@ -148,6 +150,7 @@ export function ExperienceStory({ content }: { content: HomePageContent["experie
                 alt={image.alt}
                 width={image.width}
                 height={image.height}
+                sizes="300px"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
             </div>

@@ -86,6 +86,7 @@ export function MenuTabs({
                     alt={item.alt}
                     width={item.width}
                     height={item.height}
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                 </div>
