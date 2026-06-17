@@ -4,8 +4,8 @@ import Link from "next/link";
 import type { HomePageContent } from "@/lib/page-content";
 
 const images = [
-  { src: "/pictures/Food2.png", alt: "A vivid lobster and sushi plate at Tokyo Club." },
-  { src: "/pictures/Drinks.png", alt: "Tokyo Club cocktails and sushi served under dramatic light." },
+  { src: "/pictures/Food2.png", alt: "A vivid lobster and sushi plate at Tokyo Sushi Speakeasy." },
+  { src: "/pictures/Drinks.png", alt: "Tokyo Sushi Speakeasy cocktails and sushi served under dramatic light." },
   { src: "/pictures/08-citrus-cocktail-with-dried-lime-and-flowers.jpg", alt: "Citrus cocktail with dried lime and flowers." },
   { src: "/pictures/13-matcha-cake-with-mango-and-pansy.jpg", alt: "Matcha cake with mango and pansy." },
   { src: "/pictures/05-japanese-dishes-spread-with-cocktail.jpg", alt: "Japanese dishes spread with cocktail." },

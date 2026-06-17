@@ -107,7 +107,7 @@ export const menuSections: Section[] = [
     accentTitle: "Buns",
     tabLabel: "Bao Buns",
     description:
-      "Pillowy steamed bao — two pieces per order — filled with Tokyo Club's most indulgent combinations. Light outside, bold inside.",
+      "Pillowy steamed bao — two pieces per order — filled with Tokyo Sushi Speakeasy's most indulgent combinations. Light outside, bold inside.",
     type: "items",
     rows: [
       [
@@ -382,7 +382,7 @@ export const menuSections: Section[] = [
     accentTitle: "Crafted After Dark",
     tabLabel: "COCKTAILS",
     description:
-      "Floral, smoky, citrus-led pours engineered for the room after dark. Each cocktail is designed to photograph as well as it tastes — because at Tokyo Club, the table is the stage.",
+      "Floral, smoky, citrus-led pours engineered for the room after dark. Each cocktail is designed to photograph as well as it tastes — because at Tokyo Sushi Speakeasy, the table is the stage.",
     type: "cocktails",
     rows: [],
     cardItems: [
@@ -390,7 +390,7 @@ export const menuSections: Section[] = [
         name: "Lychee Orchid",
         tags: ["Flora", "Citrus", "Light"],
         description:
-          "Fresh lychee, orchid bitters, yuzu, and premium vodka. Garnished with a live orchid. The signature pour of Tokyo Club.",
+          "Fresh lychee, orchid bitters, yuzu, and premium vodka. Garnished with a live orchid. The signature pour of Tokyo Sushi Speakeasy.",
         price: "$18",
         image: "/pictures/lychee-orchild.png",
       },

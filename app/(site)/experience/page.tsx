@@ -71,17 +71,17 @@ const moments = [
 const gallery = [
   {
     src: "/pictures/Food2.png",
-    alt: "A vivid lobster and sushi plate at Tokyo Club.",
+    alt: "A vivid lobster and sushi plate at Tokyo Sushi Speakeasy.",
     className: "lg:row-span-2",
   },
   {
     src: "/pictures/Drinks.png",
-    alt: "Tokyo Club cocktails and sushi served under dramatic light.",
+    alt: "Tokyo Sushi Speakeasy cocktails and sushi served under dramatic light.",
     className: "",
   },
   {
     src: "/pictures/04-lychee-orchid-and-citrus-cocktails.jpg",
-    alt: "Lychee orchid cocktails in Tokyo Club's moody room.",
+    alt: "Lychee orchid cocktails in Tokyo Sushi Speakeasy's moody room.",
     className: "",
   },
   {
@@ -288,7 +288,7 @@ export default async function ExperiencePage() {
             <div className="figma-image-card group aspect-[4/5] lg:aspect-[668/540]">
               <Image
                 src="/pictures/28-DSC08248.jpg"
-                alt="Damask-wallpapered staircase with a gold handrail inside Tokyo Club."
+                alt="Damask-wallpapered staircase with a gold handrail inside Tokyo Sushi Speakeasy."
                 width={1365}
                 height={2048}
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"

@@ -15,8 +15,8 @@ export async function generateMetadata({ params }: Props) {
   const name = slug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
   return createPageMetadata({
     path: `/blog/category/${slug}`,
-    title: `${name} — Tokyo Club Blog | Sushi, Cocktails, and South Beach Nights`,
-    description: `Read ${name} stories on the Tokyo Club blog.`,
+    title: `${name} — Tokyo Sushi Speakeasy Blog | Sushi, Cocktails, and South Beach Nights`,
+    description: `Read ${name} stories on the Tokyo Sushi Speakeasy blog.`,
     image: pageOgImages.home,
   });
 }

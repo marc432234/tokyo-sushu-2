@@ -10,7 +10,7 @@ import type { HomePageContent } from "@/lib/page-content";
 const storyImages = [
   {
     src: "/pictures/04-lychee-orchid-and-citrus-cocktails.jpg",
-    alt: "Lychee orchid cocktails in Tokyo Club's moody room.",
+    alt: "Lychee orchid cocktails in Tokyo Sushi Speakeasy's moody room.",
     width: 2048,
     height: 1365,
     className: "aspect-square",
@@ -24,7 +24,7 @@ const storyImages = [
   },
   {
     src: "/pictures/17-DSC07903.jpg",
-    alt: "Tokyo Club dining room detail.",
+    alt: "Tokyo Sushi Speakeasy dining room detail.",
     width: 1365,
     height: 2048,
     className: "mx-auto aspect-square w-[69%]",

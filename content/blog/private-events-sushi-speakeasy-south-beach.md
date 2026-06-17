@@ -94,6 +94,6 @@ Share the guest count, occasion, preferred timing, dietary restrictions, and whe
 
 Suggested URL slug: private-events-sushi-speakeasy-south-beach
 
-Target keywords: private events South Beach, sushi private dining Miami Beach, birthday dinner South Beach, Japanese speakeasy events, group dinner Miami Beach, Tokyo Club private events
+Target keywords: private events South Beach, sushi private dining Miami Beach, birthday dinner South Beach, Japanese speakeasy events, group dinner Miami Beach, Tokyo Sushi Speakeasy private events
 
 Meta description: Host private events in South Beach with sushi, cocktails, moody ambiance, and group-friendly dining at Tokyo Sushi Speakeasy.

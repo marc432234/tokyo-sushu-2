@@ -102,6 +102,6 @@ Choose flexible drinks that work across several dishes. Citrus-forward cocktails
 
 Suggested URL slug: sushi-and-cocktail-pairing-south-beach
 
-Target keywords: sushi and cocktails South Beach, sushi cocktail pairing, Miami Beach sushi bar, Japanese speakeasy cocktails, craft cocktails South Beach, Tokyo Club cocktails
+Target keywords: sushi and cocktails South Beach, sushi cocktail pairing, Miami Beach sushi bar, Japanese speakeasy cocktails, craft cocktails South Beach, Tokyo Sushi Speakeasy cocktails
 
-Meta description: Learn how to pair sushi and cocktails in South Beach with bright, smoky, savory, and sake-friendly tips from Tokyo Club.
+Meta description: Learn how to pair sushi and cocktails in South Beach with bright, smoky, savory, and sake-friendly tips from Tokyo Sushi Speakeasy.

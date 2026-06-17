@@ -45,7 +45,7 @@ export async function BlogPageLayout({ page, categorySlug }: { page: number; cat
                 <span className="text-highlight-underline-amber italic" style={{ color: "#FFC107" }}>Stories</span> from the<br />Speakeasy.
               </h1>
               <div className="font-['Outfit'] text-base font-light leading-[22.40px] tracking-wide text-white">
-                Inside Tokyo Club — from sushi craftsmanship and cocktail rituals to South Beach nightlife, Japanese dining culture, and after-dark experiences.
+                Inside Tokyo Sushi Speakeasy — from sushi craftsmanship and cocktail rituals to South Beach nightlife, Japanese dining culture, and after-dark experiences.
               </div>
             </div>
           </div>

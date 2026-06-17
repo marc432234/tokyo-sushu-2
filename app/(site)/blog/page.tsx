@@ -6,9 +6,9 @@ export const dynamic = "force-dynamic";
 
 export const metadata = createPageMetadata({
   path: "/blog",
-  title: "Tokyo Club Blog | Sushi, Cocktails, and South Beach Nights",
+  title: "Tokyo Sushi Speakeasy Blog | Sushi, Cocktails, and South Beach Nights",
   description:
-    "Read the latest Tokyo Club stories, guides, and updates from the South Beach sushi speakeasy.",
+    "Read the latest Tokyo Sushi Speakeasy stories, guides, and updates from the South Beach sushi speakeasy.",
   image: pageOgImages.home,
 });
 
