@@ -3,6 +3,7 @@ import type { BlogRow, CategoryRow } from "@/lib/admin-data";
 import { listCategories } from "@/lib/admin-data";
 import { deletePostAction, savePostAction } from "../../actions";
 import { PostBodyEditor } from "./PostBodyEditor";
+import { DeleteButton, SaveButton } from "./PostEditorButtons";
 
 const field = "rounded-md border border-white/15 bg-white/5 px-3 py-2 text-white outline-none focus:border-[#ad6d25]";
 const labelClass = "text-sm text-white/70";
@@ -89,24 +90,14 @@ export async function PostEditor({ post }: { post?: BlogRow }) {
         </div>
 
         <div className="flex items-center gap-3">
-          <button
-            type="submit"
-            className="rounded-md bg-[#ad6d25] px-5 py-2 font-medium text-white hover:opacity-90"
-          >
-            Save
-          </button>
+          <SaveButton isNew={isNew} />
         </div>
       </form>
 
       {!isNew && (
         <form action={deletePostAction} className="mt-6 border-t border-white/10 pt-6">
           <input type="hidden" name="slug" value={post.slug} />
-          <button
-            type="submit"
-            className="rounded-md border border-[#ff6b6b]/40 px-4 py-2 text-sm text-[#ff6b6b] hover:bg-[#ff6b6b]/10"
-          >
-            Delete post
-          </button>
+          <DeleteButton title={post.title} />
         </form>
       )}
     </div>
