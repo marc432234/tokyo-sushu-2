@@ -29,7 +29,7 @@ export default async function HomePage() {
   return (
     <>
       <StructuredData
-        name="Tokyo Club Sushi Speakeasy"
+        name="Tokyo Sushi Speakeasy"
         path="/"
         image={pageOgImages.home}
       />
@@ -40,7 +40,7 @@ export default async function HomePage() {
       <section className="relative isolate overflow-hidden bg-[#160306] py-[120px]">
         <Image
           src="/pictures/premium-sushi.png"
-          alt="Premium sushi platter at Tokyo Club Sushi Speakeasy"
+          alt="Premium sushi platter at Tokyo Sushi Speakeasy"
           width={380}
           height={570}
           className="absolute inset-0 -z-10 h-full w-full object-contain object-center"
@@ -52,7 +52,7 @@ export default async function HomePage() {
 
           <div className="max-w-[984px] text-center text-3xl md:text-5xl font-normal font-['Lora'] leading-[57.60px] text-white/80">&quot;Premium sushi. Sculpted cocktails. A room that moves on its own frequency.&quot;</div>
           <hr className="w-full border-white/16" />
-          <div className="text-center text-base font-light font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px] text-[#ac6e26]">Tokyo Club Sushi Speakeasy — South Beach, Miami</div>
+          <div className="text-center text-base font-light font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px] text-[#ac6e26]">Tokyo Sushi Speakeasy — South Beach, Miami</div>
         </div>
       </section>
       <Reveal delay={90}>

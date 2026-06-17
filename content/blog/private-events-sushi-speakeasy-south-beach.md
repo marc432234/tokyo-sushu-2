@@ -10,7 +10,7 @@ featuredImage: /uploads/blog/private-events-south-beach.svg
 
 Planning a private event in South Beach sounds exciting until the details start stacking up. You need a venue with atmosphere, food that works for different guests, drinks that feel special, and a layout that supports conversation instead of fighting it. You also need the night to feel polished without becoming complicated. That is why a sushi speakeasy can be such a strong choice for birthdays, group dinners, company celebrations, visiting friends, and private dining in Miami Beach.
 
-Tokyo Club Sushi Speakeasy offers the kind of event setting that already feels like a plan. The room is intimate, the menu is shareable, the cocktails are built for after-dark energy, and the location puts guests in the heart of South Beach. Instead of building an event from scratch, you can start with a venue that already has a point of view. The right sushi restaurant gives you structure, style, and flexibility in one place.
+Tokyo Sushi Speakeasy offers the kind of event setting that already feels like a plan. The room is intimate, the menu is shareable, the cocktails are built for after-dark energy, and the location puts guests in the heart of South Beach. Instead of building an event from scratch, you can start with a venue that already has a point of view. The right sushi restaurant gives you structure, style, and flexibility in one place.
 
 ## Why Venue Choice Matters More Than Extra Decorations
 
@@ -74,7 +74,7 @@ The best events feel effortless to guests because someone planned the details ea
 
 Yes. A sushi speakeasy works well because it combines food, cocktails, atmosphere, and a social dining format. It is especially useful for birthdays, group dinners, and stylish celebrations.
 
-### What types of events work best at Tokyo Club Sushi Speakeasy?
+### What types of events work best at Tokyo Sushi Speakeasy?
 
 Birthdays, date-night groups, visiting friends, company dinners, celebrations, and private or semi-private gatherings all fit well because the menu and room support different energy levels.
 
@@ -96,4 +96,4 @@ Suggested URL slug: private-events-sushi-speakeasy-south-beach
 
 Target keywords: private events South Beach, sushi private dining Miami Beach, birthday dinner South Beach, Japanese speakeasy events, group dinner Miami Beach, Tokyo Club private events
 
-Meta description: Host private events in South Beach with sushi, cocktails, moody ambiance, and group-friendly dining at Tokyo Club Sushi Speakeasy.
+Meta description: Host private events in South Beach with sushi, cocktails, moody ambiance, and group-friendly dining at Tokyo Sushi Speakeasy.

@@ -28,7 +28,7 @@ export async function sendContactMessage(
     return { success: false, error: "Unable to process your request right now." };
   }
 
-  const from = "Tokyo Club Sushi Speakeasy <events@fairwindhotelmiami.com>";
+  const from = "Tokyo Sushi Speakeasy <events@fairwindhotelmiami.com>";
 
   try {
     await Promise.all([
@@ -49,15 +49,15 @@ export async function sendContactMessage(
       resend.emails.send({
         from,
         to: email,
-        subject: "We received your message — Tokyo Club Sushi Speakeasy",
+        subject: "We received your message — Tokyo Sushi Speakeasy",
         text: [
           `Hi ${name},`,
           "",
-          "Thank you for reaching out to Tokyo Club Sushi Speakeasy. We've received your message and will get back to you shortly.",
+          "Thank you for reaching out to Tokyo Sushi Speakeasy. We've received your message and will get back to you shortly.",
           "",
           "In the meantime, feel free to call us at (786) 728-9318 for anything urgent.",
           "",
-          "— The Tokyo Club Sushi Speakeasy Team",
+          "— The Tokyo Sushi Speakeasy Team",
         ].join("\n"),
       }),
     ]);

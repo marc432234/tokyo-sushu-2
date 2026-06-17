@@ -10,7 +10,7 @@ featuredImage: "/uploads/blog/south-beach-sushi-night-guide.svg"
 
 South Beach has no shortage of dinner plans, but a great sushi night still stands out because it gives the evening a clear mood. It feels polished without being stiff, social without becoming chaotic, and memorable without needing a complicated itinerary. If you are looking for premium sushi in South Beach, a modern Japanese speakeasy gives you more than a meal. It gives you a setting for craft cocktails, late-night energy, shareable plates, and the kind of atmosphere that turns a regular reservation into the centerpiece of the night.
 
-Tokyo Club Sushi Speakeasy is built around that exact idea. The experience starts with sushi, but it continues through lighting, music, service, cocktails, and the rhythm of the room. Whether you are planning a date, birthday dinner, group night out, or a low-pressure evening with friends, the right approach helps you get the most from the visit. Use this guide to plan a South Beach sushi night that feels intentional, easy, and worth talking about after the check is closed.
+Tokyo Sushi Speakeasy is built around that exact idea. The experience starts with sushi, but it continues through lighting, music, service, cocktails, and the rhythm of the room. Whether you are planning a date, birthday dinner, group night out, or a low-pressure evening with friends, the right approach helps you get the most from the visit. Use this guide to plan a South Beach sushi night that feels intentional, easy, and worth talking about after the check is closed.
 
 ## Why Sushi Works So Well for a South Beach Night Out
 
@@ -102,6 +102,6 @@ Yes. Sushi is excellent for groups because the table can share rolls, small plat
 
 Suggested URL slug: south-beach-sushi-night-guide
 
-Target keywords: South Beach sushi, sushi night South Beach, Miami Beach sushi restaurant, Japanese speakeasy Miami, sushi date night Miami Beach, Tokyo Club Sushi Speakeasy
+Target keywords: South Beach sushi, sushi night South Beach, Miami Beach sushi restaurant, Japanese speakeasy Miami, sushi date night Miami Beach, Tokyo Sushi Speakeasy
 
-Meta description: Plan a South Beach sushi night with premium rolls, cocktails, reservations, and speakeasy energy at Tokyo Club Sushi Speakeasy.
+Meta description: Plan a South Beach sushi night with premium rolls, cocktails, reservations, and speakeasy energy at Tokyo Sushi Speakeasy.

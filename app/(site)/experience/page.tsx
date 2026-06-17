@@ -116,10 +116,10 @@ export default async function ExperiencePage() {
   return (
     <>
       <StructuredData
-        name="Tokyo Club Sushi Speakeasy Experience"
+        name="Tokyo Sushi Speakeasy Experience"
         path="/experience"
         image={pageOgImages.experience}
-        description="Step inside Tokyo Club Sushi Speakeasy — an intimate hidden speakeasy in South Beach with moody lighting, Japanese craftsmanship, and unforgettable nightlife energy."
+        description="Step inside Tokyo Sushi Speakeasy — an intimate hidden speakeasy in South Beach with moody lighting, Japanese craftsmanship, and unforgettable nightlife energy."
       />
 
       <section className="relative isolate min-h-[600px] overflow-hidden pt-(--header-offset)">

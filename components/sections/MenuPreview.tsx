@@ -166,7 +166,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
           </div>
           <div className="flex-1 p-6 bg-white/5 rounded-lg outline outline-1 outline-white/10 backdrop-blur-[10px] flex flex-col lg:flex-row items-center gap-6 card-hover">
             <div className="w-full lg:w-[207px] h-60 relative bg-white rounded-sm outline outline-1 outline-white/20 overflow-hidden shrink-0 group">
-              <Image width={207} height={310} sizes="(max-width: 1024px) 100vw, 207px" className="w-full lg:w-[207px] h-[310px] left-0 top-[-23px] absolute object-cover transition duration-700 group-hover:scale-105" src="/pictures/lychee-martini.png" alt="Lychee martini signature cocktail at Tokyo Club Sushi Speakeasy" />
+              <Image width={207} height={310} sizes="(max-width: 1024px) 100vw, 207px" className="w-full lg:w-[207px] h-[310px] left-0 top-[-23px] absolute object-cover transition duration-700 group-hover:scale-105" src="/pictures/lychee-martini.png" alt="Lychee martini signature cocktail at Tokyo Sushi Speakeasy" />
             </div>
             <div className="flex flex-col justify-start items-start gap-4">
               <div className="flex flex-col justify-start items-start gap-5">

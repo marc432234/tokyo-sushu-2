@@ -27,7 +27,7 @@ export async function BlogPageLayout({ page, categorySlug }: { page: number; cat
         <section className="relative isolate overflow-hidden">
           <Image
             src="/pictures/blog-list-bg.png"
-            alt="Tokyo Club Sushi Speakeasy dining atmosphere"
+            alt="Tokyo Sushi Speakeasy dining atmosphere"
             width={1920}
             height={1080}
             priority

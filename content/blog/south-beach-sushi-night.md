@@ -8,7 +8,7 @@ categories:
 featuredImage: "/pictures/15-japanese-dinner-spread-sushi-bao-dumplings.jpg"
 ---
 
-A good South Beach dinner needs more than a table. The room, the timing, the cocktails, and the plates all have to work together. Tokyo Club Sushi Speakeasy is built for nights where dinner turns into the main event.
+A good South Beach dinner needs more than a table. The room, the timing, the cocktails, and the plates all have to work together. Tokyo Sushi Speakeasy is built for nights where dinner turns into the main event.
 
 ## Start with the table
 

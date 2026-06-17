@@ -11,7 +11,7 @@ featuredImage: /uploads/blog/date-night-south-beach.svg
 
 A good date night in South Beach needs the right balance. It should feel special, but not forced. It should give you something to talk about, but not make conversation difficult. It should have atmosphere, but not so much noise that the night becomes work. Sushi is one of the easiest ways to hit that balance, especially when the setting is a modern Japanese speakeasy with cocktails, low light, and a menu built for sharing.
 
-Tokyo Club Sushi Speakeasy is designed for this kind of evening. It gives a date night structure without making it stiff. You can start with a cocktail, share a few plates, compare favorite bites, and let the room create a sense of occasion. If you are looking for a sushi date night in South Beach, the best plan is simple: choose a place with mood, order with balance, and leave enough time for the night to unfold.
+Tokyo Sushi Speakeasy is designed for this kind of evening. It gives a date night structure without making it stiff. You can start with a cocktail, share a few plates, compare favorite bites, and let the room create a sense of occasion. If you are looking for a sushi date night in South Beach, the best plan is simple: choose a place with mood, order with balance, and leave enough time for the night to unfold.
 
 ## Why Sushi Is a Strong Date Night Choice
 
@@ -103,7 +103,7 @@ Early reservations are better for quieter conversation. Later reservations are b
 
 Yes, when they are balanced. Bright, citrus-forward, floral, or lightly smoky cocktails can pair well with sushi and help the night feel more relaxed.
 
-### What makes Tokyo Club Sushi Speakeasy a good date spot?
+### What makes Tokyo Sushi Speakeasy a good date spot?
 
 The combination of sushi, cocktails, moody lighting, and South Beach energy creates a date-night setting that feels polished, intimate, and easy to enjoy.
 
@@ -113,4 +113,4 @@ Suggested URL slug: date-night-sushi-south-beach
 
 Target keywords: date night South Beach, sushi date night Miami, romantic sushi restaurant South Beach, Miami Beach date night, Japanese speakeasy date, Tokyo Club date night
 
-Meta description: Plan a South Beach sushi date night with shareable rolls, cocktails, moody ambiance, and easy pacing at Tokyo Club Sushi Speakeasy.
+Meta description: Plan a South Beach sushi date night with shareable rolls, cocktails, moody ambiance, and easy pacing at Tokyo Sushi Speakeasy.

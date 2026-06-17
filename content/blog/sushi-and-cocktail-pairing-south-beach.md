@@ -10,7 +10,7 @@ featuredImage: "/uploads/blog/sushi-cocktail-pairing.svg"
 
 Sushi and cocktails are a better match than many people expect. The best sushi has precision, freshness, texture, and restraint. The best cocktails bring aroma, temperature, acidity, sweetness, smoke, or spice. When those qualities are balanced, the pairing can make both sides feel more memorable. In South Beach, where dinner often blends into nightlife, sushi and craft cocktails create a natural bridge between a refined meal and an after-dark experience.
 
-Tokyo Club Sushi Speakeasy leans into that bridge. The menu is built around modern Japanese dining, while the bar program gives the night its energy. If you are searching for sushi and cocktails in South Beach, the goal is not to memorize strict rules. The goal is to understand how flavor, mood, and pacing work together. This guide explains how to pair sushi with cocktails in a way that feels polished, easy, and right for the moment.
+Tokyo Sushi Speakeasy leans into that bridge. The menu is built around modern Japanese dining, while the bar program gives the night its energy. If you are searching for sushi and cocktails in South Beach, the goal is not to memorize strict rules. The goal is to understand how flavor, mood, and pacing work together. This guide explains how to pair sushi with cocktails in a way that feels polished, easy, and right for the moment.
 
 ## Start with Balance, Not Perfection
 

@@ -1,6 +1,6 @@
 # Tokyo Club South Beach
 
-Next.js (App Router) site for Tokyo Club Sushi Speakeasy. Content is stored in
+Next.js (App Router) site for Tokyo Sushi Speakeasy. Content is stored in
 **Supabase** and edited through a built-in admin at `/admin`. Deployed on **Vercel**.
 
 ## Local Development
