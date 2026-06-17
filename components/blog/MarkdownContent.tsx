@@ -1,90 +1,66 @@
-import type { ReactNode } from "react";
+import type { Components } from "react-markdown";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
-function renderInline(text: string): ReactNode[] {
-  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g).filter(Boolean);
-
-  return parts.map((part, index) => {
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return <strong key={index}>{part.slice(2, -2)}</strong>;
-    }
-
-    if (part.startsWith("*") && part.endsWith("*")) {
-      return <em key={index}>{part.slice(1, -1)}</em>;
-    }
-
-    return part;
-  });
-}
-
-function renderParagraph(text: string): ReactNode[] {
-  return text.split("\n").flatMap((line, index, lines) => {
-    const nodes = renderInline(line);
-
-    if (index < lines.length - 1) {
-      return [...nodes, <br key={`br-${index}`} />];
-    }
-
-    return nodes;
-  });
-}
+const components: Components = {
+  h1: ({ children }) => (
+    <h1 className="font-display text-3xl md:text-5xl leading-tight text-stone-50">
+      {children}
+    </h1>
+  ),
+  h2: ({ children }) => (
+    <h2 className="pt-4 font-display text-2xl md:text-4xl leading-tight text-stone-50">
+      {children}
+    </h2>
+  ),
+  h3: ({ children }) => (
+    <h3 className="font-display text-xl md:text-3xl leading-tight text-stone-50">
+      {children}
+    </h3>
+  ),
+  p: ({ children }) => (
+    <p className="text-lg leading-9 text-stone-300">{children}</p>
+  ),
+  ul: ({ children }) => (
+    <ul className="list-disc space-y-3 pl-6 text-lg leading-8 text-stone-300">
+      {children}
+    </ul>
+  ),
+  ol: ({ children }) => (
+    <ol className="list-decimal space-y-3 pl-6 text-lg leading-8 text-stone-300">
+      {children}
+    </ol>
+  ),
+  li: ({ children }) => <li>{children}</li>,
+  a: ({ href, children }) => (
+    <a
+      href={href}
+      className="text-[#ad6d25] underline underline-offset-4 hover:text-[#cf8b3d]"
+    >
+      {children}
+    </a>
+  ),
+  strong: ({ children }) => <strong>{children}</strong>,
+  em: ({ children }) => <em>{children}</em>,
+  blockquote: ({ children }) => (
+    <blockquote className="border-l-4 border-[#ad6d25] pl-5 italic text-stone-300">
+      {children}
+    </blockquote>
+  ),
+  code: ({ children }) => (
+    <code className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-base text-stone-100">
+      {children}
+    </code>
+  ),
+  hr: () => <hr className="border-white/15" />,
+};
 
 export function MarkdownContent({ content }: { content: string }) {
-  const blocks = content.split(/\n{2,}/).filter((block) => block.trim() !== "");
-
   return (
     <div className="space-y-7 text-stone-200">
-      {blocks.map((block, index) => {
-        const trimmed = block.trim();
-
-        if (trimmed.startsWith("### ")) {
-          return (
-            <h3
-              key={index}
-              className="font-display text-xl md:text-3xl leading-tight text-stone-50"
-            >
-              {renderInline(trimmed.replace(/^### /, ""))}
-            </h3>
-          );
-        }
-
-        if (trimmed.startsWith("## ")) {
-          return (
-            <h2
-              key={index}
-              className="pt-4 font-display text-2xl md:text-4xl leading-tight text-stone-50"
-            >
-              {renderInline(trimmed.replace(/^## /, ""))}
-            </h2>
-          );
-        }
-
-        if (trimmed.startsWith("# ")) {
-          return (
-            <h1
-              key={index}
-              className="font-display text-3xl md:text-5xl leading-tight text-stone-50"
-            >
-              {renderInline(trimmed.replace(/^# /, ""))}
-            </h1>
-          );
-        }
-
-        if (trimmed.split("\n").every((line) => line.startsWith("- "))) {
-          return (
-            <ul key={index} className="list-disc space-y-3 pl-6 text-lg leading-8 text-stone-300">
-              {trimmed.split("\n").map((line) => (
-                <li key={line}>{renderInline(line.replace(/^- /, ""))}</li>
-              ))}
-            </ul>
-          );
-        }
-
-        return (
-          <p key={index} className="text-lg leading-9 text-stone-300">
-            {renderParagraph(trimmed)}
-          </p>
-        );
-      })}
+      <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
+        {content}
+      </ReactMarkdown>
     </div>
   );
 }
