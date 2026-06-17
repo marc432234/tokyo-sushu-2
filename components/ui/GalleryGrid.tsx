@@ -49,6 +49,7 @@ export function GalleryGrid() {
                     width={1365}
                     height={2048}
                     priority={globalIndex < 4}
+                    sizes="(min-width: 640px) 33vw, 100vw"
                     className="w-full h-auto transition duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-[#170307]/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

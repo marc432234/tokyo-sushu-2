@@ -48,6 +48,7 @@ export function GalleryTeaser({ content }: { content: HomePageContent["galleryTe
                       alt={asset.alt}
                       width={1365}
                       height={2048}
+                      sizes="(min-width: 768px) 33vw, 50vw"
                       className="w-full h-auto transition duration-700 group-hover:scale-105"
                     />
                   </div>

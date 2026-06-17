@@ -6,7 +6,7 @@ import { createPageMetadata, getPageSeo } from "@/lib/metadata";
 import { getPageContent } from "@/lib/page-content";
 import { pageOgImages } from "@/lib/site";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export async function generateMetadata() {
   const seo = await getPageSeo("gallery");

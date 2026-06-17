@@ -2,7 +2,7 @@ import { createPageMetadata } from "@/lib/metadata";
 import { pageOgImages } from "@/lib/site";
 import { BlogPageLayout } from "@/components/blog/BlogPageLayout";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export const metadata = createPageMetadata({
   path: "/blog",

@@ -6,7 +6,7 @@ import { BlogPageLayout } from "@/components/blog/BlogPageLayout";
 
 const PER_PAGE = 4;
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 type Props = {
   params: Promise<{ page: string }>;

@@ -23,6 +23,7 @@ export async function Footer() {
         aria-hidden="true"
         width={2048}
         height={1365}
+        sizes="100vw"
         className="absolute inset-0 h-full w-full object-cover"
       />
 

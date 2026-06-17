@@ -5,9 +5,10 @@ import { Header } from "@/components/layout/Header";
 import { getSiteConfig } from "@/lib/get-site-config";
 import { pageOgImages, siteConfig as staticSiteConfig, siteUrl } from "@/lib/site";
 
-// Content is read from Supabase at request time, so the whole site segment
-// renders dynamically rather than being prerendered at build.
-export const dynamic = "force-dynamic";
+// Content comes from Supabase. The site segment is cached (ISR) and
+// revalidated every 60s; admin saves call revalidatePath("/", "layout")
+// for instant updates, so this window only covers out-of-band DB changes.
+export const revalidate = 60;
 
 export async function generateMetadata(): Promise<Metadata> {
   // Never let a Supabase hiccup throw here — that would drop the canonical link
