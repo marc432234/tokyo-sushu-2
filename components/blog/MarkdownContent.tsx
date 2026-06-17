@@ -1,27 +1,46 @@
 import type { Components } from "react-markdown";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-import rehypeSanitize from "rehype-sanitize";
+import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import remarkGfm from "remark-gfm";
 
+// Block elements that may carry an inline `text-align` style from the editor,
+// plus the button/image attributes the rich editor emits. The default schema
+// strips `style`, custom `data-*`, and most classes, so allow them explicitly.
+const styleTags = ["p", "h1", "h2", "h3", "h4", "h5", "h6", "div", "li", "blockquote"];
+
+const schema = {
+  ...defaultSchema,
+  attributes: {
+    ...defaultSchema.attributes,
+    a: [...(defaultSchema.attributes?.a ?? []), "dataButton", "target", "rel"],
+    img: [...(defaultSchema.attributes?.img ?? []), "alt", "title", "width", "height"],
+    ...Object.fromEntries(
+      styleTags.map((tag) => [tag, [...(defaultSchema.attributes?.[tag] ?? []), "style"]]),
+    ),
+  },
+};
+
 const components: Components = {
-  h1: ({ children }) => (
-    <h1 className="font-display text-3xl md:text-5xl leading-tight text-stone-50">
+  h1: ({ children, style }) => (
+    <h1 style={style} className="font-display text-3xl md:text-5xl leading-tight text-stone-50">
       {children}
     </h1>
   ),
-  h2: ({ children }) => (
-    <h2 className="pt-4 font-display text-2xl md:text-4xl leading-tight text-stone-50">
+  h2: ({ children, style }) => (
+    <h2 style={style} className="pt-4 font-display text-2xl md:text-4xl leading-tight text-stone-50">
       {children}
     </h2>
   ),
-  h3: ({ children }) => (
-    <h3 className="font-display text-xl md:text-3xl leading-tight text-stone-50">
+  h3: ({ children, style }) => (
+    <h3 style={style} className="font-display text-xl md:text-3xl leading-tight text-stone-50">
       {children}
     </h3>
   ),
-  p: ({ children }) => (
-    <p className="text-lg leading-9 text-stone-300">{children}</p>
+  p: ({ children, style }) => (
+    <p style={style} className="text-lg leading-9 text-stone-300">
+      {children}
+    </p>
   ),
   ul: ({ children }) => (
     <ul className="list-disc space-y-3 pl-6 text-lg leading-8 text-stone-300">
@@ -34,13 +53,31 @@ const components: Components = {
     </ol>
   ),
   li: ({ children }) => <li>{children}</li>,
-  a: ({ href, children }) => (
-    <a
-      href={href}
-      className="text-[#ad6d25] underline underline-offset-4 hover:text-[#cf8b3d]"
-    >
-      {children}
-    </a>
+  a: ({ href, children, node }) => {
+    const isButton = node?.properties?.dataButton !== undefined;
+    if (isButton) {
+      return (
+        <a href={href} className="post-button">
+          {children}
+        </a>
+      );
+    }
+    return (
+      <a
+        href={href}
+        className="text-[#ad6d25] underline underline-offset-4 hover:text-[#cf8b3d]"
+      >
+        {children}
+      </a>
+    );
+  },
+  img: ({ src, alt }) => (
+    // eslint-disable-next-line @next/next/no-img-element -- body images have arbitrary remote/uploaded sources
+    <img
+      src={typeof src === "string" ? src : undefined}
+      alt={alt ?? ""}
+      className="post-image h-auto max-w-full rounded-lg"
+    />
   ),
   strong: ({ children }) => <strong>{children}</strong>,
   em: ({ children }) => <em>{children}</em>,
@@ -62,7 +99,7 @@ export function MarkdownContent({ content }: { content: string }) {
     <div className="space-y-7 text-stone-200">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeRaw, rehypeSanitize]}
+        rehypePlugins={[rehypeRaw, [rehypeSanitize, schema]]}
         components={components}
       >
         {content}

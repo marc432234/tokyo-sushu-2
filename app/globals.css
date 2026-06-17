@@ -655,3 +655,35 @@ header + .container-shell {
   padding: 0.1rem 0.35rem;
   font-size: 0.95em;
 }
+
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.ProseMirror img.ProseMirror-selectednode {
+  outline: 2px solid var(--accent-gold);
+}
+
+/* Call-to-action button shared by the editor (.ProseMirror) and the public
+   post renderer (components/blog/MarkdownContent). */
+.post-button {
+  display: inline-block;
+  border: 1px solid var(--accent-gold);
+  border-radius: 0.375rem;
+  background: linear-gradient(180deg, #ac6e26, #7f4916);
+  padding: 0.6rem 1.4rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.post-button:hover {
+  filter: brightness(1.05);
+}
+
+.post-image {
+  border-radius: 0.5rem;
+}
