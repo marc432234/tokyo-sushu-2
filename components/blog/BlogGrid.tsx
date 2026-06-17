@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import type { BlogPost } from "@/lib/blog";
 
@@ -31,7 +32,13 @@ export function BlogGrid({ posts, page, categorySlug }: { posts: BlogPost[]; pag
             className={"card-hover flex flex-col items-start justify-start gap-6 rounded-lg bg-white/5 p-6 outline outline-1 outline-white/10"}
           >
             <div className="img-zoom relative h-48 w-full shrink-0 overflow-hidden rounded-lg bg-white md:h-[300px]">
-              <img className="h-full w-full object-cover" src={article.featuredImage} alt={article.title} />
+              <Image
+                src={article.featuredImage}
+                alt={article.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 420px"
+                className="object-cover"
+              />
             </div>
             <div className="flex w-full flex-1 flex-col items-start justify-start gap-4">
               <div className="flex w-full flex-col items-start justify-start gap-5">

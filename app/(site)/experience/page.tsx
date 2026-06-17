@@ -129,6 +129,8 @@ export default async function ExperiencePage() {
           width={pageContent.hero.image.width ?? 1365}
           height={pageContent.hero.image.height ?? 2048}
           priority
+          fetchPriority="high"
+          sizes="100vw"
           className="absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-70"
         />
 

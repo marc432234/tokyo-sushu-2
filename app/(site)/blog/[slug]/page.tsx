@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getAllBlogPosts, getBlogPostBySlug, formatPostDate } from "@/lib/blog";
 import { MarkdownContent } from "@/components/blog/MarkdownContent";
@@ -82,7 +83,17 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           </div>
           <div className="w-full shrink-0 md:w-[480px]">
-            <img className="w-full rounded-lg border border-white/16 object-cover" src={post.featuredImage} alt={post.title} />
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg border border-white/16">
+              <Image
+                src={post.featuredImage}
+                alt={post.title}
+                fill
+                priority
+                fetchPriority="high"
+                sizes="(max-width: 768px) 100vw, 480px"
+                className="object-cover"
+              />
+            </div>
             </div>
           </div>
         </div>
@@ -106,7 +117,13 @@ export default async function BlogPostPage({ params }: Props) {
               {otherPosts.map((article, i) => (
                 <div key={i} className="flex h-full w-full flex-col items-start justify-start gap-6 rounded-lg bg-white/5 p-6 outline outline-1 outline-white/10 card-hover">
                   <div className="img-zoom relative h-48 w-full shrink-0 overflow-hidden rounded-lg bg-white md:h-[300px]">
-                    <img className="h-full w-full object-cover" src={article.featuredImage} alt={article.title} />
+                    <Image
+                      src={article.featuredImage}
+                      alt={article.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover"
+                    />
                   </div>
                   <div className="flex w-full flex-1 flex-col items-start justify-start gap-4">
                     <div className="flex w-full flex-col items-start justify-start gap-5">
