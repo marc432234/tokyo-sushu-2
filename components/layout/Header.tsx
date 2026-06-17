@@ -61,6 +61,7 @@ export function Header() {
               height={siteConfig.logo.height}
               className="h-auto w-32 sm:w-44"
               priority
+              fetchPriority="high"
             />
           </Link>
 
