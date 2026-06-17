@@ -585,3 +585,73 @@ header + .container-shell {
   backdrop-filter: blur(15px);
   box-shadow: 0 0 30px rgba(172, 110, 38, 0.15);
 }
+
+/* ── Admin rich-text editor (Tiptap) ── */
+
+.ProseMirror {
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+}
+
+.ProseMirror:focus {
+  outline: none;
+}
+
+.ProseMirror > * + * {
+  margin-top: 0.85rem;
+}
+
+.ProseMirror h1 {
+  font-family: var(--font-display), serif;
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+.ProseMirror h2 {
+  font-family: var(--font-display), serif;
+  font-size: 1.55rem;
+  line-height: 1.25;
+}
+
+.ProseMirror h3 {
+  font-family: var(--font-display), serif;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 1.5rem;
+}
+
+.ProseMirror ul {
+  list-style: disc;
+}
+
+.ProseMirror ol {
+  list-style: decimal;
+}
+
+.ProseMirror li + li {
+  margin-top: 0.35rem;
+}
+
+.ProseMirror blockquote {
+  border-left: 3px solid var(--accent-gold);
+  padding-left: 1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.ProseMirror a {
+  color: var(--accent-gold-bright);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ProseMirror code {
+  border-radius: 0.25rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.1rem 0.35rem;
+  font-size: 0.95em;
+}

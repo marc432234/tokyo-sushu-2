@@ -22,12 +22,23 @@ type BlogPostRow = {
 };
 
 function createExcerpt(body: string): string {
-  return body
+  // Bodies may be HTML (rich editor) or legacy Markdown. Strip both kinds of
+  // markup, then take the first block of prose.
+  const plain = body
+    .replace(/<\/(p|h[1-6]|li|blockquote|div)>/gi, "\n\n")
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<[^>]+>/g, "")
     .replace(/^#+\s+/gm, "")
     .replace(/[*_`]/g, "")
-    .split(/\n{2,}/)[0]
-    ?.trim()
-    .slice(0, 180) ?? "";
+    .replace(/&nbsp;/gi, " ");
+
+  return (
+    plain
+      .split(/\n{2,}/)
+      .map((block) => block.trim())
+      .find((block) => block !== "")
+      ?.slice(0, 180) ?? ""
+  );
 }
 
 function toPost(row: BlogPostRow): BlogPost {

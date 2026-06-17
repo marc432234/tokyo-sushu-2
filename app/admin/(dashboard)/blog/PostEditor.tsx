@@ -1,6 +1,8 @@
+import { marked } from "marked";
 import type { BlogRow, CategoryRow } from "@/lib/admin-data";
 import { listCategories } from "@/lib/admin-data";
 import { deletePostAction, savePostAction } from "../../actions";
+import { PostBodyEditor } from "./PostBodyEditor";
 
 const field = "rounded-md border border-white/15 bg-white/5 px-3 py-2 text-white outline-none focus:border-[#ad6d25]";
 const labelClass = "text-sm text-white/70";
@@ -10,6 +12,10 @@ export async function PostEditor({ post }: { post?: BlogRow }) {
   const dateValue = post?.date ? post.date.slice(0, 10) : new Date().toISOString().slice(0, 10);
   const allCategories: CategoryRow[] = await listCategories();
   const selected = new Set(post?.categories ?? []);
+  // Existing posts may hold Markdown (legacy) or HTML (saved via the rich
+  // editor). marked passes existing HTML through, so this normalizes both to
+  // HTML for the WYSIWYG.
+  const initialBodyHtml = post?.body ? await marked.parse(post.body) : "";
 
   return (
     <div>
@@ -78,14 +84,8 @@ export async function PostEditor({ post }: { post?: BlogRow }) {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label className={labelClass} htmlFor="body">Body (Markdown)</label>
-          <textarea
-            id="body"
-            name="body"
-            rows={20}
-            defaultValue={post?.body}
-            className={`${field} font-mono text-sm`}
-          />
+          <label className={labelClass}>Body</label>
+          <PostBodyEditor initialHtml={initialBodyHtml} />
         </div>
 
         <div className="flex items-center gap-3">
