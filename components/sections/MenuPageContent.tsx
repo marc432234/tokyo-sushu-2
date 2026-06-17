@@ -39,7 +39,7 @@ export function MenuPageContent() {
       <section className="relative isolate min-h-[600px] overflow-hidden pt-(--header-offset)">
         <Image
           src="/pictures/menu-banner-bg.png"
-          alt="Japanese dinner spread of sushi, bao buns, and dumplings at Tokyo Club Sushi Speakeasy"
+          alt="Japanese dinner spread of sushi, bao buns, and dumplings at Tokyo Sushi Speakeasy"
           width={1365}
           height={2048}
           priority
@@ -51,7 +51,7 @@ export function MenuPageContent() {
         <div className="container-shell flex min-h-[calc(600px-var(--header-offset))] items-center">
           <div className="flex w-full flex-col lg:flex-row items-center lg:justify-between gap-16">
             <div className="max-w-[39rem] pb-14 pt-20">
-              <span className="eyebrow text-white">Tokyo Club Sushi Speakeasy</span>
+              <span className="eyebrow text-white">Tokyo Sushi Speakeasy</span>
               <h1 className="mt-7 font-(family-name:--font-display) text-[2.5rem] md:text-[4rem] leading-[1.02] text-white">
                 Every <span className="text-highlight-underline"><span className="italic text-(--accent-gold)">Dish</span></span>, A Statement.
               </h1>

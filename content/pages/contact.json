@@ -1,15 +1,15 @@
 {
   "seo": {
-    "title": "Contact | Tokyo Club Sushi Speakeasy",
-    "description": "Get in touch with Tokyo Club Sushi Speakeasy. Reserve a table, plan a private event, or reach our team at 1000 Collins Ave, South Beach."
+    "title": "Contact | Tokyo Sushi Speakeasy",
+    "description": "Get in touch with Tokyo Sushi Speakeasy. Reserve a table, plan a private event, or reach our team at 1000 Collins Ave, South Beach."
   },
   "hero": {
     "eyebrow": "Private events & celebrations",
     "title": "The venue already feels like the event.",
-    "description": "Birthdays, date nights, group dinners — Tokyo Club Sushi Speakeasy is built for nights that turn into stories.",
+    "description": "Birthdays, date nights, group dinners — Tokyo Sushi Speakeasy is built for nights that turn into stories.",
     "image": {
       "src": "/pictures/contact-us-bg.png",
-      "alt": "Moody table setting with cocktails and Japanese dishes at Tokyo Club Sushi Speakeasy",
+      "alt": "Moody table setting with cocktails and Japanese dishes at Tokyo Sushi Speakeasy",
       "width": 1365,
       "height": 2048
     },
@@ -30,7 +30,7 @@
     },
     {
       "title": "Groups & Nights Out",
-      "description": "From visiting crews to after-dark plans, Tokyo Club Sushi Speakeasy sets the mood for the full evening."
+      "description": "From visiting crews to after-dark plans, Tokyo Sushi Speakeasy sets the mood for the full evening."
     }
   ],
   "formIntro": {

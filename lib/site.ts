@@ -64,7 +64,7 @@ const dinnerSpread: SiteImageAsset = {
 };
 
 export const siteConfig = {
-  name: "Tokyo Club Sushi Speakeasy",
+  name: "Tokyo Sushi Speakeasy",
   shortName: "Tokyo Club",
   title: "Tokyo Sushi Speakeasy | Modern Japanese Speakeasy in South Beach Miami",
   description:
@@ -149,7 +149,7 @@ export const signatureCategories = [
 export const experiencePillars = [
   {
     title: "Japanese craft, Miami pulse",
-    body: "Tokyo Club Sushi Speakeasy balances refined technique with a nightlife energy that feels unmistakably South Beach. Every plate is built with the precision of an Edomae kitchen — clean cuts, seasonal instinct, and a respect for simplicity — then served inside a room that moves to its own rhythm.",
+    body: "Tokyo Sushi Speakeasy balances refined technique with a nightlife energy that feels unmistakably South Beach. Every plate is built with the precision of an Edomae kitchen — clean cuts, seasonal instinct, and a respect for simplicity — then served inside a room that moves to its own rhythm.",
     image: {
       src: "/pictures/02-seared-tuna-tataki-with-microgreens.jpg",
       alt: "Seared tuna tataki plated with microgreens showcasing Japanese precision.",
@@ -208,7 +208,7 @@ export const eventOccasions = [
   },
   {
     title: "Groups & Nights Out",
-    description: "From visiting crews to after-dark plans, Tokyo Club Sushi Speakeasy sets the mood for the full evening.",
+    description: "From visiting crews to after-dark plans, Tokyo Sushi Speakeasy sets the mood for the full evening.",
   },
 ];
 
@@ -222,12 +222,12 @@ export const faqItems = [
     answer: "Yes. We can help plan birthdays, nights out, and private or semi-private group experiences.",
   },
   {
-    question: "Is Tokyo Club Sushi Speakeasy good for a date night?",
+    question: "Is Tokyo Sushi Speakeasy good for a date night?",
     answer: "Absolutely. The moody lighting, craft cocktails, and shareable menu were made for it.",
   },
   {
     question: "Where are you located?",
-    answer: "Find Tokyo Club Sushi Speakeasy inside the Fairwind Hotel area at 1000 Collins Ave in the heart of South Beach.",
+    answer: "Find Tokyo Sushi Speakeasy inside the Fairwind Hotel area at 1000 Collins Ave in the heart of South Beach.",
   },
 ];
 
@@ -264,17 +264,17 @@ export const pageOgImages = {
   home: heroGallery[0],
   menu: {
     ...menuSpread,
-    alt: "A dramatic spread of Japanese dishes and cocktails at Tokyo Club Sushi Speakeasy.",
+    alt: "A dramatic spread of Japanese dishes and cocktails at Tokyo Sushi Speakeasy.",
   },
   experience: {
     src: "/pictures/27-DSC08232.jpg",
     width: 1365,
     height: 2048,
-    alt: "A moody table setting inside Tokyo Club Sushi Speakeasy with Japanese scroll art and dark slatted walls.",
+    alt: "A moody table setting inside Tokyo Sushi Speakeasy with Japanese scroll art and dark slatted walls.",
   },
   gallery: galleryAssets[0],
   contact: {
     ...tableSetting,
-    alt: "Moody table setting with cocktails and Japanese dishes at Tokyo Club Sushi Speakeasy.",
+    alt: "Moody table setting with cocktails and Japanese dishes at Tokyo Sushi Speakeasy.",
   },
 };

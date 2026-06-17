@@ -15,7 +15,7 @@
     "tailwindcss",
     "tokyo-club"
   ],
-  "description": "Premium homepage and site structure for Tokyo Club Sushi Speakeasy.",
+  "description": "Premium homepage and site structure for Tokyo Sushi Speakeasy.",
   "license": "ISC",
   "dependencies": {
     "@supabase/supabase-js": "^2.108.2",

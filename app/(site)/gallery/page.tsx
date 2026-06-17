@@ -23,10 +23,10 @@ export default async function GalleryPage() {
   return (
     <>
       <StructuredData
-        name="Tokyo Club Sushi Speakeasy Gallery"
+        name="Tokyo Sushi Speakeasy Gallery"
         path="/gallery"
         image={pageOgImages.gallery}
-        description="Browse the gallery of Tokyo Club Sushi Speakeasy — premium sushi, craft cocktails, and moody interior shots from our South Beach hidden bar."
+        description="Browse the gallery of Tokyo Sushi Speakeasy — premium sushi, craft cocktails, and moody interior shots from our South Beach hidden bar."
       />
 
       <Reveal>

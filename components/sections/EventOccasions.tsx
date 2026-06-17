@@ -30,7 +30,7 @@ export function EventOccasions() {
             <div className="overflow-hidden p-6 relative bg-black rounded-lg flex flex-col justify-end items-start gap-4 card-hover group min-h-[22rem] md:min-h-[32rem] lg:min-h-[37.5rem]">
               <Image
                 src="/pictures/date-nights.png"
-                alt="Romantic date night dinner setting at Tokyo Club Sushi Speakeasy"
+                alt="Romantic date night dinner setting at Tokyo Sushi Speakeasy"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition duration-700 group-hover:scale-105"
@@ -45,7 +45,7 @@ export function EventOccasions() {
             <div className="overflow-hidden p-6 relative bg-black rounded-lg flex flex-col justify-end items-start gap-4 card-hover group min-h-[22rem] md:min-h-[32rem] lg:min-h-[37.5rem]">
               <Image
                 src="/pictures/birthday.png"
-                alt="Birthday celebration with cocktails and sushi at Tokyo Club Sushi Speakeasy"
+                alt="Birthday celebration with cocktails and sushi at Tokyo Sushi Speakeasy"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition duration-700 group-hover:scale-105"
@@ -60,7 +60,7 @@ export function EventOccasions() {
             <div className="overflow-hidden p-6 relative bg-black rounded-lg flex flex-col justify-end items-start gap-4 card-hover group min-h-[22rem] md:min-h-[32rem] lg:min-h-[37.5rem]">
               <Image
                 src="/pictures/groups-and-night-out.png"
-                alt="Group dining and nightlife experience at Tokyo Club Sushi Speakeasy"
+                alt="Group dining and nightlife experience at Tokyo Sushi Speakeasy"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition duration-700 group-hover:scale-105"
@@ -69,7 +69,7 @@ export function EventOccasions() {
               <div className="relative text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">03</div>
               <div className="relative flex flex-col justify-start items-start gap-4">
                 <h3 className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Groups &amp; Night Out</h3>
-                <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">From visiting crews to after-dark plans, Tokyo Club Sushi Speakeasy sets the mood for the full evening.</div>
+                <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">From visiting crews to after-dark plans, Tokyo Sushi Speakeasy sets the mood for the full evening.</div>
               </div>
             </div>
           </div>

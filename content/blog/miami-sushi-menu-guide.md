@@ -10,7 +10,7 @@ featuredImage: "/uploads/blog/miami-sushi-menu-guide.svg"
 
 A great sushi menu can be exciting, but it can also feel overwhelming if you are not sure how to order. Nigiri, sashimi, rolls, chef specials, sake, cocktails, and shareable plates all compete for attention. The good news is that ordering well does not require expert knowledge. You only need a simple strategy: start clean, add contrast, choose one or two signature items, and pace the meal so the table can enjoy the full range of flavors.
 
-At Tokyo Club Sushi Speakeasy in South Beach, the menu is designed for both sushi lovers and guests who want a stylish night out without studying every term in advance. You can build a refined dinner, a social group spread, a cocktail-forward meal, or a date-night order that feels easy and memorable. This guide explains how to read a sushi menu in Miami Beach and make choices that fit your table.
+At Tokyo Sushi Speakeasy in South Beach, the menu is designed for both sushi lovers and guests who want a stylish night out without studying every term in advance. You can build a refined dinner, a social group spread, a cocktail-forward meal, or a date-night order that feels easy and memorable. This guide explains how to read a sushi menu in Miami Beach and make choices that fit your table.
 
 ## Start with the Main Sushi Categories
 

@@ -37,7 +37,7 @@ export async function Footer() {
               className="h-auto w-40 sm:w-52"
             />
             <p className="max-w-md text-base font-light leading-[1.4] tracking-wide text-white/60">
-              Tokyo Club Sushi Speakeasy blends Japanese craft with South Beach nightlife for a dining experience
+              Tokyo Sushi Speakeasy blends Japanese craft with South Beach nightlife for a dining experience
               that feels moody, polished, and made to linger.
             </p>
             <div className="flex gap-4">
@@ -87,7 +87,7 @@ export async function Footer() {
             <h2 className="text-sm font-medium uppercase tracking-[0.16em] text-(--accent-gold)">Visit Us</h2>
             <div className="mt-6 space-y-5 text-base tracking-wide">
               <div>
-                <p className="text-white">Tokyo Club Sushi Speakeasy</p>
+                <p className="text-white">Tokyo Sushi Speakeasy</p>
                 <p className="mt-3 font-light text-white/60">{siteConfig.address}</p>
               </div>
               <div>
@@ -106,7 +106,7 @@ export async function Footer() {
         </div>
 
         <div className="mt-6 flex flex-col gap-4 text-sm font-light tracking-wide text-white/55 lg:flex-row lg:items-center lg:justify-between">
-          <p>Tokyo Club Sushi Speakeasy. Premium sushi, cocktails, and nightlife atmosphere in Miami Beach.</p>
+          <p>Tokyo Sushi Speakeasy. Premium sushi, cocktails, and nightlife atmosphere in Miami Beach.</p>
           <div className="flex gap-3">
             <Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
             <span className="text-white/25">|</span>

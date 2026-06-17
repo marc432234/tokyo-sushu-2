@@ -29,10 +29,10 @@ export default async function ContactPage() {
   return (
     <div className="w-full min-h-screen bg-[#160206]">
       <StructuredData
-        name="Contact Tokyo Club Sushi Speakeasy"
+        name="Contact Tokyo Sushi Speakeasy"
         path="/contact"
         image={pageOgImages.contact}
-        description="Get in touch with Tokyo Club Sushi Speakeasy. Reserve a table, plan a private event, or reach our team at 1000 Collins Ave, South Beach."
+        description="Get in touch with Tokyo Sushi Speakeasy. Reserve a table, plan a private event, or reach our team at 1000 Collins Ave, South Beach."
       />
 
       <section className="relative isolate min-h-[600px] pt-(--header-offset) pb-8 md:pb-32">
