@@ -111,6 +111,6 @@ The combination of sushi, cocktails, moody lighting, and South Beach energy crea
 
 Suggested URL slug: date-night-sushi-south-beach
 
-Target keywords: date night South Beach, sushi date night Miami, romantic sushi restaurant South Beach, Miami Beach date night, Japanese speakeasy date, Tokyo Club date night
+Target keywords: date night South Beach, sushi date night Miami, romantic sushi restaurant South Beach, Miami Beach date night, Japanese speakeasy date, Tokyo Sushi Speakeasy date night
 
 Meta description: Plan a South Beach sushi date night with shareable rolls, cocktails, moody ambiance, and easy pacing at Tokyo Sushi Speakeasy.

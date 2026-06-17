@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: Props) {
   const { page } = await params;
   return createPageMetadata({
     path: `/blog/page/${page}`,
-    title: `Tokyo Club Blog - Page ${page} | Sushi, Cocktails, and South Beach Nights`,
-    description: `Page ${page} of the Tokyo Club blog — read stories, guides, and updates from the South Beach sushi speakeasy.`,
+    title: `Tokyo Sushi Speakeasy Blog - Page ${page} | Sushi, Cocktails, and South Beach Nights`,
+    description: `Page ${page} of the Tokyo Sushi Speakeasy blog — read stories, guides, and updates from the South Beach sushi speakeasy.`,
     image: pageOgImages.home,
   });
 }

@@ -118,6 +118,6 @@ Order in rounds. Start with a focused first selection, then add dishes as the ta
 
 Suggested URL slug: miami-sushi-menu-guide
 
-Target keywords: Miami Beach sushi menu, how to order sushi, South Beach sushi restaurant, sushi rolls Miami Beach, nigiri sashimi guide, Tokyo Club menu
+Target keywords: Miami Beach sushi menu, how to order sushi, South Beach sushi restaurant, sushi rolls Miami Beach, nigiri sashimi guide, Tokyo Sushi Speakeasy menu
 
-Meta description: Learn how to order from a Miami Beach sushi menu with nigiri, sashimi, rolls, cocktails, and group-friendly tips from Tokyo Club.
+Meta description: Learn how to order from a Miami Beach sushi menu with nigiri, sashimi, rolls, cocktails, and group-friendly tips from Tokyo Sushi Speakeasy.

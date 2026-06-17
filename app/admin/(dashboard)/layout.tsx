@@ -6,7 +6,7 @@ import { isAuthenticated } from "@/lib/admin-auth";
 import { logout } from "../actions";
 
 export const metadata: Metadata = {
-  title: "Tokyo Club Admin",
+  title: "Tokyo Sushi Speakeasy Admin",
   robots: { index: false, follow: false },
 };
 

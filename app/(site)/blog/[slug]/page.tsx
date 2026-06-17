@@ -20,13 +20,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: siteUrl,
-    title: `${post.title} | Tokyo Club Blog`,
+    title: `${post.title} | Tokyo Sushi Speakeasy Blog`,
     description: post.excerpt,
     alternates: {
       canonical: `/blog/${slug}`,
     },
     openGraph: {
-      title: `${post.title} | Tokyo Club Blog`,
+      title: `${post.title} | Tokyo Sushi Speakeasy Blog`,
       description: post.excerpt,
       url: `/blog/${slug}`,
       siteName: siteConfig.name,
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} | Tokyo Club Blog`,
+      title: `${post.title} | Tokyo Sushi Speakeasy Blog`,
       description: post.excerpt,
       images: [post.featuredImage],
     },
@@ -112,7 +112,7 @@ export default async function BlogPostPage({ params }: Props) {
               visibleCount={3}
               eyebrow="BLOGS"
               title={<>Continue <span className="text-[#cf183c]">the Ritual</span></>}
-              description="Inside Tokyo Club — from sushi craftsmanship and cocktail rituals to South Beach nightlife, Japanese dining culture, and after-dark experiences."
+              description="Inside Tokyo Sushi Speakeasy — from sushi craftsmanship and cocktail rituals to South Beach nightlife, Japanese dining culture, and after-dark experiences."
             >
               {otherPosts.map((article, i) => (
                 <div key={i} className="flex h-full w-full flex-col items-start justify-start gap-6 rounded-lg bg-white/5 p-6 outline outline-1 outline-white/10 card-hover">

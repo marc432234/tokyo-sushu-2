@@ -65,7 +65,7 @@ const dinnerSpread: SiteImageAsset = {
 
 export const siteConfig = {
   name: "Tokyo Sushi Speakeasy",
-  shortName: "Tokyo Club",
+  shortName: "Tokyo Sushi Speakeasy",
   title: "Tokyo Sushi Speakeasy | Modern Japanese Speakeasy in South Beach Miami",
   description:
     "A modern Japanese speakeasy in South Beach where premium sushi, bold cocktails, karaoke energy, and late-night atmosphere meet.",

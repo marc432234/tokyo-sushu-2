@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: "/",
     },
     appleWebApp: {
-      title: "Tokyoclub Sushi's Speakeasy",
+      title: "Tokyo Sushi Speakeasy",
     },
     openGraph: {
       title: siteConfig.title,
