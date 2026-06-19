@@ -84,7 +84,7 @@ export const siteConfig = {
   phoneNumberMenu: "Call Us",
   addressMenu: "Find Us",
   social: {
-    facebook: "https://www.facebook.com/tokyosushispeakeasy",
+    facebook: "https://www.facebook.com/profile.php?id=100092551446062",
     instagram: "https://www.instagram.com/tokyosushispeakeasy/",
     whatsapp: "https://wa.me/7867289318",
     website: "https://www.tokyosushispeakeasy.com",
