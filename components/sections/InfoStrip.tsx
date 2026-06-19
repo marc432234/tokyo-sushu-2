@@ -11,7 +11,10 @@ export function InfoStrip() {
           <span className="text-[var(--accent-gold)]">Reviews</span> {siteConfig.reviewCount}
         </p>
         <p>
-          <span className="text-[var(--accent-gold)]">Address</span> 1000 Collins Ave
+          <span className="text-[var(--accent-gold)]">Address</span>{" "}
+          <a href={siteConfig.mapsUrl} target="_blank" rel="noreferrer" className="hover:text-white">
+            1000 Collins Ave
+          </a>
         </p>
         <p>
           <span className="text-[var(--accent-gold)]">Hours</span> {siteConfig.hours}

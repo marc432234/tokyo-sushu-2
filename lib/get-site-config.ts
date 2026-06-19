@@ -4,7 +4,6 @@ import { siteConfig } from "./site";
 export async function getSiteConfig() {
   const settings = await getSettings();
   const phoneDigits = settings.phoneNumber.replace(/\D/g, "");
-  const encodedAddress = settings.address.replace(/\s+/g, "+").replace(/,/g, "%2C");
 
   return {
     ...siteConfig,
@@ -13,7 +12,7 @@ export async function getSiteConfig() {
     phoneHref: `tel:+${phoneDigits}`,
     email: settings.emailAddress,
     address: settings.address,
-    mapsUrl: `https://maps.google.com/?q=${encodedAddress}`,
+    // mapsUrl intentionally inherits from siteConfig (a fixed share link).
     visitMenu: settings.visitMenu,
     phoneNumberMenu: settings.phoneNumberMenu,
     addressMenu: settings.addressMenu,
