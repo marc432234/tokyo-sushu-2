@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllBlogPosts, getBlogPostBySlug, formatPostDate } from "@/lib/blog";
 import { MarkdownContent } from "@/components/blog/MarkdownContent";
@@ -120,7 +121,7 @@ export default async function BlogPostPage({ params }: Props) {
               description="Inside Tokyo Sushi Speakeasy — from sushi craftsmanship and cocktail rituals to South Beach nightlife, Japanese dining culture, and after-dark experiences."
             >
               {otherPosts.map((article, i) => (
-                <div key={i} className="flex h-full w-full flex-col items-start justify-start gap-6 rounded-lg bg-white/5 p-6 outline outline-1 outline-white/10 card-hover">
+                <Link key={i} href={`/blog/${article.slug}`} className="flex h-full w-full flex-col items-start justify-start gap-6 rounded-lg bg-white/5 p-6 outline outline-1 outline-white/10 card-hover">
                   <div className="img-zoom relative h-48 w-full shrink-0 overflow-hidden rounded-lg bg-white md:h-[300px]">
                     <Image
                       src={article.featuredImage}
@@ -145,7 +146,7 @@ export default async function BlogPostPage({ params }: Props) {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </Carousel>
           </div>
