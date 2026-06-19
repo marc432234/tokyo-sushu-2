@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getAllBlogPosts, getBlogPostBySlug, formatPostDate } from "@/lib/blog";
 import { MarkdownContent } from "@/components/blog/MarkdownContent";
 import { ShareButtons } from "@/components/blog/ShareButtons";
+import { CtaSection } from "@/components/sections/CtaSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Carousel } from "@/components/ui/Carousel";
 import { siteConfig, siteUrl } from "@/lib/site";
@@ -139,8 +140,8 @@ export default async function BlogPostPage({ params }: Props) {
                         ))}
                       </div>
                       <div className="flex w-full flex-1 flex-col items-start justify-start gap-3">
-                        <div className="font-['Lora'] text-2xl font-normal leading-[33.60px] text-white">{article.title}</div>
-                        <div className="font-['Outfit'] text-base font-light leading-[22.40px] tracking-wide text-white/60">{article.excerpt}</div>
+                        <div className="line-clamp-2 font-['Lora'] text-2xl font-normal leading-[33.60px] text-white">{article.title}</div>
+                        <div className="line-clamp-3 font-['Outfit'] text-base font-light leading-[22.40px] tracking-wide text-white/60">{article.excerpt}</div>
                       </div>
                     </div>
                   </div>
@@ -150,6 +151,8 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </ScrollReveal>
       )}
+
+      <CtaSection />
     </div>
   );
 }
