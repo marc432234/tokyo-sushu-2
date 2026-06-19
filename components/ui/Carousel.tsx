@@ -13,7 +13,11 @@ type CarouselProps = {
 export function Carousel({ children, visibleCount = 3, eyebrow, title, description }: CarouselProps) {
   const items = Array.isArray(children) ? children : [children];
   const total = items.length;
-  const extended = [...items, ...items.slice(0, visibleCount)];
+  // Only clone items for the infinite-loop effect when there are more items than
+  // fit on screen. Otherwise the clones render alongside the originals and the
+  // same cards visibly repeat.
+  const canLoop = total > visibleCount;
+  const extended = canLoop ? [...items, ...items.slice(0, visibleCount)] : items;
   const [current, setCurrent] = useState(0);
   const currentRef = useRef(0);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -31,6 +35,7 @@ export function Carousel({ children, visibleCount = 3, eyebrow, title, descripti
   }, []);
 
   const next = useCallback(() => {
+    if (!canLoop) return;
     const nextIndex = currentRef.current + 1;
     currentRef.current = nextIndex;
 
@@ -46,9 +51,10 @@ export function Carousel({ children, visibleCount = 3, eyebrow, title, descripti
       slideTo(nextIndex, true);
       setCurrent(nextIndex);
     }
-  }, [total, slideTo]);
+  }, [total, slideTo, canLoop]);
 
   const prev = useCallback(() => {
+    if (!canLoop) return;
     const prevIndex = currentRef.current - 1;
     currentRef.current = prevIndex;
 
@@ -64,7 +70,7 @@ export function Carousel({ children, visibleCount = 3, eyebrow, title, descripti
       slideTo(prevIndex, true);
       setCurrent(prevIndex);
     }
-  }, [total, slideTo]);
+  }, [total, slideTo, canLoop]);
 
   return (
     <div className="w-full min-w-0">
@@ -75,14 +81,16 @@ export function Carousel({ children, visibleCount = 3, eyebrow, title, descripti
             {title && <div className="figma-section-title mt-8 text-white">{title}</div>}
             {description && <div className="font-['Outfit'] text-base font-light leading-[22.40px] tracking-wide text-white/70 mt-4">{description}</div>}
           </div>
-          <div className="flex gap-3">
-            <button type="button" aria-label="Previous" onClick={prev} className="size-12 cursor-pointer border border-(--accent-gold) text-(--accent-gold)">
-              ‹
-            </button>
-            <button type="button" aria-label="Next" onClick={next} className="size-12 cursor-pointer bg-(--accent-gold) text-[#170307]">
-              ›
-            </button>
-          </div>
+          {canLoop && (
+            <div className="flex gap-3">
+              <button type="button" aria-label="Previous" onClick={prev} className="size-12 cursor-pointer border border-(--accent-gold) text-(--accent-gold)">
+                ‹
+              </button>
+              <button type="button" aria-label="Next" onClick={next} className="size-12 cursor-pointer bg-(--accent-gold) text-[#170307]">
+                ›
+              </button>
+            </div>
+          )}
         </div>
       )}
       <div className="relative mt-12 overflow-hidden">
