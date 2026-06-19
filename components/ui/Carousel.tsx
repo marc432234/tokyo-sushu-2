@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef, type ReactNode } from "react";
+import { useState, useCallback, useEffect, useRef, type ReactNode } from "react";
 
 type CarouselProps = {
   children: ReactNode[];
@@ -10,9 +10,29 @@ type CarouselProps = {
   description?: string;
 };
 
-export function Carousel({ children, visibleCount = 3, eyebrow, title, description }: CarouselProps) {
+// Cards get cramped on small screens, so show fewer at a time: 1 on mobile,
+// 2 on tablet, and the full requested count on desktop.
+function responsiveVisible(maxVisible: number): number {
+  if (typeof window === "undefined") return maxVisible;
+  const width = window.innerWidth;
+  if (width < 768) return 1;
+  if (width < 1024) return Math.min(2, maxVisible);
+  return maxVisible;
+}
+
+export function Carousel({ children, visibleCount: maxVisible = 3, eyebrow, title, description }: CarouselProps) {
   const items = Array.isArray(children) ? children : [children];
   const total = items.length;
+  // Render with the desktop count on the server / first paint to avoid a
+  // hydration mismatch, then narrow it down on the client.
+  const [visibleCount, setVisibleCount] = useState(maxVisible);
+
+  useEffect(() => {
+    const update = () => setVisibleCount(responsiveVisible(maxVisible));
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, [maxVisible]);
   // Only clone items for the infinite-loop effect when there are more items than
   // fit on screen. Otherwise the clones render alongside the originals and the
   // same cards visibly repeat.
@@ -33,6 +53,14 @@ export function Carousel({ children, visibleCount = 3, eyebrow, title, descripti
     track.style.transition = animate ? "transform 500ms ease-in-out" : "none";
     track.style.transform = `translateX(${offset}px)`;
   }, []);
+
+  // When the visible count changes (breakpoint/resize), the slide width and
+  // clone set change, so snap back to the start to keep the offset correct.
+  useEffect(() => {
+    currentRef.current = 0;
+    setCurrent(0);
+    slideTo(0, false);
+  }, [visibleCount, slideTo]);
 
   const next = useCallback(() => {
     if (!canLoop) return;
