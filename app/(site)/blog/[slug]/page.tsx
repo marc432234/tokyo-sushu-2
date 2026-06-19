@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getAllBlogPosts, getBlogPostBySlug, formatPostDate } from "@/lib/blog";
 import { MarkdownContent } from "@/components/blog/MarkdownContent";
+import { ShareButtons } from "@/components/blog/ShareButtons";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Carousel } from "@/components/ui/Carousel";
 import { siteConfig, siteUrl } from "@/lib/site";
@@ -57,8 +58,11 @@ export default async function BlogPostPage({ params }: Props) {
 
   const otherPosts = (await getAllBlogPosts()).filter((p) => p.slug !== slug).slice(0, 5);
 
+  const shareUrl = new URL(`/blog/${slug}`, siteUrl).toString();
+
   return (
     <div className="overflow-x-hidden bg-[#160206] text-white">
+      <ShareButtons url={shareUrl} title={post.title} />
       <ScrollReveal>
         <div className="container-shell relative">
           <div className="flex flex-col items-start justify-between gap-12 px-5 pb-10 pt-[200px] md:flex-row md:px-10">
