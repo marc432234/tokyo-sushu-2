@@ -168,7 +168,7 @@ export default async function ContactPage() {
                 </div>
                 <div className="flex-1 flex flex-col justify-start items-start gap-2">
                   <span className="text-white">Visit us</span>
-                  <div className="self-stretch justify-start text-[#c0c0c0] text-base font-normal font-['Outfit'] leading-[22.40px]">{siteConfig.address}</div>
+                  <a href={siteConfig.mapsUrl} target="_blank" rel="noreferrer" className="self-stretch justify-start text-[#c0c0c0] text-base font-normal font-['Outfit'] leading-[22.40px] hover:text-white">{siteConfig.address}</a>
                   <a href={siteConfig.mapsUrl} target="_blank" rel="noreferrer" className="self-stretch justify-start text-[#ad6d25] text-base font-normal font-['Outfit'] underline leading-[22.40px]">Open in maps</a>
                 </div>
               </div>
