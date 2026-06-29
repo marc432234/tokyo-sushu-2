@@ -41,6 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${displayFont.variable} ${bodyFont.variable}`} suppressHydrationWarning>
       <head>
+        <meta name="google-site-verification" content="tFQZUQW2yLEMRYvBU7LvC5Re5O68QxaCj_czuFNGJGg" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://connect.facebook.net" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
