@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import { siteConfig } from "@/lib/site";
+import { BookingButton } from "@/components/ui/ReservationModal";
 
 export function CtaSection() {
   return (
@@ -44,13 +45,13 @@ export function CtaSection() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-6">
-            <a href="https://www.opentable.com/r/tokyo-club-reservations-miami-beach?restref=1480237&lang=en-US&ot_source=Restaurant%20website&ot_campaign=LP&utm_source=google&utm_medium=cpc&utm_campaign=tokyo_search" className="w-full md:w-auto h-14 px-6 py-[17px] bg-[#ac6e26] flex justify-center items-center gap-2.5 btn-glow">
+            <BookingButton className="w-full md:w-auto h-14 px-6 py-[17px] bg-[#ac6e26] flex justify-center items-center gap-2.5 btn-glow">
               <div className="text-white text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">Book a Table via OpenTable</div>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.4168 10H4.16675" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
                 <path d="M10.8333 15L15.8333 10L10.8333 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
               </svg>
-            </a>
+            </BookingButton>
             <a href="tel:+17867289318" className="btn-secondary w-full md:w-auto gap-1">
               <div className="text-[#ac6e26] text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">(786) 728-9318</div>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
