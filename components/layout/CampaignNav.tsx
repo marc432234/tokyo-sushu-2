@@ -31,9 +31,15 @@ export function CampaignNav() {
               </Link>
             </nav>
 
-            <BookingButton className="btn-secondary">
-              <span className="hidden sm:inline">Reserve a Table</span>
-              <span className="sm:hidden">Reserve</span>
+            <BookingButton className="h-12 px-5 bg-[#ad6d25] flex items-center gap-2 btn-glow">
+              <span className="text-white text-sm font-normal font-['Outfit'] uppercase leading-none tracking-[2.56px]">
+                <span className="hidden sm:inline">Reserve a Table</span>
+                <span className="sm:hidden">Reserve</span>
+              </span>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.4165 10H4.1665" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
+                <path d="M10.8335 15L15.8335 10L10.8335 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
+              </svg>
             </BookingButton>
           </div>
         </div>
