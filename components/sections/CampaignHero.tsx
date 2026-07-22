@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { BookingButton } from "@/components/ui/ReservationModal";
@@ -9,16 +8,16 @@ export function CampaignHero({ content }: { content: HomePageContent["hero"] }) 
     <>
     <section className="relative isolate min-h-[600px] md:min-h-[880px]">
       <div className="absolute inset-0">
-        <Image
-          src={content.poster.src}
-          alt={content.poster.alt}
-          width={content.poster.width ?? 1365}
-          height={content.poster.height ?? 2048}
-          priority
-          fetchPriority="high"
-          sizes="100vw"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster={content.poster.src}
           className="absolute inset-0 h-full w-full object-cover object-center"
-        />
+        >
+          <source src="/bg-vid.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/10" />
       </div>
 
