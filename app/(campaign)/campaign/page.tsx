@@ -24,6 +24,8 @@ export async function generateMetadata() {
   });
 }
 
+const CAMPAIGN_BOOKING_URL = "https://www.opentable.com/r/tokyo-club-reservations-miami-beach?restref=1480237&lang=en-US&ot_source=Google&ot_campaign=tokyo_search";
+
 export default async function CampaignPage() {
   const pageContent = await getPageContent("home");
   return (
@@ -64,7 +66,7 @@ export default async function CampaignPage() {
         </Reveal>
       )}
       <Reveal delay={130}>
-        <EventOccasions />
+        <EventOccasions bookingUrl={CAMPAIGN_BOOKING_URL} />
       </Reveal>
       {pageContent.socialProof && (
         <Reveal delay={170}>
@@ -76,7 +78,7 @@ export default async function CampaignPage() {
           <GalleryTeaser content={pageContent.galleryTeaser} />
         </Reveal>
       )}
-      <CtaSection />
+      <CtaSection bookingUrl={CAMPAIGN_BOOKING_URL} />
     </>
   );
 }

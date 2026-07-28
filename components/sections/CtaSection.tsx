@@ -2,7 +2,9 @@ import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import { siteConfig } from "@/lib/site";
 
-export function CtaSection() {
+const DEFAULT_BOOKING_URL = "https://www.opentable.com/r/tokyo-club-reservations-miami-beach?restref=1480237&lang=en-US&ot_source=Restaurant%20website&ot_campaign=LP&utm_source=google&utm_medium=cpc&utm_campaign=tokyo_search";
+
+export function CtaSection({ bookingUrl = DEFAULT_BOOKING_URL }: { bookingUrl?: string }) {
   return (
     <ScrollReveal>
       <section className="relative isolate overflow-hidden">
@@ -44,7 +46,7 @@ export function CtaSection() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-6">
-            <a href="https://www.opentable.com/r/tokyo-club-reservations-miami-beach?restref=1480237&lang=en-US&ot_source=Restaurant%20website&ot_campaign=LP&utm_source=google&utm_medium=cpc&utm_campaign=tokyo_search" className="w-full md:w-auto h-14 px-6 py-[17px] bg-[#ac6e26] flex justify-center items-center gap-2.5 btn-glow">
+            <a href={bookingUrl} className="w-full md:w-auto h-14 px-6 py-[17px] bg-[#ac6e26] flex justify-center items-center gap-2.5 btn-glow">
               <div className="text-white text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">Book a Table via OpenTable</div>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.4168 10H4.16675" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
