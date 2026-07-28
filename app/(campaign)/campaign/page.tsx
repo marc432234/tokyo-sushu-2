@@ -35,7 +35,7 @@ export default async function CampaignPage() {
         path="/campaign"
         image={pageOgImages.home}
       />
-      <CampaignHero content={pageContent.hero} />
+      <CampaignHero content={pageContent.hero} bookingUrl={CAMPAIGN_BOOKING_URL} />
       {pageContent.experience && (
         <Reveal delay={50}>
           <ExperienceStory content={pageContent.experience} />

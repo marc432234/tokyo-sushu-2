@@ -17,9 +17,11 @@ declare global {
 export function BookingButton({
   children,
   className,
+  href = siteConfig.bookingUrl,
 }: {
   children: React.ReactNode;
   className?: string;
+  href?: string;
 }) {
   const trackBookingClick = () => {
     window.gtag?.("event", "conversion", {
@@ -29,7 +31,7 @@ export function BookingButton({
 
   return (
     <a
-      href={siteConfig.bookingUrl}
+      href={href}
       target="_blank"
       rel="noreferrer"
       className={className}
