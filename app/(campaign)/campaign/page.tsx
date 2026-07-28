@@ -38,7 +38,7 @@ export default async function CampaignPage() {
       <CampaignHero content={pageContent.hero} bookingUrl={CAMPAIGN_BOOKING_URL} />
       {pageContent.experience && (
         <Reveal delay={50}>
-          <ExperienceStory content={pageContent.experience} />
+          <ExperienceStory content={pageContent.experience} bookingUrl={CAMPAIGN_BOOKING_URL} />
         </Reveal>
       )}
       <section className="relative isolate overflow-hidden bg-[#160306] py-[120px]">

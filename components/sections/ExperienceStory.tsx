@@ -44,7 +44,7 @@ const stats = [
   ["∞", "Unforgettable Nights"],
 ];
 
-export function ExperienceStory({ content }: { content: HomePageContent["experience"] }) {
+export function ExperienceStory({ content, bookingUrl }: { content: HomePageContent["experience"]; bookingUrl?: string }) {
   const [active, setActive] = useState(0);
   const [fading, setFading] = useState(false);
   const pillar = content.pillars[active];
@@ -137,7 +137,7 @@ export function ExperienceStory({ content }: { content: HomePageContent["experie
           </div>
 
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row lg:hidden">
-            <BookingButton className="btn-primary">Reserve a Table</BookingButton>
+            <BookingButton href={bookingUrl} className="btn-primary">Reserve a Table</BookingButton>
             <Link href="/menu" className="btn-secondary">Explore the Menu</Link>
           </div>
         </div>
