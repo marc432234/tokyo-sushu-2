@@ -71,6 +71,11 @@ export default function RootLayout({
           src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`}
           strategy="lazyOnload"
         />
+        <Script
+          id="ga4-tag"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`}
+          strategy="lazyOnload"
+        />
         <Script id="google-tag-config" strategy="lazyOnload">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
