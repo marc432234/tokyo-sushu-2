@@ -5,6 +5,7 @@ import Script from "next/script";
 import "./globals.css";
 
 const GOOGLE_TAG_ID = "AW-18203197260";
+const GA4_MEASUREMENT_ID = "G-194W25JLJQ";
 const META_PIXEL_ID = "226892389948826";
 const GTM_ID = "GTM-TS5THG7K";
 
@@ -75,7 +76,8 @@ export default function RootLayout({
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-gtag('config', '${GOOGLE_TAG_ID}');`}
+gtag('config', '${GOOGLE_TAG_ID}');
+gtag('config', '${GA4_MEASUREMENT_ID}');`}
         </Script>
         <Script id="gtm" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
