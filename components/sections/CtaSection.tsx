@@ -61,7 +61,7 @@ export function CtaSection({ bookingUrl = DEFAULT_BOOKING_URL }: { bookingUrl?: 
               </svg>
             </a>
           </div>
-          <div className="text-[#ac6e26] text-base font-light font-['Outfit'] uppercase leading-[22.40px] tracking-[3.20px] text-center">Open Wednesday – Monday · 5:00 PM – 12:00 AM · <a href={siteConfig.mapsUrl} target="_blank" rel="noreferrer" className="underline hover:text-white">1000 Collins Ave, Miami Beach</a></div>
+          <div className="text-[#ac6e26] text-base font-light font-['Outfit'] uppercase leading-[22.40px] tracking-[3.20px] text-center">Open Wednesday – Sunday · 5:00 PM – 12:00 AM · <a href={siteConfig.mapsUrl} target="_blank" rel="noreferrer" className="underline hover:text-white">1000 Collins Ave, Miami Beach</a></div>
         </div>
         </div>
       </section>

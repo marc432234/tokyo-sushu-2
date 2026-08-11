@@ -62,7 +62,7 @@ export function MenuPageContent() {
             <div className="w-[577px] inline-flex flex-col justify-start items-start gap-4 max-w-full">
             <div className="self-stretch p-4 bg-white/5 rounded-lg outline outline-1 outline-white/10 backdrop-blur-[20px] flex flex-col justify-start items-start gap-2">
               <div className="self-stretch justify-start text-[#ad6d25] text-base font-light font-['Outfit'] uppercase leading-[22.40px]">Dining Hours</div>
-              <div className="self-stretch justify-start text-white text-xl font-normal font-['Outfit'] leading-7">Wednesday – Monday · 5PM – 12AM</div>
+              <div className="self-stretch justify-start text-white text-xl font-normal font-['Outfit'] leading-7">Wednesday – Sunday · 5PM – 12AM</div>
             </div>
             <div className="self-stretch p-4 bg-white/5 rounded-lg outline outline-1 outline-white/10 backdrop-blur-[20px] flex flex-col justify-start items-start gap-2">
               <div className="self-stretch justify-start text-[#ad6d25] text-base font-light font-['Outfit'] uppercase leading-[22.40px]">Reservations</div>

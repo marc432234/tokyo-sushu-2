@@ -41,7 +41,6 @@ function createRestaurantSchema(siteConfig: SiteConfig) {
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: [
-          "Monday",
           "Wednesday",
           "Thursday",
           "Friday",
