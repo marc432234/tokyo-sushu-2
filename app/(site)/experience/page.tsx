@@ -172,7 +172,7 @@ export default async function ExperiencePage() {
               <p className="mt-5 text-base font-light leading-[1.55] tracking-wide text-white/65">
                 {sectionText("storyBodyTwo")}
               </p>
-              <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+              <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-8">
                 <BookingButton className="w-full sm:w-auto h-14 px-6 py-[17px] bg-[#ad6d25] flex justify-center items-center gap-2.5 btn-glow">
                   <div className="justify-start text-white text-base font-normal font-['Outfit'] leading-[22.40px] tracking-[2.56px]">RESERVE A TABLE</div>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -188,7 +188,7 @@ export default async function ExperiencePage() {
                   </svg>
                 </Link>
               </div>
-              <div className="text-[#cfa638] text-sm font-light font-['Outfit'] uppercase tracking-[2.56px]">See why guests call it unforgettable.</div>
+              <div className="mt-8 text-[#cfa638] text-sm font-light font-['Outfit'] uppercase tracking-[2.56px]">See why guests call it unforgettable.</div>
             </div>
           </div>
         </section>
