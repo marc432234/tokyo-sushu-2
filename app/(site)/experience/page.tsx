@@ -188,6 +188,7 @@ export default async function ExperiencePage() {
                   </svg>
                 </Link>
               </div>
+              <div className="text-[#cfa638] text-sm font-light font-['Outfit'] uppercase tracking-[2.56px]">See why guests call it unforgettable.</div>
             </div>
           </div>
         </section>

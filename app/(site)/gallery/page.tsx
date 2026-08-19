@@ -52,7 +52,12 @@ export default async function GalleryPage() {
       <Reveal delay={60}>
         <section className="bg-[#170307] pb-[clamp(4rem,8vw,7.5rem)]">
         <div className="container-shell">
-          <GalleryGrid />
+          <p className="mx-auto max-w-[42rem] text-center text-base font-light leading-[1.55] tracking-wide text-white/65">
+            Step inside Miami&apos;s top-rated Japanese speakeasy — see the room, the rolls, and the cocktails guests come back for.
+          </p>
+          <div className="mt-10">
+            <GalleryGrid />
+          </div>
         </div>
       </section>
       </Reveal>

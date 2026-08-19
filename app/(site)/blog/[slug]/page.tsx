@@ -109,6 +109,17 @@ export default async function BlogPostPage({ params }: Props) {
         <article className="w-full prose prose-invert max-w-none">
           <MarkdownContent content={post.body} />
         </article>
+        <div className="w-full flex flex-col items-center justify-center gap-4 rounded-lg bg-white/5 p-8 outline outline-1 outline-[#cfa638]/30 backdrop-blur-[10px] text-center">
+          <div className="text-white text-2xl md:text-3xl font-normal font-['Lora'] leading-[38.40px]">Craving this? Reserve your table tonight.</div>
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noreferrer" className="h-14 px-6 py-[17px] bg-[#ac6e26] flex justify-center items-center gap-2.5 btn-glow">
+            <div className="text-white text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">RESERVE NOW</div>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.4168 10H4.16675" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
+              <path d="M10.8333 15L15.8333 10L10.8333 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
+            </svg>
+          </a>
+          <div className="text-[#cfa638] text-sm font-light font-['Outfit'] uppercase tracking-[2.56px]">Wed–Sun · 5PM–12AM · 1000 Collins Ave</div>
+        </div>
       </div>
 
       {otherPosts.length > 0 && (
