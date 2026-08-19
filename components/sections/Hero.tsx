@@ -23,8 +23,8 @@ export function Hero({ content }: { content: HomePageContent["hero"] }) {
       </div>
 
       <div className="container-shell grid min-h-[600px] md:min-h-[880px] grid-rows-[1fr_auto] pt-(--header-offset)">
-        <div className="flex items-center">
-          <div className="hero-stack max-w-[41rem] space-y-6 pb-16 pt-[180px] md:pt-[300px] lg:pb-0 lg:pt-[350px] mb-[80px] md:mb-[120px]">
+        <div className="flex items-center justify-center">
+          <div className="hero-stack flex max-w-[41rem] flex-col items-center space-y-6 pb-16 pt-[180px] text-center md:pt-[300px] lg:pb-0 lg:pt-[350px] mb-[80px] md:mb-[120px]">
             <span className="eyebrow text-white">{content.eyebrow}</span>
 
             <h1 className="max-w-[41rem] font-(family-name:--font-display) text-[2.5rem] md:text-[4rem] leading-[1.02] text-white">
@@ -43,21 +43,24 @@ export function Hero({ content }: { content: HomePageContent["hero"] }) {
               {content.description}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-              <BookingButton className="w-full sm:w-auto h-14 px-6 py-[17px] bg-[#ad6d25] flex justify-center items-center gap-2.5 btn-glow">
-                <div className="justify-start text-white text-base font-normal font-['Outfit'] leading-[22.40px] tracking-[2.56px]">RESERVE A TABLE</div>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15.4165 10H4.1665" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
-                  <path d="M10.8335 15L15.8335 10L10.8335 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
-                </svg>
-              </BookingButton>
-              <Link href={content.secondaryButton.href} className="w-full sm:w-auto h-14 px-6 py-[17px] flex justify-center items-center gap-1 btn-glow outline outline-1 outline-transparent transition-all duration-300 hover:outline-[#ad6d25]">
-                <div className="justify-start text-white text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">{content.secondaryButton.label}</div>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15.4165 10H4.1665" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
-                  <path d="M10.8335 15L15.8335 10L10.8335 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
-                </svg>
-              </Link>
+            <div className="flex w-full flex-col items-center justify-center gap-3 sm:w-auto">
+              <div className="flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row">
+                <BookingButton className="w-full sm:w-auto h-14 px-6 py-[17px] bg-[#ad6d25] flex justify-center items-center gap-2.5 btn-glow">
+                  <div className="justify-start text-white text-base font-normal font-['Outfit'] leading-[22.40px] tracking-[2.56px]">RESERVE THE RITUAL</div>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.4165 10H4.1665" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
+                    <path d="M10.8335 15L15.8335 10L10.8335 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
+                  </svg>
+                </BookingButton>
+                <Link href={content.secondaryButton.href} className="w-full sm:w-auto h-14 px-6 py-[17px] flex justify-center items-center gap-1 btn-glow outline outline-1 outline-transparent transition-all duration-300 hover:outline-[#ad6d25]">
+                  <div className="justify-start text-white text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">{content.secondaryButton.label}</div>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.4165 10H4.1665" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
+                    <path d="M10.8335 15L15.8335 10L10.8335 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
+                  </svg>
+                </Link>
+              </div>
+              <div className="text-[#cfa638] text-sm font-light font-['Outfit'] uppercase tracking-[2.56px]">Only a few tables left tonight.</div>
             </div>
           </div>
         </div>

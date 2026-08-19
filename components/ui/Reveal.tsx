@@ -32,6 +32,11 @@ export function Reveal({
       return;
     }
 
+    if (typeof IntersectionObserver === "undefined") {
+      setVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry?.isIntersecting) {
@@ -49,7 +54,17 @@ export function Reveal({
 
     observer.observe(node);
 
-    return () => observer.disconnect();
+    // Safety net: if the observer never fires (slow tunnel, late JS, hidden
+    // iframe), reveal the content anyway so it is never stuck invisible.
+    const fallback = window.setTimeout(() => {
+      setVisible(true);
+      observer.disconnect();
+    }, 2500);
+
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(fallback);
+    };
   }, []);
 
   return (

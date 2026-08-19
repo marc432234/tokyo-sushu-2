@@ -1,4 +1,6 @@
 import { cache } from "react";
+import fs from "node:fs/promises";
+import path from "node:path";
 
 import { getSupabaseClient } from "./supabase";
 
@@ -129,23 +131,40 @@ type PageContentMap = {
 
 export const getPageContent = cache(
   async <TPage extends keyof PageContentMap>(page: TPage): Promise<PageContentMap[TPage]> => {
-    const { data, error } = await getSupabaseClient()
-      .from("pages")
-      .select("content")
-      .eq("key", page)
-      .maybeSingle();
+    try {
+      const { data, error } = await getSupabaseClient()
+        .from("pages")
+        .select("content")
+        .eq("key", page)
+        .maybeSingle();
 
-    if (error) {
-      throw new Error(`Failed to load page content "${page}": ${error.message}`);
+      if (error) {
+        throw new Error(`Failed to load page content "${page}": ${error.message}`);
+      }
+
+      if (!data) {
+        throw new Error(
+          `No "${page}" row found in the Supabase "pages" table. Run \`npm run migrate:content\` to populate content.`,
+        );
+      }
+
+      return data.content as PageContentMap[TPage];
+    } catch {
+      // TEMPORARY: fall back to local JSON so pages render without Supabase.
+      return getPageContentLocal(page);
     }
+  },
+);
 
-    if (!data) {
-      throw new Error(
-        `No "${page}" row found in the Supabase "pages" table. Run \`npm run migrate:content\` to populate content.`,
-      );
-    }
-
-    return data.content as PageContentMap[TPage];
+/**
+ * TEMPORARY: reads page content from the local `content/pages/*.json` files so
+ * pages can be previewed without Supabase. Remove once Supabase is configured.
+ */
+export const getPageContentLocal = cache(
+  async <TPage extends keyof PageContentMap>(page: TPage): Promise<PageContentMap[TPage]> => {
+    const filePath = path.join(process.cwd(), "content/pages", `${page}.json`);
+    const raw = await fs.readFile(filePath, "utf8");
+    return JSON.parse(raw) as PageContentMap[TPage];
   },
 );
 

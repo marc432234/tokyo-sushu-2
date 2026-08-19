@@ -87,9 +87,12 @@ export function Header() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <BookingButton className="btn-secondary">
-              Reserve a Table
-            </BookingButton>
+            <div className="flex flex-col items-end gap-1">
+              <BookingButton className="btn-secondary">
+                Reserve Now
+              </BookingButton>
+              <span className="text-[10px] font-light uppercase tracking-[0.2em] text-[#cfa638]">Wed–Sun 5PM–12AM</span>
+            </div>
           </div>
 
           <button
@@ -158,7 +161,7 @@ export function Header() {
                     {siteConfig.phone}
                   </a>
                   <BookingButton className="btn-secondary">
-                    Reserve a Table
+                    Reserve Now
                   </BookingButton>
                 </div>
               </div>

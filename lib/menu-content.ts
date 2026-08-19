@@ -133,7 +133,7 @@ export const menuSections: Section[] = [
     accentTitle: "— Two Pieces",
     tabLabel: "NIGIRI",
     description:
-      "Clean cuts. Precise seasoning. Fish-forward restraint. The purest expression of the kitchen — each piece hand-formed, each bite complete.",
+      "Clean cuts. Precise seasoning. Fish-forward restraint. The purest sushi near you in Miami — each piece hand-formed, each bite complete.",
     type: "items",
     rows: [
       [
@@ -223,7 +223,7 @@ export const menuSections: Section[] = [
     accentTitle: "Rolls",
     tabLabel: "SIGNATURE ROLLS",
     description:
-      "Decadent house creations built for the late-night South Beach table. Eight pieces per roll. These are not just rolls — they are the reason you came.",
+      "Decadent house creations built for the late-night South Beach table — the rolls people search best sushi miami for. Eight pieces per roll. These are not just rolls — they are the reason you came.",
     type: "items",
     rows: [
       [
@@ -382,7 +382,7 @@ export const menuSections: Section[] = [
     accentTitle: "Crafted After Dark",
     tabLabel: "COCKTAILS",
     description:
-      "Floral, smoky, citrus-led pours engineered for the room after dark. Each cocktail is designed to photograph as well as it tastes — because at Tokyo Sushi Speakeasy, the table is the stage.",
+      "Floral, smoky, citrus-led pours engineered for the room after dark — the speakeasy miami pours guests come back for. Each cocktail is designed to photograph as well as it tastes — because at Tokyo Sushi Speakeasy, the table is the stage.",
     type: "cocktails",
     rows: [],
     cardItems: [

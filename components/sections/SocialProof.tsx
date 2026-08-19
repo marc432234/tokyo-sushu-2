@@ -82,6 +82,7 @@ export function SocialProof({ content }: { content: HomePageContent["socialProof
           <div className="max-w-[46rem]">
             <span className="eyebrow">{content.eyebrow}</span>
             <h2 className="figma-section-title mt-8 text-white">{content.title}</h2>
+            <p className="mt-4 text-sm font-light uppercase tracking-[0.16em] text-[#cfa638]">As seen on Instagram — 15K+ followers</p>
           </div>
           <div className="flex gap-3">
             <button type="button" aria-label="Previous review" onClick={prev} className="size-12 border border-(--accent-gold) text-(--accent-gold) cursor-pointer">

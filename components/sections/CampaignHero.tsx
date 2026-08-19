@@ -41,21 +41,24 @@ export function CampaignHero({ content, bookingUrl }: { content: HomePageContent
             {content.description}
           </p>
 
-          <div className="flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row">
-            <BookingButton href={bookingUrl} className="w-full sm:w-auto h-14 px-6 py-[17px] bg-[#ad6d25] flex justify-center items-center gap-2.5 btn-glow">
-              <div className="justify-start text-white text-base font-normal font-['Outfit'] leading-[22.40px] tracking-[2.56px]">RESERVE A TABLE</div>
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.4165 10H4.1665" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
-                <path d="M10.8335 15L15.8335 10L10.8335 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
-              </svg>
-            </BookingButton>
-            <Link href="/menu" className="w-full sm:w-auto h-14 px-6 py-[17px] flex justify-center items-center gap-1 btn-glow outline outline-1 outline-transparent transition-all duration-300 hover:outline-[#ad6d25]">
-              <div className="justify-start text-white text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">{content.secondaryButton.label}</div>
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.4165 10H4.1665" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
-                <path d="M10.8335 15L15.8335 10L10.8335 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
-              </svg>
-            </Link>
+          <div className="flex w-full flex-col items-center justify-center gap-3 sm:w-auto">
+            <div className="flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row">
+              <BookingButton href={bookingUrl} className="w-full sm:w-auto h-14 px-6 py-[17px] bg-[#ad6d25] flex justify-center items-center gap-2.5 btn-glow">
+                <div className="justify-start text-white text-base font-normal font-['Outfit'] leading-[22.40px] tracking-[2.56px]">RESERVE THE RITUAL</div>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.4165 10H4.1665" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
+                  <path d="M10.8335 15L15.8335 10L10.8335 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
+                </svg>
+              </BookingButton>
+              <Link href="/menu" className="w-full sm:w-auto h-14 px-6 py-[17px] flex justify-center items-center gap-1 btn-glow outline outline-1 outline-transparent transition-all duration-300 hover:outline-[#ad6d25]">
+                <div className="justify-start text-white text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">{content.secondaryButton.label}</div>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.4165 10H4.1665" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
+                  <path d="M10.8335 15L15.8335 10L10.8335 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
+                </svg>
+              </Link>
+            </div>
+            <div className="text-[#cfa638] text-sm font-light font-['Outfit'] uppercase tracking-[2.56px]">Only a few tables left tonight.</div>
           </div>
         </div>
       </div>

@@ -149,7 +149,7 @@ export const signatureCategories = [
 export const experiencePillars = [
   {
     title: "Japanese craft, Miami pulse",
-    body: "Tokyo Sushi Speakeasy balances refined technique with a nightlife energy that feels unmistakably South Beach. Every plate is built with the precision of an Edomae kitchen — clean cuts, seasonal instinct, and a respect for simplicity — then served inside a room that moves to its own rhythm.",
+    body: "If you're looking for an authentic Japanese dinner near you in Miami, Tokyo Sushi Speakeasy balances refined Edomae technique with the nightlife energy that feels unmistakably South Beach. As one of the top-rated Japanese restaurants in South Beach, every plate is built with precision — clean cuts, seasonal instinct, and a respect for simplicity — served inside a room that moves to its own rhythm.",
     image: {
       src: "/pictures/02-seared-tuna-tataki-with-microgreens.jpg",
       alt: "Seared tuna tataki plated with microgreens showcasing Japanese precision.",
@@ -200,15 +200,15 @@ export const testimonials = [
 export const eventOccasions = [
   {
     title: "Date Nights",
-    description: "Low light, standout cocktails, and a menu built for lingering together.",
+    description: "Planning a romantic dinner in Miami? Low light, standout cocktails, and a menu built for couples to linger together — the ideal spot for date night or an anniversary dinner in South Beach.",
   },
   {
     title: "Birthdays",
-    description: "Turn dinner into a celebration with dramatic plates, music, and bottle-worthy energy.",
+    description: "Hosting a birthday dinner in Miami Beach? Turn it into a celebration with dramatic plates, music, and bottle-worthy energy.",
   },
   {
     title: "Groups & Nights Out",
-    description: "From visiting crews to after-dark plans, Tokyo Sushi Speakeasy sets the mood for the full evening.",
+    description: "Planning a couples' dinner or group reservation in Miami? From visiting crews to after-dark plans, Tokyo Sushi Speakeasy sets the mood for the full evening. Groups of 15+, email events@fairwindhotelmiami.com to plan ahead.",
   },
 ];
 

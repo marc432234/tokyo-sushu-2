@@ -27,7 +27,7 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
           <span className="eyebrow text-white">Japanese speakeasy meets Miami nightlife</span>
           <div className="flex flex-col justify-start items-center gap-4">
             <h2 className="max-w-[898px] text-center text-[#cf183c] text-3xl md:text-5xl font-normal font-['Lora'] leading-[57.60px]">Sushi precision, cocktail drama, and late-night share plates.</h2>
-            <div className="max-w-[812px] text-center text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Edomae technique meets South Beach decadence. From clean-cut nigiri to 24K gold-topped signature rolls — every dish is built for the table after dark.</div>
+            <div className="max-w-[812px] text-center text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Looking for the best sushi dinner in Miami? Edomae technique meets South Beach decadence. From clean-cut nigiri to 24K gold-topped signature rolls — every dish is built for those seeking an omakase-style night, served for the table after dark.</div>
           </div>
         </div>
           <div className="w-full">
@@ -185,12 +185,15 @@ export function MenuPreview({ content }: { content: HomePageContent["menuPreview
       </div>
       <div className="container-shell flex flex-col justify-center items-center gap-10 pt-20">
         <div className="text-center"><span className="text-white text-3xl md:text-[40px] font-normal font-['Lora'] leading-[48px]">The full </span><span className="text-[#cf183c] text-3xl md:text-[40px] font-normal font-['Lora'] leading-[48px]">ritual</span><span className="text-white text-3xl md:text-[40px] font-normal font-['Lora'] leading-[48px]"> awaits.</span></div>
-        <div className="h-14 px-6 py-[17px] bg-[#ac6e26] inline-flex justify-center items-center gap-2.5 btn-glow">
-          <div className="text-white text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">View the Complete Menu</div>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15.4168 10H4.16675" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
-            <path d="M10.8333 15L15.8333 10L10.8333 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
-          </svg>
+        <div className="flex flex-col items-center gap-3">
+          <div className="h-14 px-6 py-[17px] bg-[#ac6e26] inline-flex justify-center items-center gap-2.5 btn-glow">
+            <div className="text-white text-base font-normal font-['Outfit'] uppercase leading-[22.40px] tracking-[2.56px]">View the Complete Menu</div>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.4168 10H4.16675" stroke="white" strokeWidth="1.25" strokeLinecap="square" strokeLinejoin="round" />
+              <path d="M10.8333 15L15.8333 10L10.8333 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
+            </svg>
+          </div>
+          <div className="text-[#cfa638] text-sm font-light font-['Outfit'] uppercase tracking-[2.56px]">Tonight&apos;s tables are filling fast.</div>
         </div>
       </div>
     </section>

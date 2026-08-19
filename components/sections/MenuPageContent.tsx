@@ -56,7 +56,7 @@ export function MenuPageContent() {
                 Every <span className="text-highlight-underline"><span className="italic text-(--accent-gold)">Dish</span></span>, A Statement.
               </h1>
               <p className="mt-5 max-w-xl text-base font-light leading-[1.4] tracking-wide text-white/70">
-                Sushi precision, speakeasy cocktails, and late-night share plates — crafted for the full South Beach night.
+                Widely regarded as the best sushi in Miami Beach, our sushi precision, speakeasy cocktails, and late-night share plates are crafted for the full South Beach night — an omakase-style dinner experience without the wait.
               </p>
             </div>
             <div className="w-[577px] inline-flex flex-col justify-start items-start gap-4 max-w-full">

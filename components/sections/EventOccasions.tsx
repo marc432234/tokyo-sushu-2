@@ -23,9 +23,12 @@ export function EventOccasions({ bookingUrl = DEFAULT_BOOKING_URL }: { bookingUr
             <h2 className="text-white text-3xl md:text-5xl font-normal font-['Lora'] leading-[57.60px]">Built for celebrations, group plans, and after-dark momentum.</h2>
             <div className="text-white text-base font-normal font-['Outfit'] leading-[22.40px]">Open the occasion that matches the night you are planning.</div>
           </div>
-          <a href={bookingUrl} className="h-12 px-4 py-[13px] outline outline-1 outline-offset-[-1px] outline-[#ac6e26] flex justify-center items-center gap-2.5 btn-glow">
-            <div className="text-[#ac6e26] text-base font-normal font-['Outfit'] leading-[22.40px] tracking-[2.56px]">Plan Your Night</div>
-          </a>
+          <div className="flex flex-col items-start gap-2">
+            <a href={bookingUrl} className="w-full h-12 px-4 py-[13px] outline outline-1 outline-offset-[-1px] outline-[#ac6e26] flex justify-center items-center gap-2.5 btn-glow">
+              <div className="text-[#ac6e26] text-base font-normal font-['Outfit'] leading-[22.40px] tracking-[2.56px]">Plan Your Night</div>
+            </a>
+            <div className="text-[#cfa638] text-sm font-light font-['Outfit'] uppercase tracking-[2.56px]">Weekend tables go first.</div>
+          </div>
         </div>
         <ScrollReveal>
           <div className="container-shell grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -41,7 +44,7 @@ export function EventOccasions({ bookingUrl = DEFAULT_BOOKING_URL }: { bookingUr
               <div className="relative text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">01</div>
               <div className="relative flex flex-col justify-start items-start gap-4">
                 <h3 className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Date Nights</h3>
-                <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Low light, standout cocktails, and a menu built for lingering together.</div>
+                <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Planning a romantic dinner in Miami? Low light, standout cocktails, and a menu built for couples to linger together — the ideal spot for date night or an anniversary dinner in South Beach.</div>
               </div>
             </div>
             <div className="overflow-hidden p-6 relative bg-black rounded-lg flex flex-col justify-end items-start gap-4 card-hover group min-h-[22rem] md:min-h-[32rem] lg:min-h-[37.5rem]">
@@ -56,7 +59,7 @@ export function EventOccasions({ bookingUrl = DEFAULT_BOOKING_URL }: { bookingUr
               <div className="relative text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">02</div>
               <div className="relative flex flex-col justify-start items-start gap-4">
                 <h3 className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Birthdays</h3>
-                <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Turn dinner into a celebration with dramatic plates, music, and bottle-worthy energy.</div>
+                <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Hosting a birthday dinner in Miami Beach? Turn it into a celebration with dramatic plates, music, and bottle-worthy energy.</div>
               </div>
             </div>
             <div className="overflow-hidden p-6 relative bg-black rounded-lg flex flex-col justify-end items-start gap-4 card-hover group min-h-[22rem] md:min-h-[32rem] lg:min-h-[37.5rem]">
@@ -71,7 +74,7 @@ export function EventOccasions({ bookingUrl = DEFAULT_BOOKING_URL }: { bookingUr
               <div className="relative text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">03</div>
               <div className="relative flex flex-col justify-start items-start gap-4">
                 <h3 className="text-white text-2xl font-normal font-['Lora'] leading-[33.60px]">Groups &amp; Night Out</h3>
-                <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">From visiting crews to after-dark plans, Tokyo Sushi Speakeasy sets the mood for the full evening.</div>
+                <div className="text-white/60 text-base font-light font-['Outfit'] leading-[22.40px] tracking-wide">Planning a couples&apos; dinner or group reservation in Miami? From visiting crews to after-dark plans, Tokyo Sushi Speakeasy sets the mood for the full evening. Groups of 15+, email events@fairwindhotelmiami.com to plan ahead.</div>
               </div>
             </div>
           </div>
