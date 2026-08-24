@@ -91,7 +91,7 @@ export function Header() {
               <BookingButton className="btn-secondary">
                 Reserve Now
               </BookingButton>
-              <span className="text-[10px] font-light uppercase tracking-[0.2em] text-[#cfa638]">Wed–Sun 5PM–12AM</span>
+              <span className="text-[10px] font-light uppercase tracking-[0.2em] text-[#cfa638]">Thu–Sun 5PM–12AM</span>
             </div>
           </div>
 

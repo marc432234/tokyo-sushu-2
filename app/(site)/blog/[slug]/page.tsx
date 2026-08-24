@@ -118,7 +118,7 @@ export default async function BlogPostPage({ params }: Props) {
               <path d="M10.8333 15L15.8333 10L10.8333 5" stroke="white" strokeWidth="1.25" strokeLinejoin="round" />
             </svg>
           </a>
-          <div className="text-[#cfa638] text-sm font-light font-['Outfit'] uppercase tracking-[2.56px]">Wed–Sun · 5PM–12AM · 1000 Collins Ave</div>
+          <div className="text-[#cfa638] text-sm font-light font-['Outfit'] uppercase tracking-[2.56px]">Thu–Sun · 5PM–12AM · 1000 Collins Ave</div>
         </div>
       </div>
 

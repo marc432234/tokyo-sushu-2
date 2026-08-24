@@ -76,7 +76,7 @@ export const siteConfig = {
   email: "events@fairwindhotelmiami.com",
   address: "1000 Collins Ave, Miami Beach, FL 33139",
   mapsUrl: "https://maps.app.goo.gl/kqUDWtU7ydrbNqCE7",
-  hours: "Wed-Sun 5PM-12AM",
+  hours: "Thu-Sun 5PM-12AM",
   utilityCopy: "Sushi. Cocktails. Karaoke. South Beach after dark.",
   reviewSummary: "4.8 Google rating",
   reviewCount: "200+ reviews",

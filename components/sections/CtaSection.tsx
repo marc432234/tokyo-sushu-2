@@ -64,7 +64,7 @@ export function CtaSection({ bookingUrl = DEFAULT_BOOKING_URL }: { bookingUrl?: 
             </div>
             <div className="text-[#cfa638] text-sm font-light font-['Outfit'] uppercase tracking-[2.56px]">Today&apos;s tables are filling fast.</div>
           </div>
-          <div className="text-[#ac6e26] text-base font-light font-['Outfit'] uppercase leading-[22.40px] tracking-[3.20px] text-center">Open Wednesday – Sunday · 5:00 PM – 12:00 AM · <a href={siteConfig.mapsUrl} target="_blank" rel="noreferrer" className="underline hover:text-white">1000 Collins Ave, Miami Beach</a></div>
+          <div className="text-[#ac6e26] text-base font-light font-['Outfit'] uppercase leading-[22.40px] tracking-[3.20px] text-center">Open Thursday – Sunday · 5:00 PM – 12:00 AM · <a href={siteConfig.mapsUrl} target="_blank" rel="noreferrer" className="underline hover:text-white">1000 Collins Ave, Miami Beach</a></div>
         </div>
         </div>
       </section>
