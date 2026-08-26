@@ -4,22 +4,22 @@ import Link from "next/link";
 import type { HomePageContent } from "@/lib/page-content";
 
 const images = [
-  { src: "/pictures/image-speakeasy-1.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 670, sizes: "(min-width: 768px) 33vw, 50vw" },
-  { src: "/pictures/image-speakeasy-2.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 324, sizes: "(min-width: 768px) 20vw, 33vw" },
-  { src: "/pictures/image-speakeasy-3.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 324, sizes: "(min-width: 768px) 33vw, 50vw" },
-  { src: "/pictures/image-speakeasy-4.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 324, sizes: "(min-width: 768px) 33vw, 50vw" },
-  { src: "/pictures/image-speakeasy-5.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 324, sizes: "(min-width: 768px) 20vw, 33vw" },
-  { src: "/pictures/image-speakeasy-6.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 670, sizes: "(min-width: 768px) 20vw, 33vw" },
+  { src: "/pictures/image-speakeasy-1.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 670, sizes: "(min-width: 768px) 33vw, 50vw", span: "big" as const },
+  { src: "/pictures/image-speakeasy-2.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 324, sizes: "(min-width: 768px) 20vw, 33vw", span: "small" as const },
+  { src: "/pictures/image-speakeasy-3.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 324, sizes: "(min-width: 768px) 33vw, 50vw", span: "horizontal" as const },
+  { src: "/pictures/image-speakeasy-4.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 324, sizes: "(min-width: 768px) 33vw, 50vw", span: "horizontal" as const },
+  { src: "/pictures/image-speakeasy-5.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 324, sizes: "(min-width: 768px) 20vw, 33vw", span: "small" as const },
+  { src: "/pictures/image-speakeasy-6.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 670, sizes: "(min-width: 768px) 20vw, 33vw", span: "vertical" as const },
 ];
 
-const mosaicLayout = [
-  { gridColumn: "1 / 3", gridRow: "1" },
-  { gridColumn: "3", gridRow: "1" },
-  { gridColumn: "1", gridRow: "2" },
-  { gridColumn: "2 / 4", gridRow: "2" },
-  { gridColumn: "1 / 3", gridRow: "3" },
-  { gridColumn: "3", gridRow: "3" },
-];
+function spanStyle(span: "small" | "horizontal" | "vertical" | "big") {
+  switch (span) {
+    case "horizontal": return { gridColumn: "span 2" };
+    case "vertical": return { gridRow: "span 2" };
+    case "big": return { gridColumn: "span 2", gridRow: "span 2" };
+    default: return {};
+  }
+}
 
 export function GalleryTeaser({ content }: { content: HomePageContent["galleryTeaser"] }) {
   return (
@@ -40,9 +40,9 @@ export function GalleryTeaser({ content }: { content: HomePageContent["galleryTe
           </Link>
         </div>
 
-        <div className="mt-12 grid grid-cols-3 gap-3 relative z-10">
-          {images.map((asset, i) => (
-            <div key={asset.src} className="figma-image-card group overflow-hidden" style={mosaicLayout[i]}>
+        <div className="mt-12 grid grid-cols-4 gap-3 gallery-teaser-grid relative z-10">
+          {images.map((asset) => (
+            <div key={asset.src} className="figma-image-card group overflow-hidden" style={spanStyle(asset.span)}>
               <Image
                 src={asset.src}
                 alt={asset.alt}

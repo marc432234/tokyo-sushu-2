@@ -687,3 +687,15 @@ header + .container-shell {
 .post-image {
   border-radius: 0.5rem;
 }
+
+/* ── Mosaic gallery grid ── */
+
+.gallery-grid {
+  grid-auto-rows: 180px;
+  grid-auto-flow: dense;
+}
+
+.gallery-teaser-grid {
+  grid-auto-rows: 160px;
+  grid-auto-flow: dense;
+}
