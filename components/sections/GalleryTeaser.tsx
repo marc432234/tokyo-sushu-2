@@ -4,17 +4,18 @@ import Link from "next/link";
 import type { HomePageContent } from "@/lib/page-content";
 
 const images = [
-  { src: "/pictures/Food2.png", alt: "A vivid lobster and sushi plate at Tokyo Sushi Speakeasy." },
-  { src: "/pictures/Drinks.png", alt: "Tokyo Sushi Speakeasy cocktails and sushi served under dramatic light." },
-  { src: "/pictures/08-citrus-cocktail-with-dried-lime-and-flowers.jpg", alt: "Citrus cocktail with dried lime and flowers." },
-  { src: "/pictures/13-matcha-cake-with-mango-and-pansy.jpg", alt: "Matcha cake with mango and pansy." },
-  { src: "/pictures/05-japanese-dishes-spread-with-cocktail.jpg", alt: "Japanese dishes spread with cocktail." },
+  { src: "/pictures/image-speakeasy-1.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 670 },
+  { src: "/pictures/image-speakeasy-2.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 324 },
+  { src: "/pictures/image-speakeasy-3.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 324 },
+  { src: "/pictures/image-speakeasy-4.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 324 },
+  { src: "/pictures/image-speakeasy-5.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 324 },
+  { src: "/pictures/image-speakeasy-6.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 670 },
 ];
 
 const columns = [
   { items: [0, 1] },
   { items: [2, 3] },
-  { items: [4] },
+  { items: [4, 5] },
 ];
 
 export function GalleryTeaser({ content }: { content: HomePageContent["galleryTeaser"] }) {
@@ -46,8 +47,8 @@ export function GalleryTeaser({ content }: { content: HomePageContent["galleryTe
                     <Image
                       src={asset.src}
                       alt={asset.alt}
-                      width={1365}
-                      height={2048}
+                      width={asset.width}
+                      height={asset.height}
                       sizes="(min-width: 768px) 33vw, 50vw"
                       className="w-full h-auto transition duration-700 group-hover:scale-105"
                     />

@@ -5,18 +5,18 @@ import Image from "next/image";
 import { Lightbox } from "./Lightbox";
 
 const gallery = [
-  { src: "/pictures/04-lychee-orchid-and-citrus-cocktails.jpg", alt: "Lychee orchid cocktails in Tokyo Sushi Speakeasy's moody room." },
-  { src: "/pictures/Food2.png", alt: "A vivid lobster and sushi plate at Tokyo Sushi Speakeasy." },
-  { src: "/pictures/Drinks.png", alt: "Tokyo Sushi Speakeasy cocktails and sushi served under dramatic light." },
-  { src: "/pictures/08-citrus-cocktail-with-dried-lime-and-flowers.jpg", alt: "Citrus cocktail with dried lime and flowers." },
-  { src: "/pictures/13-matcha-cake-with-mango-and-pansy.jpg", alt: "Matcha cake with mango and pansy." },
-  { src: "/pictures/05-japanese-dishes-spread-with-cocktail.jpg", alt: "Japanese dishes spread with cocktail." },
-  { src: "/pictures/10-salmon-bao-bun-with-edible-flowers.jpg", alt: "Salmon bao bun with edible flowers." },
-  { src: "/pictures/12-wagyu-beef-sushi-roll-closeup.jpg", alt: "Wagyu beef sushi roll closeup." },
-  { src: "/pictures/17-DSC07903.jpg", alt: "Tokyo Sushi Speakeasy cocktail detail in the dining room." },
-  { src: "/pictures/28-DSC08248.jpg", alt: "Damask-wallpapered staircase with a gold handrail inside Tokyo Sushi Speakeasy." },
-  { src: "/pictures/27-DSC08232.jpg", alt: "Moody Tokyo Sushi Speakeasy table setting with Japanese wall art." },
-  { src: "/pictures/16-DSC07892.jpg", alt: "Smoked cocktail under a glass cloche." },
+  { src: "/pictures/05-japanese-dishes-spread-with-cocktail-1.png", alt: "Japanese dishes spread with cocktail.", width: 322, height: 322 },
+  { src: "/pictures/10-salmon-bao-bun-with-edible-flowers-1.png", alt: "Salmon bao bun with edible flowers.", width: 668, height: 322 },
+  { src: "/pictures/image-16.png", alt: "Gallery image.", width: 322, height: 322 },
+  { src: "/pictures/image-30.png", alt: "Gallery image.", width: 668, height: 668 },
+  { src: "/pictures/image-31.png", alt: "Gallery image.", width: 322, height: 667 },
+  { src: "/pictures/image-32.png", alt: "Gallery image.", width: 668, height: 322 },
+  { src: "/pictures/image-33.png", alt: "Gallery image.", width: 322, height: 322 },
+  { src: "/pictures/image-34.png", alt: "Gallery image.", width: 668, height: 668 },
+  { src: "/pictures/image-35.png", alt: "Gallery image.", width: 668, height: 322 },
+  { src: "/pictures/image-36.png", alt: "Gallery image.", width: 322, height: 322 },
+  { src: "/pictures/image-37.png", alt: "Gallery image.", width: 322, height: 668 },
+  { src: "/pictures/image-38.png", alt: "Gallery image.", width: 668, height: 322 },
 ];
 
 const columns = [
@@ -46,8 +46,8 @@ export function GalleryGrid() {
                   <Image
                     src={asset.src}
                     alt={asset.alt}
-                    width={1365}
-                    height={2048}
+                    width={asset.width}
+                    height={asset.height}
                     priority={globalIndex < 4}
                     sizes="(min-width: 640px) 33vw, 100vw"
                     className="w-full h-auto transition duration-700 group-hover:scale-105"
