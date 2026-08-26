@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { CtaSection } from "@/components/sections/CtaSection";
 import { EventOccasions } from "@/components/sections/EventOccasions";
+import { GalleryTeaser } from "@/components/sections/GalleryTeaser";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { BookingButton } from "@/components/ui/ReservationModal";
@@ -69,32 +70,22 @@ const moments = [
 ];
 
 const gallery = [
-  {
-    src: "/pictures/Food2.png",
-    alt: "A vivid lobster and sushi plate at Tokyo Sushi Speakeasy.",
-    className: "lg:row-span-2",
-  },
-  {
-    src: "/pictures/Drinks.png",
-    alt: "Tokyo Sushi Speakeasy cocktails and sushi served under dramatic light.",
-    className: "",
-  },
-  {
-    src: "/pictures/04-lychee-orchid-and-citrus-cocktails.jpg",
-    alt: "Lychee orchid cocktails in Tokyo Sushi Speakeasy's moody room.",
-    className: "",
-  },
-  {
-    src: "/pictures/13-matcha-cake-with-mango-and-pansy.jpg",
-    alt: "Matcha dessert with mango and pansy.",
-    className: "",
-  },
-  {
-    src: "/pictures/08-citrus-cocktail-with-dried-lime-and-flowers.jpg",
-    alt: "Citrus cocktail with dried lime and flowers.",
-    className: "lg:col-span-2",
-  },
+  { src: "/pictures/image-speakeasy-1.png", alt: "Inside Tokyo Sushi Speakeasy.", span: "big" as const },
+  { src: "/pictures/image-speakeasy-4.png", alt: "Inside Tokyo Sushi Speakeasy.", span: "horizontal" as const },
+  { src: "/pictures/image-speakeasy-5.png", alt: "Inside Tokyo Sushi Speakeasy.", span: "small" as const },
+  { src: "/pictures/image-speakeasy-6.png", alt: "Inside Tokyo Sushi Speakeasy.", span: "vertical" as const },
+  { src: "/pictures/image-speakeasy-2.png", alt: "Inside Tokyo Sushi Speakeasy.", span: "small" as const },
+  { src: "/pictures/image-speakeasy-3.png", alt: "Inside Tokyo Sushi Speakeasy.", span: "horizontal" as const },
 ];
+
+function gallerySpanStyle(span: "small" | "horizontal" | "vertical" | "big") {
+  switch (span) {
+    case "horizontal": return { gridColumn: "span 2" };
+    case "vertical": return { gridRow: "span 2" };
+    case "big": return { gridColumn: "span 2", gridRow: "span 2" };
+    default: return {};
+  }
+}
 
 export const revalidate = 60;
 
@@ -307,34 +298,15 @@ export default async function ExperiencePage() {
       </Reveal>
 
       <Reveal delay={180}>
-        <section className="bg-[#170307] py-[clamp(4rem,8vw,7.5rem)]">
-          <div className="container-shell">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-              <div>
-                <span className="eyebrow">Gallery</span>
-                <h2 className="figma-section-title mt-8 text-white">
-                  Inside the <span className="italic text-(--accent-red)">Speakeasy</span>
-                </h2>
-              </div>
-              <Link href="/gallery" className="btn-secondary w-fit">Full Gallery</Link>
-            </div>
-
-            <div className="mt-12 grid auto-rows-[16rem] gap-4 sm:auto-rows-[20rem] lg:grid-cols-3 lg:auto-rows-[20rem]">
-              {gallery.map((asset) => (
-                <div key={asset.src} className={`figma-image-card group ${asset.className}`}>
-                  <Image
-                    src={asset.src}
-                    alt={asset.alt}
-                    width={1365}
-                    height={2048}
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <GalleryTeaser
+          content={{
+            eyebrow: "Gallery",
+            title: "Inside the Speakeasy",
+            description: "",
+            button: { label: "Full Gallery", href: "/gallery" },
+            images: [],
+          }}
+        />
       </Reveal>
 
       <CtaSection />

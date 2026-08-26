@@ -691,11 +691,11 @@ header + .container-shell {
 /* ── Mosaic gallery grid ── */
 
 .gallery-grid {
-  grid-auto-rows: 180px;
+  grid-auto-rows: minmax(160px, auto);
   grid-auto-flow: dense;
 }
 
 .gallery-teaser-grid {
-  grid-auto-rows: 160px;
+  grid-auto-rows: minmax(140px, auto);
   grid-auto-flow: dense;
 }

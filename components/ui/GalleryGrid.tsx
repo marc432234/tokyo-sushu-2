@@ -5,18 +5,18 @@ import Image from "next/image";
 import { Lightbox } from "./Lightbox";
 
 const gallery = [
-  { src: "/pictures/05-japanese-dishes-spread-with-cocktail-1.png", alt: "Japanese dishes spread with cocktail.", width: 322, height: 322, sizes: "(min-width: 1024px) 15vw, (min-width: 640px) 25vw, 50vw", span: "small" as const },
-  { src: "/pictures/10-salmon-bao-bun-with-edible-flowers-1.png", alt: "Salmon bao bun with edible flowers.", width: 668, height: 322, sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw", span: "horizontal" as const },
-  { src: "/pictures/image-16.png", alt: "Gallery image.", width: 322, height: 322, sizes: "(min-width: 1024px) 15vw, (min-width: 640px) 25vw, 50vw", span: "small" as const },
   { src: "/pictures/image-30.png", alt: "Gallery image.", width: 668, height: 668, sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw", span: "big" as const },
+  { src: "/pictures/10-salmon-bao-bun-with-edible-flowers-1.png", alt: "Salmon bao bun with edible flowers.", width: 668, height: 322, sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw", span: "horizontal" as const },
+  { src: "/pictures/05-japanese-dishes-spread-with-cocktail-1.png", alt: "Japanese dishes spread with cocktail.", width: 322, height: 322, sizes: "(min-width: 1024px) 15vw, (min-width: 640px) 25vw, 50vw", span: "small" as const },
   { src: "/pictures/image-31.png", alt: "Gallery image.", width: 322, height: 667, sizes: "(min-width: 1024px) 15vw, (min-width: 640px) 25vw, 50vw", span: "vertical" as const },
   { src: "/pictures/image-32.png", alt: "Gallery image.", width: 668, height: 322, sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw", span: "horizontal" as const },
-  { src: "/pictures/image-33.png", alt: "Gallery image.", width: 322, height: 322, sizes: "(min-width: 1024px) 15vw, (min-width: 640px) 25vw, 50vw", span: "small" as const },
+  { src: "/pictures/image-16.png", alt: "Gallery image.", width: 322, height: 322, sizes: "(min-width: 1024px) 15vw, (min-width: 640px) 25vw, 50vw", span: "small" as const },
   { src: "/pictures/image-34.png", alt: "Gallery image.", width: 668, height: 668, sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw", span: "big" as const },
   { src: "/pictures/image-35.png", alt: "Gallery image.", width: 668, height: 322, sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw", span: "horizontal" as const },
-  { src: "/pictures/image-36.png", alt: "Gallery image.", width: 322, height: 322, sizes: "(min-width: 1024px) 15vw, (min-width: 640px) 25vw, 50vw", span: "small" as const },
+  { src: "/pictures/image-33.png", alt: "Gallery image.", width: 322, height: 322, sizes: "(min-width: 1024px) 15vw, (min-width: 640px) 25vw, 50vw", span: "small" as const },
   { src: "/pictures/image-37.png", alt: "Gallery image.", width: 322, height: 668, sizes: "(min-width: 1024px) 15vw, (min-width: 640px) 25vw, 50vw", span: "vertical" as const },
   { src: "/pictures/image-38.png", alt: "Gallery image.", width: 668, height: 322, sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw", span: "horizontal" as const },
+  { src: "/pictures/image-36.png", alt: "Gallery image.", width: 322, height: 322, sizes: "(min-width: 1024px) 15vw, (min-width: 640px) 25vw, 50vw", span: "small" as const },
 ];
 
 function spanStyle(span: "small" | "horizontal" | "vertical" | "big") {
@@ -39,7 +39,7 @@ export function GalleryGrid() {
         {gallery.map((asset, i) => (
           <figure
             key={asset.src}
-            className="figma-image-card group relative cursor-pointer overflow-hidden"
+            className="figma-image-card group relative cursor-pointer overflow-hidden h-full"
             style={spanStyle(asset.span)}
             onClick={() => setLightboxIndex(i)}
           >
