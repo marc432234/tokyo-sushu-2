@@ -19,10 +19,19 @@ const gallery = [
   { src: "/pictures/image-38.png", alt: "Gallery image.", width: 668, height: 322 },
 ];
 
-const columns = [
-  { items: [0, 1, 2, 3] },
-  { items: [4, 5, 6, 7] },
-  { items: [8, 9, 10, 11] },
+const mosaicLayout = [
+  { gridColumn: "1 / 3", gridRow: "1 / 3" },
+  { gridColumn: "3", gridRow: "1" },
+  { gridColumn: "3", gridRow: "2" },
+  { gridColumn: "1", gridRow: "3 / 5" },
+  { gridColumn: "2", gridRow: "3" },
+  { gridColumn: "3", gridRow: "3 / 5" },
+  { gridColumn: "2", gridRow: "4" },
+  { gridColumn: "1", gridRow: "5" },
+  { gridColumn: "2 / 4", gridRow: "5" },
+  { gridColumn: "1", gridRow: "6" },
+  { gridColumn: "2", gridRow: "6" },
+  { gridColumn: "3", gridRow: "6" },
 ];
 
 const lightboxAssets = gallery.map((a) => ({ src: a.src, alt: a.alt }));
@@ -32,34 +41,28 @@ export function GalleryGrid() {
 
   return (
     <>
-      <div className="flex flex-col sm:flex-row gap-4">
-        {columns.map((col) => (
-          <div key={col.items[0]} className="flex flex-1 flex-col gap-4">
-            {col.items.map((globalIndex) => {
-              const asset = gallery[globalIndex];
-              return (
-                <figure
-                  key={asset.src}
-                  className="figma-image-card group relative cursor-pointer overflow-hidden"
-                  onClick={() => setLightboxIndex(globalIndex)}
-                >
-                  <Image
-                    src={asset.src}
-                    alt={asset.alt}
-                    width={asset.width}
-                    height={asset.height}
-                    priority={globalIndex < 4}
-                    sizes="(min-width: 640px) 33vw, 100vw"
-                    className="w-full h-auto transition duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-[#170307]/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                  <div className="absolute bottom-0 left-0 right-0 translate-y-4 p-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                    <span className="text-sm text-white/80">{asset.alt}</span>
-                  </div>
-                </figure>
-              );
-            })}
-          </div>
+      <div className="grid grid-cols-3 gap-4">
+        {gallery.map((asset, i) => (
+          <figure
+            key={asset.src}
+            className="figma-image-card group relative cursor-pointer overflow-hidden"
+            style={mosaicLayout[i]}
+            onClick={() => setLightboxIndex(i)}
+          >
+            <Image
+              src={asset.src}
+              alt={asset.alt}
+              width={asset.width}
+              height={asset.height}
+              priority={i < 4}
+              sizes="(min-width: 640px) 33vw, 100vw"
+              className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-[#170307]/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            <div className="absolute bottom-0 left-0 right-0 translate-y-4 p-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <span className="text-sm text-white/80">{asset.alt}</span>
+            </div>
+          </figure>
         ))}
       </div>
 

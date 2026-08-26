@@ -12,10 +12,13 @@ const images = [
   { src: "/pictures/image-speakeasy-6.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 670 },
 ];
 
-const columns = [
-  { items: [0, 1] },
-  { items: [2, 3] },
-  { items: [4, 5] },
+const mosaicLayout = [
+  { gridColumn: "1 / 3", gridRow: "1 / 3" },
+  { gridColumn: "3", gridRow: "1" },
+  { gridColumn: "3", gridRow: "2" },
+  { gridColumn: "1", gridRow: "3 / 5" },
+  { gridColumn: "2 / 4", gridRow: "3" },
+  { gridColumn: "1", gridRow: "4" },
 ];
 
 export function GalleryTeaser({ content }: { content: HomePageContent["galleryTeaser"] }) {
@@ -37,24 +40,17 @@ export function GalleryTeaser({ content }: { content: HomePageContent["galleryTe
           </Link>
         </div>
 
-        <div className="mt-12 flex gap-4 relative z-10">
-          {columns.map((col, i) => (
-            <div key={col.items[0]} className={`flex-1 flex-col gap-4 ${i === 2 ? "hidden md:flex" : "flex"}`}>
-              {col.items.map((globalIndex) => {
-                const asset = images[globalIndex];
-                return (
-                  <div key={asset.src} className="figma-image-card group overflow-hidden">
-                    <Image
-                      src={asset.src}
-                      alt={asset.alt}
-                      width={asset.width}
-                      height={asset.height}
-                      sizes="(min-width: 768px) 33vw, 50vw"
-                      className="w-full h-auto transition duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                );
-              })}
+        <div className="mt-12 grid grid-cols-3 gap-4 relative z-10">
+          {images.map((asset, i) => (
+            <div key={asset.src} className="figma-image-card group overflow-hidden" style={mosaicLayout[i]}>
+              <Image
+                src={asset.src}
+                alt={asset.alt}
+                width={asset.width}
+                height={asset.height}
+                sizes="(min-width: 768px) 33vw, 50vw"
+                className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+              />
             </div>
           ))}
         </div>
