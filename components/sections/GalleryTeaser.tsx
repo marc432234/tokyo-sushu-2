@@ -4,21 +4,21 @@ import Link from "next/link";
 import type { HomePageContent } from "@/lib/page-content";
 
 const images = [
-  { src: "/pictures/image-speakeasy-1.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 670 },
-  { src: "/pictures/image-speakeasy-2.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 324 },
-  { src: "/pictures/image-speakeasy-3.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 324 },
-  { src: "/pictures/image-speakeasy-4.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 324 },
-  { src: "/pictures/image-speakeasy-5.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 324 },
-  { src: "/pictures/image-speakeasy-6.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 670 },
+  { src: "/pictures/image-speakeasy-1.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 670, sizes: "(min-width: 768px) 33vw, 50vw" },
+  { src: "/pictures/image-speakeasy-2.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 324, sizes: "(min-width: 768px) 20vw, 33vw" },
+  { src: "/pictures/image-speakeasy-3.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 324, sizes: "(min-width: 768px) 33vw, 50vw" },
+  { src: "/pictures/image-speakeasy-4.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 670, height: 324, sizes: "(min-width: 768px) 33vw, 50vw" },
+  { src: "/pictures/image-speakeasy-5.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 324, sizes: "(min-width: 768px) 20vw, 33vw" },
+  { src: "/pictures/image-speakeasy-6.png", alt: "Inside Tokyo Sushi Speakeasy.", width: 324, height: 670, sizes: "(min-width: 768px) 20vw, 33vw" },
 ];
 
 const mosaicLayout = [
-  { gridColumn: "1 / 3", gridRow: "1 / 3" },
+  { gridColumn: "1 / 3", gridRow: "1" },
   { gridColumn: "3", gridRow: "1" },
-  { gridColumn: "3", gridRow: "2" },
-  { gridColumn: "1", gridRow: "3 / 5" },
-  { gridColumn: "2 / 4", gridRow: "3" },
-  { gridColumn: "1", gridRow: "4" },
+  { gridColumn: "1", gridRow: "2" },
+  { gridColumn: "2 / 4", gridRow: "2" },
+  { gridColumn: "1 / 3", gridRow: "3" },
+  { gridColumn: "3", gridRow: "3" },
 ];
 
 export function GalleryTeaser({ content }: { content: HomePageContent["galleryTeaser"] }) {
@@ -40,7 +40,7 @@ export function GalleryTeaser({ content }: { content: HomePageContent["galleryTe
           </Link>
         </div>
 
-        <div className="mt-12 grid grid-cols-3 gap-4 relative z-10">
+        <div className="mt-12 grid grid-cols-3 gap-3 relative z-10">
           {images.map((asset, i) => (
             <div key={asset.src} className="figma-image-card group overflow-hidden" style={mosaicLayout[i]}>
               <Image
@@ -48,7 +48,7 @@ export function GalleryTeaser({ content }: { content: HomePageContent["galleryTe
                 alt={asset.alt}
                 width={asset.width}
                 height={asset.height}
-                sizes="(min-width: 768px) 33vw, 50vw"
+                sizes={asset.sizes}
                 className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
               />
             </div>
