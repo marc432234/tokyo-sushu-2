@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { BlogPost } from "@/lib/blog";
 
-const PER_PAGE = 4;
+const PER_PAGE = 9;
 
 export function BlogGrid({ posts, page, categorySlug }: { posts: BlogPost[]; page: number; categorySlug?: string }) {
   const totalPages = Math.ceil(posts.length / PER_PAGE);
@@ -24,7 +24,7 @@ export function BlogGrid({ posts, page, categorySlug }: { posts: BlogPost[]; pag
 
   return (
     <div className="flex flex-1 flex-col items-center justify-start gap-16">
-      <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-[29px]">
+      <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[29px]">
         {visible.map((article, index) => (
           <Link
             key={article.slug}
@@ -36,7 +36,7 @@ export function BlogGrid({ posts, page, categorySlug }: { posts: BlogPost[]; pag
                 src={article.featuredImage}
                 alt={article.title}
                 fill
-                sizes="(max-width: 768px) 100vw, 420px"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
               />
             </div>

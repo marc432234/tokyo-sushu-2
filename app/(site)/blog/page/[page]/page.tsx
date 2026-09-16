@@ -4,7 +4,7 @@ import { createPageMetadata } from "@/lib/metadata";
 import { pageOgImages } from "@/lib/site";
 import { BlogPageLayout } from "@/components/blog/BlogPageLayout";
 
-const PER_PAGE = 4;
+const PER_PAGE = 9;
 
 export const revalidate = 60;
 
@@ -29,7 +29,7 @@ export default async function BlogPagePaginated({ params }: Props) {
   if (!Number.isInteger(pageNum) || pageNum < 2) notFound();
 
   const posts = await getAllBlogPosts();
-  const totalPages = Math.ceil(posts.length / 4);
+  const totalPages = Math.ceil(posts.length / PER_PAGE);
   if (pageNum > totalPages) notFound();
 
   return <BlogPageLayout page={pageNum} />;
