@@ -54,7 +54,7 @@ export async function BlogPageLayout({ page, categorySlug }: { page: number; cat
 
       <ScrollReveal>
         <div className="container-shell flex flex-wrap items-start justify-between gap-8 pb-12 pt-12 md:pb-20 md:pt-20">
-          <div className="flex w-full flex-col items-start justify-start gap-4 md:w-[322px]">
+          <div className="flex w-full flex-col items-start justify-start gap-4 md:w-[200px]">
             <Link href="/blog" className={`btn-glow flex h-14 w-full items-center justify-between px-6 py-[17px] ${!categorySlug ? "bg-[#ad6d25]" : "outline outline-1 outline-offset-[-1px] outline-[#cfa638]/40"}`}>
               <div className={`font-['Outfit'] text-base font-normal uppercase leading-[22.40px] tracking-[2.56px] ${!categorySlug ? "text-white" : "text-[#ad6d25]"}`}>ALL</div>
               {!categorySlug && (
