@@ -688,6 +688,47 @@ header + .container-shell {
   border-radius: 0.5rem;
 }
 
+/* Tables — shared by the visual editor (.ProseMirror) and the public post renderer */
+.ProseMirror table,
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+.ProseMirror table th,
+.ProseMirror table td,
+.post-content table th,
+.post-content table td {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.ProseMirror table th,
+.post-content table th {
+  background: rgba(173, 109, 37, 0.2);
+  color: #e5e5e5;
+  font-weight: 600;
+}
+
+.ProseMirror table td,
+.post-content table td {
+  color: #d6d3d1;
+}
+
+.ProseMirror table tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.ProseMirror .selectedCell {
+  background: rgba(173, 109, 37, 0.15);
+  outline: 2px solid var(--accent-gold);
+  outline-offset: -2px;
+}
+
 /* ── Mosaic gallery grid ── */
 
 .gallery-grid {

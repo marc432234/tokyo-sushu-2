@@ -5,6 +5,10 @@ import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Image from "@tiptap/extension-image";
 import TextAlign from "@tiptap/extension-text-align";
+import Table from "@tiptap/extension-table";
+import TableRow from "@tiptap/extension-table-row";
+import TableHeader from "@tiptap/extension-table-header";
+import TableCell from "@tiptap/extension-table-cell";
 import { ButtonNode } from "./button-extension";
 
 const btn =
@@ -51,6 +55,10 @@ export function PostBodyEditor({ initialHtml }: { initialHtml: string }) {
       }),
       TextAlign.configure({ types: ["heading", "paragraph"] }),
       Image.configure({ HTMLAttributes: { class: "post-image" } }),
+      Table.configure({ resizable: false }),
+      TableRow,
+      TableHeader,
+      TableCell,
       ButtonNode,
     ],
     content: initialIsMarkdown ? "" : initialHtml,
@@ -150,6 +158,17 @@ export function PostBodyEditor({ initialHtml }: { initialHtml: string }) {
           <ToolbarButton title="Link" label="Link" isActive={editor.isActive("link")} onClick={setLink} />
           <ToolbarButton title="Image" label="🖼" onClick={addImage} />
           <ToolbarButton title="Button" label="Button" isActive={editor.isActive("button")} onClick={addButton} />
+          <Divider />
+          <ToolbarButton title="Insert table" label="Table" onClick={() => editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()} />
+          {editor.isActive("table") && (
+            <>
+              <ToolbarButton title="Add column after" label="+Col" onClick={() => editor.chain().focus().addColumnAfter().run()} />
+              <ToolbarButton title="Delete column" label="-Col" onClick={() => editor.chain().focus().deleteColumn().run()} />
+              <ToolbarButton title="Add row after" label="+Row" onClick={() => editor.chain().focus().addRowAfter().run()} />
+              <ToolbarButton title="Delete row" label="-Row" onClick={() => editor.chain().focus().deleteRow().run()} />
+              <ToolbarButton title="Delete table" label="Del Table" onClick={() => editor.chain().focus().deleteTable().run()} />
+            </>
+          )}
           <Divider />
           <ToolbarButton title="Undo" label="↶" onClick={() => editor.chain().focus().undo().run()} />
           <ToolbarButton title="Redo" label="↷" onClick={() => editor.chain().focus().redo().run()} />

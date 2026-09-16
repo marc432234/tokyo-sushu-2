@@ -92,6 +92,11 @@ const components: Components = {
     </code>
   ),
   hr: () => <hr className="border-white/15" />,
+  table: ({ children }) => (
+    <div className="overflow-x-auto">
+      <table className="post-content">{children}</table>
+    </div>
+  ),
 };
 
 export function MarkdownContent({ content }: { content: string }) {

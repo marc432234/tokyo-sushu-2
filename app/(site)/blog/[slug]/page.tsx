@@ -106,7 +106,7 @@ export default async function BlogPostPage({ params }: Props) {
       </ScrollReveal>
 
       <div className="mx-auto flex max-w-[898px] flex-col items-start justify-start gap-10 px-4">
-        <article className="w-full">
+        <article className="w-full post-content">
           <MarkdownContent content={post.body} />
         </article>
       </div>
