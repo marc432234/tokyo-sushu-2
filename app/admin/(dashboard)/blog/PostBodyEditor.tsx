@@ -38,16 +38,10 @@ function Divider() {
   return <span className="mx-1 h-5 w-px bg-white/15" />;
 }
 
-function isMarkdownContent(content: string): boolean {
-  const trimmed = content.trimStart();
-  return !!trimmed && !trimmed.startsWith("<");
-}
-
 export function PostBodyEditor({ initialHtml }: { initialHtml: string }) {
-  const initialIsMarkdown = isMarkdownContent(initialHtml);
+  const initialIsMarkdown = !!initialHtml.trim() && !initialHtml.trimStart().startsWith("<");
   const [mode, setMode] = useState<"visual" | "markdown">(initialIsMarkdown ? "markdown" : "visual");
-  const [html, setHtml] = useState(initialIsMarkdown ? "" : initialHtml);
-  const [markdownText, setMarkdownText] = useState(initialIsMarkdown ? initialHtml : "");
+  const [content, setContent] = useState(initialHtml);
 
   const editor = useEditor({
     immediatelyRender: false,
@@ -66,25 +60,13 @@ export function PostBodyEditor({ initialHtml }: { initialHtml: string }) {
           "prose prose-invert max-w-none min-h-[420px] rounded-b-md bg-white/5 px-4 py-3 focus:outline-none",
       },
     },
-    onUpdate: ({ editor }) => setHtml(editor.getHTML()),
+    onUpdate: ({ editor }) => setContent(editor.getHTML()),
   });
 
   const switchMode = (newMode: "visual" | "markdown") => {
     if (newMode === mode) return;
-    const hasContent =
-      mode === "visual"
-        ? html !== "" && html !== "<p></p>"
-        : markdownText !== "";
-    if (
-      hasContent &&
-      !window.confirm("Switching mode will clear the current content. Continue?")
-    )
-      return;
-    if (newMode === "visual") {
-      editor?.commands.clearContent();
-      setHtml("");
-    } else {
-      setMarkdownText("");
+    if (newMode === "visual" && editor) {
+      editor.commands.setContent(content);
     }
     setMode(newMode);
   };
@@ -148,7 +130,7 @@ export function PostBodyEditor({ initialHtml }: { initialHtml: string }) {
         </button>
       </div>
 
-      {/* Visual editor toolbar + content */}
+      {/* Visual editor */}
       <div className={mode === "visual" ? "" : "hidden"}>
         <div className="sticky top-0 z-20 flex flex-wrap items-center gap-1 border-b border-white/15 bg-[#1c0509] px-2 py-1.5">
           <ToolbarButton title="Bold" label="B" isActive={editor.isActive("bold")} onClick={() => editor.chain().focus().toggleBold().run()} />
@@ -175,17 +157,17 @@ export function PostBodyEditor({ initialHtml }: { initialHtml: string }) {
         <EditorContent editor={editor} />
       </div>
 
-      {/* Markdown editor */}
+      {/* Markdown / raw editor */}
       {mode === "markdown" && (
         <textarea
-          value={markdownText}
-          onChange={(e) => setMarkdownText(e.target.value)}
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
           className="w-full min-h-[420px] rounded-b-md bg-white/5 px-4 py-3 font-mono text-sm text-stone-200 focus:outline-none resize-y"
           placeholder={"Write in Markdown:\n## Heading\n\n**bold**, _italic_\n\n- bullet list\n\n[link text](https://example.com)"}
         />
       )}
 
-      <input type="hidden" name="body" value={mode === "visual" ? html : markdownText} />
+      <input type="hidden" name="body" value={content} />
     </div>
   );
 }
