@@ -94,7 +94,7 @@ const components: Components = {
   hr: () => <hr className="border-white/15" />,
   table: ({ children }) => (
     <div className="overflow-x-auto">
-      <table className="post-content">{children}</table>
+      <table>{children}</table>
     </div>
   ),
 };

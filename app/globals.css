@@ -719,7 +719,8 @@ header + .container-shell {
   color: #d6d3d1;
 }
 
-.ProseMirror table tr:nth-child(even) td {
+.ProseMirror table tr:nth-child(even) td,
+.post-content table tr:nth-child(even) td {
   background: rgba(255, 255, 255, 0.03);
 }
 
